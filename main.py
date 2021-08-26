@@ -30,11 +30,13 @@ def hawkers():
 def kylie():
     # submit button has been pushed
     if request.form:
+        print("hello 1")
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("kylie.html", name=name)
+            print("hello 2")
+            return render_template("kylie.html", name1=name)
     # starting and empty input default
-    return render_template("kylie.html", name="World")
+    return render_template("kylie.html", name1="World")
 
 
 

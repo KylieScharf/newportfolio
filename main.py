@@ -1,10 +1,10 @@
 # import "packages" from flask
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 # create a Flask instance
 app = Flask(__name__)
 
-
+# The following create new routes for the top navigation bar buttons and must be connected to an HTML page
 # connects default URL to render index.html
 @app.route('/')
 def index():
@@ -26,12 +26,19 @@ def walruses():
 def hawkers():
     return render_template("hawkers.html")
 
-
-@app.route('/stub/')
+@app.route('/stub/', methods=['GET', 'POST'])
 def stub():
-    return render_template("stub.html")
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("stub.html", name=name)
+    # starting and empty input default
+    return render_template("stub.html", name="World")
+
 
 
 # runs the application on the development server
+#The rest just create routes that may be used but this actually runs the program on the server
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True,port=5180)

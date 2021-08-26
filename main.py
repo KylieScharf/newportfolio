@@ -26,15 +26,15 @@ def walruses():
 def hawkers():
     return render_template("hawkers.html")
 
-@app.route('/stub/', methods=['GET', 'POST'])
-def stub():
+@app.route('/kylie/', methods=['GET', 'POST'])
+def kylie():
     # submit button has been pushed
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("stub.html", name=name)
+            return render_template("kylie.html", name=name)
     # starting and empty input default
-    return render_template("stub.html", name="World")
+    return render_template("kylie.html", name="World")
 
 
 

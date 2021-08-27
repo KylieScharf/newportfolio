@@ -1,7 +1,28 @@
 <!-- Extending the project layout, as this file will do minor customizations -->
 {% extends "layouts/base.html" %}
 
-<!-- Setting up variables to customize "project" details to be specific to index page -->
-{% set project = "Portfolio" %}
-{% set overview = "https://nighthawkcodingsociety.com/projectsearch/details/Flask%20Portfolio%20Starter" %}
-{% set repo = "https://github.com/nighthawkcoders/flask_portfolio/" %}
+
+
+{% block body %}
+
+<div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+
+    <div class="col-12">
+        <p>Hello, User!</p>
+    </div>
+
+    <div class="col-12">
+        <p>Choose between area 51, bermuda triangle, great pyramid, crooked forrest, more  </p>
+    </div>
+
+    <div class="col-12">
+        <form action="/" id="index" method="POST" >
+            <label for="indexSearch">Type The Page You Would Link To Navigate To</label>
+            <input name="indexSearch" id="indexSearch">
+            <input type="submit" value="Press When Done!">
+        </form>
+
+    </div>
+</div>
+
+{% endblock %}

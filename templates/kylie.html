@@ -4,8 +4,10 @@
 <!- This variable sets name of browser tab  -->
 {% set project = "Stubby" %}
 
+
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
+    <body style="background-color:green;">
     <!- Try building a new body here ->
     <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
 
@@ -19,7 +21,17 @@
                 <input name="name" id="name">
                 <input type="submit" value="Greetings!">
             </form>
+
         </div>
+
+        <!-- This adds an image to the page -->
+<div class = "container">
+    <div class="row">
+        <div class="col-12">
+            <img src="/static/smiley.jpg" style="height: 400px" >
+        </div>
+    </div>
+</div>
 
     </div>
 

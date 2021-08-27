@@ -6,8 +6,15 @@ app = Flask(__name__)
 
 # The following create new routes for the top navigation bar buttons and must be connected to an HTML page
 # connects default URL to render index.html
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
+    # submit button has been pushed
+    if request.form:
+        indexName = request.form.get("indexSearch")
+        if indexName == "area 51":
+            return render_template("kylie.html")
+
+    # starting and empty input default
     return render_template("index.html")
 
 
@@ -30,9 +37,9 @@ def hawkers():
 def kylie():
     # submit button has been pushed
     if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:  # input field has content
-            return render_template("kylie.html", name1=name)
+        inputName = request.form.get("name")
+        if len(inputName) != 0:  # input field has content
+            return render_template("kylie.html", name1=inputName)
     # starting and empty input default
     return render_template("kylie.html", name1="World")
 

@@ -12,7 +12,13 @@ def index():
     if request.form:
         indexName = request.form.get("indexSearch")
         if indexName == "area 51":
-            return render_template("kylie.html")
+            return render_template("kylie.html", kylieDisplayName="World")
+        if indexName == "bermuda triangle":
+            return render_template("hawkers.html")
+        if indexName == "great pyramid":
+            return render_template("kangaroos.html")
+        if indexName == "crooked forrest":
+            return render_template("walruses.html")
 
     # starting and empty input default
     return render_template("index.html")
@@ -37,11 +43,12 @@ def hawkers():
 def kylie():
     # submit button has been pushed
     if request.form:
-        inputName = request.form.get("name")
-        if len(inputName) != 0:  # input field has content
-            return render_template("kylie.html", name1=inputName)
+        kylieInput = request.form.get("kylieForm")
+        if len(kylieInput) != 0:  # input field has content
+            return render_template("kylie.html", kylieDisplayName=kylieInput)
     # starting and empty input default
-    return render_template("kylie.html", name1="World")
+    return render_template("kylie.html", kylieDisplayName="World")
+
 
 
 

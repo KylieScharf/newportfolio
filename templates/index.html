@@ -1,28 +1,38 @@
 <!-- Extending the project layout, as this file will do minor customizations -->
 {% extends "layouts/base.html" %}
 
-
+{% set project = "Hello User" %}
 
 {% block body %}
-
+    <div class="container-fluid">
+        <div class="product" style="margin-top: 1%;">
+            <div class="row" style="padding: 9%; padding-top: 9%; padding-bottom: 0%; padding-left: 30%;">
+                <div class="col-12" >
+                    <h1>{{ project }}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
 <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
 
-    <div class="col-12">
-        <p>Hello, User!</p>
-    </div>
+<div class="container-fluid">
+    <div class="row" style="padding-left:10%";>
+        <div class="col-12">
+            <p>Choose between area 51, bermuda triangle, great pyramid, crooked forrest, more  </p>
+        </div>
 
-    <div class="col-12">
-        <p>Choose between area 51, bermuda triangle, great pyramid, crooked forrest, more  </p>
-    </div>
+        <div class="col-12">
+            <form action="/" id="index" method="POST" >
+                <label for="indexSearch">Type The Page You Would Link To Navigate To</label>
+                <input name="indexSearch" id="indexSearch">
+                <input type="submit" value="Take Me There!">
+            </form>
 
-    <div class="col-12">
-        <form action="/" id="index" method="POST" >
-            <label for="indexSearch">Type The Page You Would Link To Navigate To</label>
-            <input name="indexSearch" id="indexSearch">
-            <input type="submit" value="Press When Done!">
-        </form>
-
+        </div>
     </div>
 </div>
 
+</div>
+
 {% endblock %}
+

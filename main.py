@@ -12,7 +12,7 @@ def index():
     if request.form:
         indexName = request.form.get("indexSearch")
         if indexName == "area 51":
-            return render_template("kylie.html", kylieDisplayName="World")
+            return render_template("kylie.html", name1="World")
         if indexName == "bermuda triangle":
             return render_template("hawkers.html")
         if indexName == "great pyramid":
@@ -43,11 +43,11 @@ def hawkers():
 def kylie():
     # submit button has been pushed
     if request.form:
-        kylieInput = request.form.get("kylieForm")
-        if len(kylieInput) != 0:  # input field has content
-            return render_template("kylie.html", kylieDisplayName=kylieInput)
+        name = request.form.get("kylieInput")
+        if len(name) != 0:  # input field has content
+            return render_template("kylie.html", name1=name)
     # starting and empty input default
-    return render_template("kylie.html", kylieDisplayName="World")
+    return render_template("kylie.html", name1="World")
 
 
 
@@ -55,4 +55,4 @@ def kylie():
 # runs the application on the development server
 #The rest just create routes that may be used but this actually runs the program on the server
 if __name__ == "__main__":
-    app.run(debug=True,port=5180)
+    app.run(debug=True)

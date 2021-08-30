@@ -1,7 +1,7 @@
 <!-- Extending the project layout, as this file will do minor customizations -->
 {% extends "layouts/base.html" %}
 
-{% set project = "Hello User" %}
+{% set project = "Hello User!" %}
 
 {% block body %}
     <div class="container-fluid">
@@ -18,12 +18,12 @@
 <div class="container-fluid">
     <div class="row" style="padding-left:10%";>
         <div class="col-12">
-            <p>Choose between area 51, bermuda triangle, great pyramid, crooked forrest, more  </p>
+            <p>Choose between area 51, bermuda triangle, great pyramid, and crooked forrest</p>
         </div>
 
         <div class="col-12">
             <form action="/" id="index" method="POST" >
-                <label for="indexSearch">Type The Page You Would Link To Navigate To</label>
+                <label for="indexSearch">Type The Page You Would Link To Navigate To (No Caps)</label>
                 <input name="indexSearch" id="indexSearch">
                 <input type="submit" value="Take Me There!">
             </form>

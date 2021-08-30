@@ -49,6 +49,16 @@ def kylie():
     # starting and empty input default
     return render_template("kylie.html", name1="World")
 
+@app.route('/daniel/', methods=['GET', 'POST'])
+def daniel():
+    # submit button has been pushed
+    if request.form:
+        danielInput = request.form.get("danielForm")
+        if len(danielInput) != 0:  # input field has content
+            return render_template("daniel.html", danielDisplayName=danielInput)
+    # starting and empty input default
+    return render_template("daniel.html", danielDisplayName="World")
+
 
 
 

@@ -12,7 +12,7 @@ def index():
     if request.form:
         indexName = request.form.get("indexSearch")
         if indexName == "area 51":
-            return render_template("kylie.html", name1="World")
+            return render_template("hawkers.html")
         if indexName == "bermuda triangle":
             return render_template("hawkers.html")
         if indexName == "great pyramid":
@@ -43,11 +43,11 @@ def hawkers():
 def kylie():
     # submit button has been pushed
     if request.form:
-        name = request.form.get("kylieInput")
-        if len(name) != 0:  # input field has content
-            return render_template("kylie.html", name1=name)
+        kylieInput = request.form.get("kylieForm")
+        if len(kylieInput) != 0:  # input field has content
+            return render_template("kylie.html", kylieDisplayName=kylieInput)
     # starting and empty input default
-    return render_template("kylie.html", name1="World")
+    return render_template("kylie.html", kylieDisplayName="World")
 
 @app.route('/daniel/', methods=['GET', 'POST'])
 def daniel():

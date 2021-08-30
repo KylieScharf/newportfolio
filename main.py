@@ -49,10 +49,32 @@ def kylie():
     # starting and empty input default
     return render_template("kylie.html", kylieDisplayName="World")
 
+@app.route('/kevin/', methods=['GET', 'POST'])
+def kevin():
+    # submit button has been pushed
+    if request.form:
+        kevinInput = request.form.get("kevinForm")
+        if len(kevinInput) != 0:  # input field has content
+            return render_template("kevin.html", kevinDisplayName=kevinInput)
+    # starting and empty input default
+    return render_template("kevin.html", kevinDisplayName="World")
+
+@app.route('/stub', methods=['GET', 'POST'])
+def stub():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("stub.html", name1=name)
+    # starting and empty input default
+    return render_template("stub.html", name1="World")
+
+
+
 
 
 
 # runs the application on the development server
 #The rest just create routes that may be used but this actually runs the program on the server
 if __name__ == "__main__":
-    app.run(debug=True,port=5180)
+    app.run(debug=True)

@@ -12,32 +12,30 @@ def index():
     if request.form:
         indexName = request.form.get("indexSearch")
         if indexName == "area 51":
-            return render_template("hawkers.html")
+            return render_template("Area51.html")
         if indexName == "bermuda triangle":
-            return render_template("hawkers.html")
+            return render_template("bermudaTriangle.html")
         if indexName == "great pyramid":
-            return render_template("kangaroos.html")
-        if indexName == "crooked forrest":
-            return render_template("walruses.html")
+            return render_template("greatPyramid.html")
 
     # starting and empty input default
     return render_template("index.html")
 
 
-# connects /kangaroos path to render kangaroos.html
-@app.route('/kangaroos/')
-def kangaroos():
-    return render_template("kangaroos.html")
+# connects /kangaroos path to render greatPyramid.html
+@app.route('/greatPyramid/')
+def greatPyramid():
+    return render_template("greatPyramid.html")
 
 
-@app.route('/walruses/')
-def walruses():
-    return render_template("walruses.html")
+@app.route('/bermudaTriangle/')
+def bermudaTriangle():
+    return render_template("bermudaTriangle.html")
 
 
-@app.route('/hawkers/')
-def hawkers():
-    return render_template("hawkers.html")
+@app.route('/area51/')
+def area51():
+    return render_template("Area51.html")
 
 @app.route('/kylie/', methods=['GET', 'POST'])
 def kylie():

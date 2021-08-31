@@ -1,0 +1,16 @@
+<!-- Extending the project layout, as this file will do minor customizations -->
+{% extends "layouts/project.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Bermuda Triangle" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+    <!- Try building a new body here ->
+    <h1> Bermuda Triangle </h1>
+    <p>Tech Talk 1 - Body Stub</p>
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}

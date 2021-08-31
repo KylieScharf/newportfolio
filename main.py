@@ -57,6 +57,18 @@ def daniel():
     # starting and empty input default
     return render_template("daniel.html", danielDisplayName="World")
 
+@app.route('/khushi/', methods=['GET', 'POST'])
+def khushi():
+    # submit button has been pushed
+    print("1")
+    if request.form:
+        print("2")
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            print("3")
+            return render_template("khushi.html", name1=name)
+    # starting and empty input default
+    return render_template("khushi.html", name1="World")
 
 
 

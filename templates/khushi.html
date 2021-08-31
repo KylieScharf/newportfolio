@@ -1,0 +1,41 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Stubby" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+<!- Try building a new body here ->
+<div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+    <div class="col-12">
+        <p>Hello, {{name1}}!</p>
+    </div>
+    <div class="col-12">
+        <form action="/khushi/" id="greet" method="POST" >
+            <label for="name">Type a greeting name?</label>
+            <input name="name" id="name">
+            <input type="submit" value="Greetings!">
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+
+{% block background %}
+<script src="{{ url_for('static', filename='three.r119.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vanta.halo.min.js') }}"></script>
+<script>
+        VANTA.HALO({
+            el: "body",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00
+        })
+    </script>
+{% endblock %}
+
+

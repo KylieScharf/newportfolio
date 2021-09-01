@@ -14,9 +14,23 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             <a class="nav-link" style="color:purple"; href={{ url_for('bermudaTriangle') }}>Bermuda Triangle</a>
             <a class="nav-link" style="color:purple"; href={{ url_for('area51') }}>Area 51</a>
             <!-- stub is shown using the name of the route -->
-            <a class="nav-link" style="color:purple"; href="/kylie">Kylie</a>
-            <a class="nav-link" style="color:purple"; href="/daniel">Daniel</a>
-            <a class="nav-link" style="color:purple"; href="/khushi/">Khushi</a>
+
+
+            <a class="nav-link" style="color:purple"; href="{{ url_for('kylie') }}">Kylie</a>
+            <a class="nav-link" style="color:purple"; href="{{ url_for('daniel') }}">Daniel</a>
+            <a class="nav-link" style="color:purple"; href="{{ url_for('khushi') }}">Khushi</a>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Mini Labs
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/kylie">Kylie</a>
+            <a class="dropdown-item" href="/daniel">Daniel</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/khushi">Khushi</a>
+            <a class="nav-link" style="color:purple"; href="https://drive.google.com/file/d/11eVvCi-PXmcRM0L1WIbLWY5jecKcZktF/view">Journal 0</a>
+        </div>
+    </li>
         </div>
 </div>
 </nav>

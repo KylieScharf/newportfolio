@@ -2,21 +2,34 @@
 This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
 -->
 
-<nav class="navbar navbar-expand-lg navbar-light bg-warning">
-    <a class="navbar-brand" style="color:black";>{{basename}}</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-background: linear-gradient(55deg, deepskyblue, yellow, forestgreen);;">
+    <a class="navbar-brand" style="color:black";></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 <div class="collapse navbar-collapse" id="navbarNavAltMarkup"><div class="navbar-nav">
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" style="color:white"; href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Choose Your Destination
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/area51">Area 51</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/greatPyramid">The Great Pyramid</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/bermudaTriangle">The Bermuda Triangle</a>
+            <div class="dropdown-divider"></div>
+        </div>
+    </li>
             <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
-            <a class="nav-link" style="color:purple"; href={{ url_for('index') }}>Home</a>
-            <a class="nav-link" style="color:purple"; href={{ url_for('greatPyramid') }}>Great Pyramid</a>
-            <a class="nav-link" style="color:purple"; href={{ url_for('bermudaTriangle') }}>Bermuda Triangle</a>
-            <a class="nav-link" style="color:purple"; href={{ url_for('area51') }}>Area 51</a>
+            <a class="nav-link" style="color:white"; href={{ url_for('index') }}>Home</a>
+            <a class="nav-link" style="color:white"; href={{ url_for('greatPyramid') }}>Great Pyramid</a>
+            <a class="nav-link" style="color:white"; href={{ url_for('bermudaTriangle') }}>Bermuda Triangle</a>
+            <a class="nav-link" style="color:white"; href={{ url_for('area51') }}>Area 51</a>
             <!-- stub is shown using the name of the route -->
 
     <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" style="color:purple"; href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" style="color:white"; href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Mini Labs
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">

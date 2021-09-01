@@ -4,6 +4,20 @@
 {% set project = "Wonders Of The World!"%}
 
 {% block body %}
+    <body style= "background: linear-gradient(55deg, palevioletred, mediumpurple, deepskyblue);">
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" style="color:white"; href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Choose Your Destination
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/area51">Area 51</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/greatPyramid">The Great Pyramid</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/bermudaTriangle">The Bermuda Triangle</a>
+            <div class="dropdown-divider"></div>
+        </div>
+    </li>
 
     <div class="container-fluid">
         <div class="product" style="margin-top: 1%;">
@@ -20,21 +34,12 @@
 <div class="container-fluid">
     <div class="row" style="padding-left:7%";>
         <div class="col-10">
-            <p style="color:black; font-size: 25px;">Hello User! Choose between area 51, bermuda triangle, and great pyramid</p>
-        </div>
-
-        <div class="col-2" style="text-align: right;">
-            {% block info %}
-                <!-- notice jinja style variables used in href's -->
-                <a><h5 style="color:black";>Our Github Link</h5></a>
-                <a href={{github}} target="_blank"><i class="fa fa-github"></i></a>
-                <!--These create the top right buttons that are displayed on all pages -->
-            {% endblock %}
+            <p style="color:white; font-size: 25px;">Hello User! Choose between area 51, bermuda triangle, and great pyramid</p>
         </div>
 
         <div class="col-12">
             <form action="/" id="index" method="POST" >
-                <label for="indexSearch" style="color:black; font-size: 25px;">Type The Page You Would Link To Navigate To (No Caps)</label>
+                <label for="indexSearch" style="color:white; font-size: 25px;">Type The Page You Would Link To Navigate To (No Caps)</label>
                 <input name="indexSearch" id="indexSearch" placeholder="Search">
                 <input type="submit" value="Take Me There!">
             </form>
@@ -45,6 +50,10 @@
 
 </div>
 </div>
+    </body>
 
+{% endblock %}
+
+{% block background %}
 {% endblock %}
 

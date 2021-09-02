@@ -1,0 +1,40 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Stubby" %}
+
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+<div class="center-block" style="margin: 2% 5% 5%; text-align:left;">
+
+  <div class="container-fluid">
+    <div class="row justify-content-end">
+      <div class="col-7">
+      </div>
+      <div class="col-7">
+        <p>Hello, {{hamzaDisplayName}}!</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row justify-content-end">
+      <div class="col-9">
+      </div>
+      <div class="col-9">
+        <form action="/hamza/" id="hamza" method="POST" >
+          <label for="hamzaForm">Type a greeting name?</label>
+          <input name="hamzaForm" id="hamzaForm">
+          <input type="submit" value="Greetings!">
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+{% endblock %}

@@ -27,6 +27,26 @@ def index():
 def greatPyramid():
     return render_template("greatPyramid.html")
 
+@app.route('/aboutKylie/')
+def aboutKylie():
+    return render_template("aboutKylie.html")
+
+@app.route('/aboutKhushi/')
+def aboutKhushi():
+    return render_template("aboutKhushi.html")
+
+@app.route('/aboutKevin/')
+def aboutKevin():
+    return render_template("aboutKevin.html")
+
+@app.route('/aboutDaniel/')
+def aboutDaniel():
+    return render_template("aboutDaniel.html")
+
+@app.route('/aboutHamza/')
+def aboutHamza():
+    return render_template("aboutHamza.html")
+
 
 @app.route('/bermudaTriangle/')
 def bermudaTriangle():

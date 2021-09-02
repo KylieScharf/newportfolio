@@ -7,6 +7,16 @@
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
 <!- Try building a new body here ->
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarMaterials" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Course-materials
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="/y2022/repos">Repos</a>
+        <a class="dropdown-item" href="/deploy">Deployment</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="/y2022/padlet">Trimester 1</a>
+    </div>
 <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
     <div class="col-12">
         <p>Hello, {{name1}}!</p>
@@ -18,24 +28,23 @@
             <input type="submit" value="Greetings!">
         </form>
     </div>
+    <canvas id="canvas"></canvas>
+
+    <p class="collection">
+        <a href="https://codepen.io/collection/AGZywR" target="_blank">WebGL Collection</a>
+    </p>
 </div>
 {% endblock %}
 
 <!- This is turning off birds background from base.html -->
 
 {% block background %}
-<script src="{{ url_for('static', filename='three.r119.min.js') }}"></script>
-<script src="{{ url_for('static', filename='vanta.halo.min.js') }}"></script>
-<script>
-        VANTA.HALO({
-            el: "body",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00
-        })
-    </script>
+</li>
+    <!--root menu -->
+<li class="nav-item active">
+    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+</li>
+
 {% endblock %}
 
 

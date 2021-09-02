@@ -70,6 +70,16 @@ def khushi():
     # starting and empty input default
     return render_template("khushi.html", name1="World")
 
+@app.route('/hamza/', methods=['GET', 'POST'])
+def hamza():
+    # submit button has been pushed
+    if request.form:
+        hamzaInput = request.form.get("hamzaForm")
+        if len(hamzaInput) != 0:  # input field has content
+            return render_template("hamza.html", hamzaDisplayName=hamzaInput)
+    # starting and empty input default
+    return render_template("hamza.html", hamzaDisplayName="World")
+
 
 
 # runs the application on the development server

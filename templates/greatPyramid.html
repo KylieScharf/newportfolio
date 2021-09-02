@@ -7,10 +7,18 @@
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
     <!- Try building a new body here ->
-    <h1> Great Pyramid </h1>
-    <p>Tech Talk 1 - Body Stub</p>
-{% endblock %}
+<div class="dark1border" style="text-align: center; margin: 20px 30px 20px 30px;
+		padding: 0px 10px 0px 10px; border-top-width: 0.5px; border-bottom-width: 0.5px; border-top-style: solid;
+		border-bottom-style: solid;">
+    <h1 id="_storyTitle">The Great Pyramids of Giza</h1>
+    <p>The Pyramids of Giza was made during 2550 BCE, where it was build originally with a height of 481 feet.</p>
+    <h1>Read about adventure.</h1>
 
-<!- This is turning off birds background from base.html -->
-{% block background %}
+    <div style="text align:bottom right; margin: 20px 20px 20px 20px;
+        padding: 0px 5px 0px 5px; border-bottom-width: 0.5px; border-bottom-width: 0.5px; border-top-style: dashed;
+        border-bottom-style: solid;">
+    </div>
+</div>    <button type="button" onclick="alert('Hello world!')">Start your adventure!</button>
+
+</div>
 {% endblock %}

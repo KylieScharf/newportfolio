@@ -4,10 +4,11 @@
 {% set project = "Wonders Of The World!"%}
 
 {% block body %}
+    <body style= "background: linear-gradient(55deg, palevioletred, mediumpurple, deepskyblue);">
 
     <div class="container-fluid">
         <div class="product" style="margin-top: 1%;">
-            <div class="row" style="padding: 9%; padding-top: 9%; padding-bottom: 0%; padding-left: 14%;">
+            <div class="row" style="padding: 9%; padding-top: 1%; padding-bottom: 0%; padding-left: 14%;">
                 <div class="col-12" >
                     <h1>{{ project }}</h1>
                 </div>
@@ -15,36 +16,25 @@
         </div>
     </div>
 
-<div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+<div class="center-block" style="margin: 2% 5% 5%; text-align:left;">
 
 <div class="container-fluid">
-    <div class="row" style="padding-left:7%";>
-        <div class="col-10">
-            <p style="color:black; font-size: 25px;">Hello User! Choose between area 51, bermuda triangle, and great pyramid</p>
-        </div>
-
-        <div class="col-2" style="text-align: right;">
-            {% block info %}
-                <!-- notice jinja style variables used in href's -->
-                <a><h5 style="color:black";>Our Github Link</h5></a>
-                <a href={{github}} target="_blank"><i class="fa fa-github"></i></a>
-                <!--These create the top right buttons that are displayed on all pages -->
-            {% endblock %}
-        </div>
-
+    <div class="row" style="padding-left:0%";>
         <div class="col-12">
-            <form action="/" id="index" method="POST" >
-                <label for="indexSearch" style="color:black; font-size: 25px;">Type The Page You Would Link To Navigate To (No Caps)</label>
-                <input name="indexSearch" id="indexSearch" placeholder="Search">
-                <input type="submit" value="Take Me There!">
-            </form>
-
-
+            <p style="text-indent: 50px; font-size: 25px;"> Have you ever thought about where those planes really go when they disappear over the bermuda triangle? Or who really built the Great Pyramid of Giza? What about wondering what really goes on inside Area 51? If your answer is yes to any of these questions, this is the site for you!</p>
+            <p style="text-indent: 50px; font-size: 25px;"> Here, you will learn about 3 of the greatest wonders of the world: Area 51, The Great Pyramid of Giza, and The Bermuda Triangle. And it doesn't stop there! You will also be taken on an adventure within each wonder where you will get to decide your own fate by picking between different options within the adventure. You create your story!</p>
+            <p style="text-indent: 50px; font-size: 25px;"> If you would like to begin, choose one of the 3 adventures to start by clicking on the "choose your destination" drop-down menu and selecting the wonder you are most interested in. Don't worry, you can always choose another adventure when you finish! Choose now to begin!</p>
         </div>
+
     </div>
+</div>
 
 </div>
 </div>
+    </body>
 
+{% endblock %}
+
+{% block background %}
 {% endblock %}
 

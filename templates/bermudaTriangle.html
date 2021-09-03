@@ -1,12 +1,11 @@
 <!-- Extending the project layout, as this file will do minor customizations -->
+<!-- Extending the predefined project layout -->
 {% extends "layouts/project.html" %}
 
-<!- This variable sets name of browser tab  -->
-{% set project = "Bermuda Triangle" %}
-
-<!- This is a replacement block for Body in base.html -->
-{% block body %}
-    <!- Try building a new body here ->
-    <h1> {{ project}} </h1>
-    <p>Tech Talk 1 - Body Stub</p>
-{% endblock %}
+{% set project = "The Bermuda Triangle" %}
+{% set para1 = "the fox the fox the fox the foc gieghg g hg ghghg g g g g g g g g g g g g g g g g  g g g g g g g g g ghug  igha ogh g g higu fg gh fg g fguhiu g fg fhgf ughfug fg " %}
+{% set para2 = "ghfghf g hgiuhf ghf  ghfig fi gf fhg fgh f fg   fhig fighdgu   ghfig di g g ghfig ig " %}
+{% set imageSRC = "/static/smiley.jpg" %}
+{% set imageHeight = "400" %}
+{% set imageWidth = "600" %}
+{% set HTML = "aboutKylie" %}

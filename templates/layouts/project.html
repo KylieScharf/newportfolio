@@ -1,20 +1,57 @@
+<!-- Extending the project layout, as this file will do minor customizations -->
 {% extends "layouts/base.html" %}
-<!-- Custom block for standardizing Project Data-->
-<!-- These create the additional buttons you may add on each html page after the index if you call them -->
+
+{% block body %}
 {% block links %}
-    <div class="col-3">
-        <a href="{{ overview }}" class="btn">Overview</a>
+    <body style= "background: linear-gradient(55deg, palevioletred, mediumpurple, deepskyblue);">
+    <div class="container-fluid">
+        <div class="row justify-content-end">
+            <div class="col-4" style="text-align: right;">
+                {% block info %}
+                    <!-- notice jinja style variables used in href's -->
+                    <a><h5>{{basename}}</h5></a>
+                {% endblock %}
+            </div>
+        </div>
+    <div class="dark1border" style="text-align: center; margin: 0px 30px 10px 30px;border-top-width: 0.5px; border-bottom-width: 0.5px; border-top-style: dashed; border-bottom-style: dashed;">
+
+        <div class="product" style="margin-top: 0%;">
+            <div class="row" style="padding: 0%; padding-left: 10%;">
+
+                <div class="col-10" >
+                    <h1>{{ project }}</h1>
+                </div>
+
+            </div>
+
+        </div>
     </div>
 
-    <div class="col-3">
-        <a href="{{ scrumboard }}" class="btn">Scrum Board</a>
-    </div>
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:left;">
 
-    <div class="col-3">
-        <a href="{{ repo }}" class="btn">Repository</a>
-    </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-8">
+                    <p style="text-indent: 50px; font-size: 15px;"> {{ para1 }}</p>
+                    <p style="text-indent: 50px; font-size: 15px;"> {{ para2 }}</p>
+                    <p style="text-indent: 50px; font-size: 15px;"> {{ para3 }}</p>
+                    <p style="text-indent: 50px; font-size: 15px;"> {{ para4 }}</p>
+                    <p style="text-indent: 50px; font-size: 15px;"> {{ para5 }}</p>
+                </div>
+                <div class="col-4">
+                    <img src={{ imageSRC }} alt={{ imageText }} width=400 height=400>
+                </div>
+                <div class="col-4">
+                <button>
+                    <a class="button" onclick=href="/{{ HTML }}">Start your adventure!</a>
+                </button>
+                </div>
+            </div>
+        </div>
 
-    <div class="col-3">
-        <a href="{{ authors }}" class="btn">Authors</a>
     </div>
+    </div>
+    </body>
+
+{% endblock %}
 {% endblock %}

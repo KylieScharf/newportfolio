@@ -11,6 +11,16 @@ https://github.com/KylieScharf/flask_portfolio/projects/2
 ###Pair Share Journals
 ####Kylie and Khushi: https://docs.google.com/document/d/1eyTgQhMv7jFi28SIGlwOs3k95a9KklfJFCS0O9pXCzA/edit
 ####Danny, Hamza, and Kevin: https://docs.google.com/document/d/1fy-J_PVrvafykD-OTxMm-Pe0L_UKrYUTC4-DP4vGXEw/edit?usp=sharing
+
+###Self Grades PBL week 1,2
+#####Scrum Team: I believe our scrum team should get a 4/4 this week. This is because we produced all the deliverables and tangible artifacts talked about in PBL 1,2 on myconnect. As a group, we were able to create issues in our scrum board and assign them to different people, edit the read me to include our project descriptions, wire frame our overall ideas with 3 theme pages and mini labs and about pages, coordinate a brain write sessions and capture all technical complexities in the read me, create a bootstrap drop down for our theme pages, create a bootstrap drop down for the about you pages, create a drop down for the mini labs, create pages with greet like functionality with all of our names and put it in the mini lab drop down, integrate the video Journal 0 into the mini lab page, and completed and participated in the TPT event.
+#####Kylie: I believe I should get a 4/4 this week for my personal grade. I believe this because I put a lot of effort into not only making sure my code worked, but all of my team members’ code worked as well. I had many github commits and also created the idea for our overall website and the overall desig of our website. I also created all issues on the scrum board and moved them as they were being completed. I also created an overall project page to organize our project. I also hosted TPT and watched and took notes on the college board videos and put the link to these notes in the journal. I also chose to use my computer for my personal work plan use for computer usage in school and at home.
+####Khushi:
+#####Kevin:
+#####Hamza:
+#####Daniel: 
+
+
 ###Notes:
 ####General Notes: https://docs.google.com/document/d/1Sk4kdFS8o3iUE9MSoS8R0oeG13owbyw91XDAEudpfVo/edit?usp=sharing
 ####In-Class video notes: https://docs.google.com/document/d/1ryaAXia9cBviGVs9KxgRe6caFzp20b449Sjkh3S65TA/edit?usp=sharing

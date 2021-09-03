@@ -1,28 +1,17 @@
 
-<!-- Extending the predefined project layout -->
-{% extends "layouts/base.html" %}
+<!-- Extending from the predefined project layout -->
+{% extends "layouts/project.html" %}
 
-<!- This variable sets name of browser tab  -->
+<!--This sets the variables in the predefined layout within the project.html file so that every page has the same layout and is efficient-->
+
 {% set project = "Area 51" %}
-
-<!- This is a replacement block for Body in base.html -->
-{% block body %}
-    <!- Try building a new body here ->
-<div class="dark1border" style="text-align: center; margin: 20px 30px 20px 30px;
-		padding: 10px 10px; border-top-width: 0.5px; border-bottom-width: 0.5px; border-top-style: solid;
-		border-bottom-style: solid;">
-    <h1>Area 51</h1>
-    <p>Area 51 is believed to be a place where people with authorized personnel can communicate to alien. Hence, it is a restricted place for the public.</p>
-    <h1>Find out more about Area 51.</h1>
-
-    <div style="margin: 20px 20px 20px 20px;
-        padding:5px 5px; border-bottom-width: 0.5px; border-top-style: dashed;
-        border-bottom-style: solid;">
-    </div>
-    <button type="button" onclick="alert('Hello world!')">Start your adventure!</button>
-</div>
-{% endblock %}
-
+{% set para1 = "the fox the fox the fox the foc gieghg g hg ghghg g g g g g g g g g g g g g g g g  g g g g g g g g g ghug  igha ogh g g higu fg gh fg g fguhiu g fg fhgf ughfug fg " %}
+{% set para2 = "ghfghf g hgiuhf ghf  ghfig fi gf fhg fgh f fg   fhig fighdgu   ghfig di g g ghfig ig " %}
+{% set para3 = "the fox the fox the fox the foc gieghg g hg ghghg g g g g g g g g g g g g g g g g  g g g g g g g g g ghug  igha ogh g g higu fg gh fg g fguhiu g fg fhgf ughfug fg " %}
+{% set para4 = "the fox the fox the fox the foc gieghg g hg ghghg g g g g g g g g g g g g g g g g  g g g g g g g g g ghug  igha ogh g g higu fg gh fg g fguhiu g fg fhgf ughfug fg " %}
+{% set para5 = "the fox the fox the fox the foc gieghg g hg ghghg g g g g g g g g g g g g g g g g  g g g g g g g g g ghug  igha ogh g g higu fg gh fg g fguhiu g fg fhgf ughfug fg " %}
+{% set imageSRC = "/static/smiley.jpg" %}
+{% set HTML = "aboutKylie" %}
 
 
 

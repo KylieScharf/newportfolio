@@ -1,16 +1,23 @@
 <!-- Extending the project layout, as this file will do minor customizations -->
+<!--this sets up the home page of the site-->
 {% extends "layouts/base.html" %}
 
 {% set project = "Wonders Of The World!"%}
+{% set github = "https://github.com/KylieScharf/flask_portfolio" %}
 
 {% block body %}
     <body style= "background: linear-gradient(55deg, palevioletred, mediumpurple, deepskyblue);">
 
     <div class="container-fluid">
         <div class="product" style="margin-top: 1%;">
-            <div class="row" style="padding: 9%; padding-top: 1%; padding-bottom: 0%; padding-left: 14%;">
-                <div class="col-12" >
+            <div class="row" style="padding: 9%; padding-top: 1%; padding-bottom: 0%; padding-left: 10%;">
+                <div class="col-10" >
                     <h1>{{ project }}</h1>
+                </div>
+                <div class="col-2">
+                    <button>
+                        <a class="button" onclick=href="https://github.com/KylieScharf/flask_portfolio">Our Github!</a>
+                    </button>
                 </div>
             </div>
         </div>

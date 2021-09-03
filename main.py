@@ -8,17 +8,6 @@ app = Flask(__name__)
 # connects default URL to render index.html
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    # submit button has been pushed
-    if request.form:
-        indexName = request.form.get("indexSearch")
-        if indexName == "area 51":
-            return render_template("Area51.html")
-        if indexName == "bermuda triangle":
-            return render_template("bermudaTriangle.html")
-        if indexName == "great pyramid":
-            return render_template("greatPyramid.html")
-
-    # starting and empty input default
     return render_template("index.html")
 
 
@@ -26,6 +15,26 @@ def index():
 @app.route('/greatPyramid/')
 def greatPyramid():
     return render_template("greatPyramid.html")
+
+@app.route('/aboutKylie/')
+def aboutKylie():
+    return render_template("aboutKylie.html")
+
+@app.route('/aboutKhushi/')
+def aboutKhushi():
+    return render_template("aboutKhushi.html")
+
+@app.route('/aboutKevin/')
+def aboutKevin():
+    return render_template("aboutKevin.html")
+
+@app.route('/aboutDaniel/')
+def aboutDaniel():
+    return render_template("aboutDaniel.html")
+
+@app.route('/aboutHamza/')
+def aboutHamza():
+    return render_template("aboutHamza.html")
 
 
 @app.route('/bermudaTriangle/')
@@ -40,12 +49,12 @@ def area51():
 @app.route('/kylie/', methods=['GET', 'POST'])
 def kylie():
     # submit button has been pushed
-    if request.form:
-        kylieInput = request.form.get("kylieForm")
-        if len(kylieInput) != 0:  # input field has content
-            return render_template("kylie.html", kylieDisplayName=kylieInput)
+    if request.form: #if the submit button has been pressed
+        kylieInput = request.form.get("kylieForm") #store the input into a variable
+        if len(kylieInput) != 0:  # if the length of the input stored in the variable is greater than 0/field has content
+            return render_template("kylie.html", kylieDisplayName=kylieInput) #render the same page and set the variable already created in jinja to whatever the user inputed-->
     # starting and empty input default
-    return render_template("kylie.html", kylieDisplayName="World")
+    return render_template("kylie.html", kylieDisplayName="World")#if nothing has happened render the page and set the variable in jinja to a default value "world"-->
 
 @app.route('/daniel/', methods=['GET', 'POST'])
 def daniel():

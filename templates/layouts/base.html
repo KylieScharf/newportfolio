@@ -106,7 +106,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
     </style>
 
-    <title>{{ basename }} | {{ project }} </title>
+    <title>{{ project }} </title>
 
 </head>
 
@@ -115,8 +115,8 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
 {% block body %}
 <div class="container-fluid">
-    <div class="row justify-content-end" style="padding: 2%;">
-        <div class="col-2" style="text-align: right;">
+    <div class="row justify-content-end">
+        <div class="col-4" style="text-align: right;">
             {% block info %}
                 <!-- notice jinja style variables used in href's -->
                 <a><h5>{{basename}}</h5></a>
@@ -128,7 +128,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
     </div>
 
     <div class="product" style="margin-top: 0%;">
-        <div class="row" style="padding: 0%; padding-left: 40%; padding-bottom: 5%;">
+        <div class="row" style="padding: 0%; padding-left: 20%; padding-bottom: 2%;">
 
             <div class="col-12" >
                 <h1>{{ project }}</h1>

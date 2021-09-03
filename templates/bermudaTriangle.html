@@ -1,11 +1,23 @@
 <!-- Extending the project layout, as this file will do minor customizations -->
-<!-- Extending the predefined project layout -->
 {% extends "layouts/project.html" %}
 
-{% set project = "The Bermuda Triangle" %}
-{% set para1 = "the fox the fox the fox the foc gieghg g hg ghghg g g g g g g g g g g g g g g g g  g g g g g g g g g ghug  igha ogh g g higu fg gh fg g fguhiu g fg fhgf ughfug fg " %}
-{% set para2 = "ghfghf g hgiuhf ghf  ghfig fi gf fhg fgh f fg   fhig fighdgu   ghfig di g g ghfig ig " %}
-{% set imageSRC = "/static/smiley.jpg" %}
-{% set imageHeight = "400" %}
-{% set imageWidth = "600" %}
-{% set HTML = "aboutKylie" %}
+<!- This variable sets name of browser tab  -->
+{% set project = "Bermuda Triangle" %}
+
+<!- This is a replacement block for Body in base.html -->
+    <!- Try building a new body here ->
+{% block body %}
+<div class="dark1border" style="text-align: center; margin: 20px 30px 20px 30px;
+		padding: 10px 10px; border-top-width: 0.5px; border-bottom-width: 0.5px; border-top-style: solid;
+		border-bottom-style: solid;">
+    <h1>Bermuda Triangle</h1>
+    <p>A place where ships and aircraft have mysteriously disappeared without any explanation, shows the mystery behind the Bermuda Triangle.</p>
+    <h1>Explore this adventure.</h1>
+
+    <div style="margin: 20px 20px 20px 20px;
+        padding:5px 5px; border-bottom-width: 0.5px; border-top-style: dashed;
+        border-bottom-style: solid;">
+    </div>
+    <button type="button" onclick="alert('Hello world!')">Start your adventure!</button>
+</div>
+{% endblock %}

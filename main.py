@@ -89,6 +89,16 @@ def hamza():
     # starting and empty input default
     return render_template("hamza.html", hamzaDisplayName="World")
 
+@app.route('/kevin/', methods=['GET', 'POST'])
+def kevin():
+    # submit button has been pushed
+    if request.form:
+        kevinInput = request.form.get("kevinForm")
+        if len(kevinInput) != 0:  # input field has content
+            return render_template("kevin.html", kevinDisplayName=kevinInput)
+    # starting and empty input default
+    return render_template("kevin.html", kevinDisplayName="World")
+
 
 
 # runs the application on the development server

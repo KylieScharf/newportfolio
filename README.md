@@ -42,17 +42,19 @@ Table Of Contents
 6. About Me Khushi https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/aboutKhushi.html
 7. About Me Daniel https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/aboutDaniel.html
 8. About Me Hamza https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/aboutHamza.html
-10. Kevin Greet https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/kevin.html
-11. Kylie Greet https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/kylie.html
-12. Daniel Greet https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/daniel.html
-13. Khushi Greet https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/khushi.html
-14. Hamza Greet https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/hamza.html
-15. Project.html changes/lazy coding https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/layouts/project.html
-16. Area 51 page https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/Area51.html
-17. Bermuda Triangle Page https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/bermudaTriangle.html
-18. Great Pyramid Page https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/greatPyramid.html
-19. Navbar Dropdowns https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/layouts/navbar.html
-20. Home/index page https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/hamza.html
+9. Kevin Greet https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/kevin.html
+10. Kylie Greet https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/kylie.html
+11. Daniel Greet https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/daniel.html
+12. Khushi Greet https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/khushi.html
+13. Hamza Greet https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/hamza.html
+14. Project.html changes/lazy coding https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/layouts/project.html
+15. Area 51 page https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/Area51.html
+16. Bermuda Triangle Page https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/bermudaTriangle.html
+17. Great Pyramid Page https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/greatPyramid.html
+18. Navbar Dropdowns https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/layouts/navbar.html
+19. Home/index page https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/hamza.html
+20. Sprint 1,2 overview video https://drive.google.com/file/d/15xS0Bw-z90teq21cxNn715eoTnT3adC8/view
+21. Journal 0 Video https://drive.google.com/file/d/11eVvCi-PXmcRM0L1WIbLWY5jecKcZktF/view
 
 Notes:
 1. General Notes: https://docs.google.com/document/d/1Sk4kdFS8o3iUE9MSoS8R0oeG13owbyw91XDAEudpfVo/edit?usp=sharing

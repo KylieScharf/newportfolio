@@ -14,8 +14,8 @@ https://chooseyourstory.com/
 4. Kevin: Navigator
 5. Khushi: Technical Lead
 ### Pair Share Journals
--Kylie and Khushi: https://docs.google.com/document/d/1eyTgQhMv7jFi28SIGlwOs3k95a9KklfJFCS0O9pXCzA/edit
--Danny, Hamza, and Kevin: https://docs.google.com/document/d/1fy-J_PVrvafykD-OTxMm-Pe0L_UKrYUTC4-DP4vGXEw/edit?usp=sharing
+1. Kylie and Khushi: https://docs.google.com/document/d/1eyTgQhMv7jFi28SIGlwOs3k95a9KklfJFCS0O9pXCzA/edit
+2. Danny, Hamza, and Kevin: https://docs.google.com/document/d/1fy-J_PVrvafykD-OTxMm-Pe0L_UKrYUTC4-DP4vGXEw/edit?usp=sharing
 ### Objective
 Our website is going to be a design your own adventure website based on different wonders of the world. 
 These wonders will include Area 51, the Bermuda Triangle, and the Great Pyramid of Giza. 

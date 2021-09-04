@@ -1,66 +1,66 @@
 
-##Wonders Of The World
-## Where We Started: [Flask Portfolio Starter](https://nighthawkcodingsociety.com/projectsearch/details/Flask%20Portfolio%20Starter)
-Group Members: Kylie Scharf, Kevin Chen, Khushi Bagri, Daniel Bertino, Hamza Hakak
+# Team Dream Squad (Kylie Scharf, Kevin Chen, Khushi Bagri, Daniel Bertino, Hamza Hakak)
 
-###Our Github Repository:
+### Our Github Repository: 
 https://github.com/KylieScharf/flask_portfolio
-###Scrum Board:
+### Scrum Board:
 https://github.com/KylieScharf/flask_portfolio/projects/2
-
+### Inspiration for our website
+https://chooseyourstory.com/
+### Roles
+-Kylie: Scrum Master
+-Daniel: Developer
+-Hamza: Designer
+-Kevin: Navigator
+-Khushi: Technical Lead
 ###Pair Share Journals
-####Kylie and Khushi: https://docs.google.com/document/d/1eyTgQhMv7jFi28SIGlwOs3k95a9KklfJFCS0O9pXCzA/edit
-####Danny, Hamza, and Kevin: https://docs.google.com/document/d/1fy-J_PVrvafykD-OTxMm-Pe0L_UKrYUTC4-DP4vGXEw/edit?usp=sharing
+-Kylie and Khushi: https://docs.google.com/document/d/1eyTgQhMv7jFi28SIGlwOs3k95a9KklfJFCS0O9pXCzA/edit
+-Danny, Hamza, and Kevin: https://docs.google.com/document/d/1fy-J_PVrvafykD-OTxMm-Pe0L_UKrYUTC4-DP4vGXEw/edit?usp=sharing
+###Objective
+Our website is going to be a design your own adventure website based on different wonders of the world. 
+These wonders will include Area 51, the Bermuda Triangle, and the Great Pyramid of Giza. 
+The user will be able to pick any wonder they want and will learn about that wonder with an informative page and then be directed to an adventure page.
+In this adventure page they will go through a story where they will be able to pick how they react to different situation within the story. 
 
-###group tool declare
-####We plan to all bring our computers to school and use them to work at home as well. 
-###Self Grades PBL week 1,2
-#####Scrum Team: I believe our scrum team should get a 4/4 this week. This is because we produced all the deliverables and tangible artifacts talked about in PBL 1,2 on myconnect. As a group, we were able to create issues in our scrum board and assign them to different people, edit the read me to include our project descriptions, wire frame our overall ideas with 3 theme pages and mini labs and about pages, coordinate a brain write sessions and capture all technical complexities in the read me, create a bootstrap drop down for our theme pages, create a bootstrap drop down for the about you pages, create a drop down for the mini labs, create pages with greet like functionality with all of our names and put it in the mini lab drop down, integrate the video Journal 0 into the mini lab page, and completed and participated in the TPT event.
-#####Kylie: I believe I should get a 4/4 this week for my personal grade. I believe this because I put a lot of effort into not only making sure my code worked, but all of my team members’ code worked as well. I had many github commits and also created the idea for our overall website and the overall desig of our website. I also created all issues on the scrum board and moved them as they were being completed. I also created an overall project page to organize our project. I also hosted TPT and watched and took notes on the college board videos and put the link to these notes in the journal. I also chose to use my computer for my personal work plan use for computer usage in school and at home.
-####Khushi: Grade: 4/4 Explanation:Github commit(s) or Ideation/ Design Document Assets:  Scrum board completion: Installed a code from a chooseyourstroy.com, that guides the user to the different tabs on the drop down menu. Also, I had used the wireframe as a reference to the actual pages of our websites, where I had found out how to change a certain margin and add a line to distinguish the beginning and ending of the story page. Also, I was able to create my own html page and therefore I started to create my greet page, as shown in the website, my page is on the left-side and on the middle as the others. On Tuesday, I led my team with the brainwrite activity, where I had shared a google doc and google slides for the ideas that we had created. Also, I had communicated my group’s idea to our crossover team, where we described how we have a website for dinner planning.  I helped Hamza to navigate through our projects tab, with the different html and what each html functions the code for. Also, with the help of Hamza and Kylie I was able to fix a problem that I was having with my greet page, as there was an error on the background. Similarly we want our website, “Wonders of the World”, to be a similar platform, however we plan to add an adventure to it. With the help of the code from chooseyourstory.com, I was able to use our, “Code, Code, Code” day as a way to find the specific lines of code that I want to work with to allow text, margin, and description of the story to be implied to. I explored the different padding and margin of the text, where being able to tweak the values of the numberpx (for example: 20px) for the accurate measurements of the font and textbox size. I tried using if then statements, but because we hadn’t figured out the link to the start your adventure, the if then statement created an error. Also, I had created an additional line on each of the adventure page to indicate the start and end of the story. Integration of Greet into each individual page: Also, I was able to create my own html page and therefore I started to create my greet page, as shown in the website, my page is on the left-side and on the middle as the others. TPT Points watch and journal assigned videos: https://docs.google.com/document/d/1l0UqsAdH5eY Tool Declare, Personal Work plan described for Computer usage in School and at home: personal laptop (plan) Additional Resources: https://www.w3schools.com/tags/tag_button.asp Read.Me has the insp
+## Sprint 3,4 (9/7-9/17)
+Table Of Contents
+1. Self Grades https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing
+2. Our Design Progress https://docs.google.com/document/d/1TDMcFtOi-Eh1hm8yJ1fT1G0TcEjQq1bJIr351FcD-zw/edit?usp=sharing
+3. Code Journals and Weekly Learnings https://docs.google.com/document/d/1Xgt4rzVnuPTBmNP03dyNoXvLqfYJEjnjjZVCNtdme4A/edit?usp=sharing
+4. Issues
 
-#####Kevin: Grade 4/4 Explanation: I did the research behind the background information of the great pyramids, the crooked forest, the bermuda triangle and Area 51. I also added these to our website under the Choose your destination tab. Added kevin.html which created a tab for the Mini Lab drop down. I added the greet me mini lab for my own About me tab. Tool Declare, Personal Work plan described for Computer usage in School and at home. I have a laptop that I bring to school and use at home. Git-hub commits I did not add much to the Github commits since it was not my job, I pulled the code that was coded by my group.
-#####Kevin scrum master edit: 3.5/4 becuase Kevin did not edit the read me as he was supposed to so Kylie did it for him(-.5 points)
-#####Hamza: Grade: 4/4 Explanation: I fixed a bug in the home page, as well as creating the mini lab page. Fixed a bug in khushi's code, also worked on khushi's background issue with kylie. I also worked on creating a wireframe for the website. I used a third party software to model the basic look of each page directory and it's main function. I also helped fix khushi's greet page with kylie.
-#####Daniel: Grade: 4/4. Explanation: Github commits/ideation--->cretated separate about.html files for everyone/& edited text; fixed a bug in Kevins page in mini labs; made the creator's page dropdown for the “about you” section, coded a background on the website using vanta backgrounds. Scrum board completion---> I have completed several cards on the scrum board(e.i dropdowns and code stub “about you” pages). Design Document asset--->I created several google docs and collaborated with my team throughout the week on what to finish during the day and got help on fixing a bunch of errors in the code. I created the weekly journal and made it all up to date and look nice. Heres the link to journals:https://docs.google.com/document/d/1fy-J_PVrvafykD-OTxMm-Pe0L_UKrYUTC4-DP4vGXEw/edit. Also, I successfully completed the “greet me” mini lab (if you click on website dropdown, everything loads up without error). I did my part in contributing to the journal assigned videos in class. Heres the link: https://docs.google.com/document/d/1NX9j4_YjD4EG06KD4ox6W2n7qlNpOBHsKOOkC6My3pk/edit?usp=sharing. Tool Declare, Personal Work plan described for Computer usage in School and at home---->personal laptop for in school and at home use
+Notes
+1. 
+
+## Sprint 1,2 (8/16-9/3) 
+Table Of Contents
+1. Self Grades https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing
+2. Our Design Progress: https://docs.google.com/document/d/1TDMcFtOi-Eh1hm8yJ1fT1G0TcEjQq1bJIr351FcD-zw/edit?usp=sharing
+3. Code Journals and Weekly learnings: https://docs.google.com/document/d/1Xgt4rzVnuPTBmNP03dyNoXvLqfYJEjnjjZVCNtdme4A/edit?usp=sharing
+4. About Me Kylie https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/aboutKylie.html
+5. About Me Kevin https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/aboutKevin.html
+6. About Me Khushi https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/aboutKhushi.html
+7. About Me Daniel https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/aboutDaniel.html
+8. About Me Hamza https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/aboutHamza.html
+10. Kevin Greet https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/kevin.html
+11. Kylie Greet https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/kylie.html
+12. Daniel Greet https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/daniel.html
+13. Khushi Greet https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/khushi.html
+14. Hamza Greet https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/hamza.html
+15. Project.html changes/lazy coding https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/layouts/project.html
+16. Area 51 page https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/Area51.html
+17. Bermuda Triangle Page https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/bermudaTriangle.html
+18. Great Pyramid Page https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/greatPyramid.html
+19. Navbar Dropdowns https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/layouts/navbar.html
+20. Home/index page https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/hamza.html
+
+Notes:
+1. General Notes: https://docs.google.com/document/d/1Sk4kdFS8o3iUE9MSoS8R0oeG13owbyw91XDAEudpfVo/edit?usp=sharing
+2. In-Class video notes: https://docs.google.com/document/d/1ryaAXia9cBviGVs9KxgRe6caFzp20b449Sjkh3S65TA/edit?usp=sharing
+3. Collab Notetaker/Webstorming: https://docs.google.com/document/d/12dsUnpEVu57HyiE23_80cQSTKghdxiLHDVVv7iYlNCA/edit?usp=sharing
+4. Padlet: https://padlet.com/kyliekylie10/s80zfwqjy2386ovv
+5. College Board Notes: https://docs.google.com/document/d/1oJNWx6yepYdKIuTszi_hgSbdDPv9pNZVhOblzeZSmXo/edit?usp=sharing
 
 
-###Notes:
-####General Notes: https://docs.google.com/document/d/1Sk4kdFS8o3iUE9MSoS8R0oeG13owbyw91XDAEudpfVo/edit?usp=sharing
-####In-Class video notes: https://docs.google.com/document/d/1ryaAXia9cBviGVs9KxgRe6caFzp20b449Sjkh3S65TA/edit?usp=sharing
-####Collab Notetaker/Webstorming: https://docs.google.com/document/d/12dsUnpEVu57HyiE23_80cQSTKghdxiLHDVVv7iYlNCA/edit?usp=sharing
-####Padlet: https://padlet.com/kyliekylie10/s80zfwqjy2386ovv
-####AP review:AP review/Leader Notes: https://docs.google.com/document/d/1oJNWx6yepYdKIuTszi_hgSbdDPv9pNZVhOblzeZSmXo/edit?usp=sharing 
-###Roles
-####Kylie: Scrum master, developer
-####Khushi: Technical Lead and Developers (integration of greet). Also, find if then statements for how the journey game works.
-####Daniel: Developer(2 dropdown menus-about me/mini labs)
-####Hamza: navigator and designer
-####Kevin: developer
 
 
-###Inspiration: https://chooseyourstory.com/
-
-###Project Overview/Ideation: 
-####This website will be an informative website about the wonders of the world including the great pyramid of giza, the bermuda triangle, and area 51. Each wonder will have it’s own adventure linked to it where the user will be able to design their own adventure within the theme of the wonder they have chosen.
-
-###Specifications: 
-####This website will have a home page that displays text about what the website is about and what they can do within the website (limitations and specifications). There will be tabs for 3 wonders in the navigation bar located within a drop down menu that makes the page look neater. The navigation will bring them to an informative page about the wonder they have chosen and on the bottom of the page there will be a button that they press to start the adventure for their wonder. This may be a search bar or just a button (decide later). This will lead them to a new HTML page that will stay within the same tab because it will not have its own tab in the nav bar. They will then navigate the story by clicking one of two buttons which will display one of two possible text outcomes and this will continue until they are done with the story. These buttons may be a search bar or just buttons (decide later). The navigation bar at the top will also have a drop down menu for the about you portion where each of us will have our own tab within the drop down that will navigate to a page with information about ourselves. The navigation bar will have another drop down menu with the many mini labs we do, including the Journal 0 video, the greet page, _____. Additionally, there will be a tab where the user will be able to put feedback on our project by typing it in and posting it to the page. There may also be a login feature where the user can create an account for the page.
-
-###Wireframe:
-https://docs.google.com/document/d/1t8cRoSjdcl2BHJ1eOqjS7T4RPHXwugz9jqXOsz4qo_w/edit?usp=sharing
-
-
-
-
-###Technical complexities: 
-####We need to figure out how to create multiple buttons where each button displays a different text option when pressed. This will include many if statements which are conditional logic. We also need to figure out how to swap the HTML with different text after the user clicks the adventure button on the informative page. We will need to swap this HTML while remaining in the same tab. We also need to figure out how to code a drop down menu and have each option go to a different page within the same tab. We also need to figure out how to create a text box for users to type and post feedback into and we need to figure out how to display such typed information within the box on the page and keep it there. Additionally, if we do the login feature, we will need to figure out how to allow users to create accounts and store their data.
-####Khushi: I have figured out how to create a webpage of the wonder, the description, and a button for the user to click on to start their journey. However, we still need to figure out the colors that we want to use for the font. I had tried to make a border line which would indicate the end of the lines of that page. Also, we need to work on how we can use our button to navigate to the informative page.
-
-###Code Journal:
-####Week 0: Downloaded the tools needed to exceed in the class including the IDE (IntelliJ), github, git, and slack which is our messaging tool
-####Week 1: Added the greet code to our project and changed some names and variables to make it work for our project. Each person has their own greet code that corresponds to their name. This code included displayed text, a text box, and a submit button tied to the text box. The text in the displayed text changes to the text entered into the text box when the submit button is pressed. The default text before any buttons are pressed is hello world.
-####Week 2: We figured out how to code both vanta visual backgrounds and gradient/multicolored backgrounds and decided on using a multicolored background. This is because the vanta visuals become the top layer and block all menu items so drop-down menus do not work on pages with vanta visuals. We also discovered how to get rid of the lining of the header and merge it with the color of the rest of the site by taking away the “bg” statement at the top. Additionally, we learned how to code drop down menus to organize our program which are located both in the nav bar and in HTML files where users have a choice between multiple options within the page. We also figured out how to change the text size, color, and font and to set defaults of all 3 in the CSS of the base where it says so.
-
-###Friday’s learnings:
-####Friday 08/28: When we run our code, we are running a web application on our computer. If we get a notification saying the port/address is already in use, it means that the python is already running on our computer, so the port is taken (sort of like trying to plug something into a computer when there is already something plugged in where you want to plug into). To fix this issue, we need to go to the activity monitor for mac or task manager for windows and search python and force quit/kill it. This will stop the application from running on our computer, so we can rerun it through IntelliJ. Through this, we learned how to kill processes on our computer, such as python or IntelliJ. Processes are entities/instances of programs that run on the computer. Our browsers are also processed to interpret HTML. We also created a template project.html file to make coding the theme pages more efficient. 

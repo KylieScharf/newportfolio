@@ -8,15 +8,15 @@ https://github.com/KylieScharf/flask_portfolio/projects/2
 ### Inspiration for our website
 https://chooseyourstory.com/
 ### Roles
--Kylie: Scrum Master
--Daniel: Developer
--Hamza: Designer
--Kevin: Navigator
--Khushi: Technical Lead
-###Pair Share Journals
+1. Kylie: Scrum Master
+2. Daniel: Developer
+3. Hamza: Designer
+4. Kevin: Navigator
+5. Khushi: Technical Lead
+### Pair Share Journals
 -Kylie and Khushi: https://docs.google.com/document/d/1eyTgQhMv7jFi28SIGlwOs3k95a9KklfJFCS0O9pXCzA/edit
 -Danny, Hamza, and Kevin: https://docs.google.com/document/d/1fy-J_PVrvafykD-OTxMm-Pe0L_UKrYUTC4-DP4vGXEw/edit?usp=sharing
-###Objective
+### Objective
 Our website is going to be a design your own adventure website based on different wonders of the world. 
 These wonders will include Area 51, the Bermuda Triangle, and the Great Pyramid of Giza. 
 The user will be able to pick any wonder they want and will learn about that wonder with an informative page and then be directed to an adventure page.

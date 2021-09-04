@@ -1,23 +1,15 @@
 <!-- Extending the project layout, as this file will do minor customizations -->
 {% extends "layouts/project.html" %}
 
-<!- This variable sets name of browser tab  -->
+<!--This sets the variables in the predefined layout within the project.html file so that every page has the same layout and is efficient-->
+
 {% set project = "Bermuda Triangle" %}
-
-<!- This is a replacement block for Body in base.html -->
-    <!- Try building a new body here ->
-{% block body %}
-<div class="dark1border" style="text-align: center; margin: 20px 30px 20px 30px;
-		padding: 10px 10px; border-top-width: 0.5px; border-bottom-width: 0.5px; border-top-style: solid;
-		border-bottom-style: solid;">
-    <h1>Bermuda Triangle</h1>
-    <p>A place where ships and aircraft have mysteriously disappeared without any explanation, shows the mystery behind the Bermuda Triangle.</p>
-    <h1>Explore this adventure.</h1>
-
-    <div style="margin: 20px 20px 20px 20px;
-        padding:5px 5px; border-bottom-width: 0.5px; border-top-style: dashed;
-        border-bottom-style: solid;">
-    </div>
-    <button type="button" onclick="alert('Hello world!')">Start your adventure!</button>
-</div>
-{% endblock %}
+{% set para1 = "tbermuda triange huighs  hgdi g ieghg g hg ghghg g g g g g g g g g g g g g g g g  g g g g g g g g g ghug  igha ogh g g higu fg gh fg g fguhiu g fg fhgf ughfug fg " %}
+{% set para2 = "ghfghf g hgiuhf ghf  ghfig fi gf fhg fgh f fg   fhig fighdgu   ghfig di g g ghfig ig " %}
+{% set para3 = "the fox the fox the fox the foc gieghg g hg ghghg g g g g g g g g g g g g g g g g  g g g g g g g g g ghug  igha ogh g g higu fg gh fg g fguhiu g fg fhgf ughfug fg " %}
+{% set para4 = "the fox the fox the fox the foc gieghg g hg ghghg g g g g g g g g g g g g g g g g  g g g g g g g g g ghug  igha ogh g g higu fg gh fg g fguhiu g fg fhgf ughfug fg " %}
+{% set para5 = "the fox the fox the fox the foc gieghg g hg ghghg g g g g g g g g g g g g g g g g  g g g g g g g g g ghug  igha ogh g g higu fg gh fg g fguhiu g fg fhgf ughfug fg " %}
+{% set imageSRC = "/static/bermuda-triangle.jpeg" %}
+{% set imageWidth = "100" %}
+{% set imageHeight = "150" %}
+{% set HTML = "aboutDaniel" %}

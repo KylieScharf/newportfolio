@@ -3,9 +3,12 @@
 {% extends "layouts/base.html" %}
 
 {% block body %}
-{% block links %}
-    <!--this created the "wonders of the world" text displayed at the top right-->
-    <body style= "background: linear-gradient(55deg, palevioletred, mediumpurple, deepskyblue);">
+    {% block links %}
+        <!--this created the "wonders of the world" text displayed at the top right-->
+        {% block background %}
+            <body style= "background: linear-gradient(55deg, palevioletred, mediumpurple, deepskyblue);">
+        {% endblock %}
+
     <div class="container-fluid">
         <div class="row justify-content-end">
             <div class="col-4" style="text-align: right;">
@@ -16,50 +19,64 @@
             </div>
         </div>
 
-    <!--this dark1border creates a border/line above and below the project name to look nicer-->
-    <div class="dark1border" style="text-align: center; margin: 0px 30px 10px 30px;border-top-width: 0.5px; border-bottom-width: 0.5px; border-top-style: dashed; border-bottom-style: dashed;">
+        <!--this dark1border creates a border/line above and below the project name to look nicer-->
+        {% block header %}
+            <div class="dark1border" style="text-align: center; margin: 0px 30px 10px 30px;border-top-width: 0.5px; border-bottom-width: 0.5px; border-top-style: dashed; border-bottom-style: dashed;">
 
-        <div class="product" style="margin-top: 0%;">
-            <div class="row" style="padding: 0%; padding-left: 10%;">
+                <div class="product" style="margin-top: 0%;">
+                    <div class="row" style="padding: 0%; padding-left: 10%;">
 
-                <!--this sets the header to be whatever you set the project variable equal to in each HTML page-->
-                <div class="col-10" >
-                    <h1>{{ project }}</h1>
+                        <!--this sets the header to be whatever you set the project variable equal to in each HTML page-->
+                        <div class="col-10" >
+                            <h1>{{ project }}</h1>
+                        </div>
+
+                    </div>
+
                 </div>
+            </div>
+        {% endblock %}
 
+        <div class="center-block" style="margin: 2% 5% 5%; text-align:left;">
+
+            <!--this creates the basic text layout with indents and up to 5 paragraphs(and you can add more paragraphs easily)-->
+            <div class="container-fluid">
+                <div class="row">
+                    {% block text %}
+                        <div class="col-8">
+                            <p style="text-indent: 50px; font-size: 15px;"> {{ para1 }}</p>
+                            <p style="text-indent: 50px; font-size: 15px;"> {{ para2 }}</p>
+                            <p style="text-indent: 50px; font-size: 15px;"> {{ para3 }}</p>
+                            <p style="text-indent: 50px; font-size: 15px;"> {{ para4 }}</p>
+                            <p style="text-indent: 50px; font-size: 15px;"> {{ para5 }}</p>
+                        </div>
+                    {% endblock %}
+                    <!--this sets up the basic layout for the image and you set the imageSRC and imageText variable to the image file name for the SRC and what text you want it to display when it doesn't work for the imagetext-->
+                    {% block image %}
+                        <div class="col-4">
+                            <img src={{ imageSRC }} alt={{ imageText }} width={{ imageWidth }} height={{ imageHeight }}>
+                        </div>
+                    {% endblock %}
+
+                    {% block button %}
+                        <div class="col-4">
+                            <!--this creates the button to navigate to the choose your adventure page and you chose the HTML you want to go to next and set that to the HTML variable-->
+                            <button>
+                                <a class="button" onclick=href="/{{ HTML }}">Start your adventure!</a>
+                            </button>
+                        </div>
+                    {% endblock %}
+
+                    {% block button2 %}
+                    {% endblock %}
+
+                </div>
             </div>
 
         </div>
-    </div>
-
-    <div class="center-block" style="margin: 2% 5% 5%; text-align:left;">
-
-        <!--this creates the basic text layout with indents and up to 5 paragraphs(and you can add more paragraphs easily)-->
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-8">
-                    <p style="text-indent: 50px; font-size: 15px;"> {{ para1 }}</p>
-                    <p style="text-indent: 50px; font-size: 15px;"> {{ para2 }}</p>
-                    <p style="text-indent: 50px; font-size: 15px;"> {{ para3 }}</p>
-                    <p style="text-indent: 50px; font-size: 15px;"> {{ para4 }}</p>
-                    <p style="text-indent: 50px; font-size: 15px;"> {{ para5 }}</p>
-                </div>
-                <!--this sets up the basic layout for the image and you set the imageSRC and imageText variable to the image file name for the SRC and what text you want it to display when it doesn't work for the imagetext-->
-                <div class="col-4">
-                    <img src={{ imageSRC }} alt={{ imageText }} width={{ imageWidth }} height={{ imageHeight }}>
-                </div>
-                <div class="col-4">
-                <!--this creates the button to navigate to the choose your adventure page and you chose the HTML you want to go to next and set that to the HTML variable-->
-                <button>
-                    <a class="button" onclick=href="/{{ HTML }}">Start your adventure!</a>
-                </button>
-                </div>
-            </div>
-        </div>
-
-    </div>
     </div>
     </body>
 
+    {% endblock %}
 {% endblock %}
-{% endblock %}
+

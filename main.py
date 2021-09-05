@@ -36,6 +36,25 @@ def aboutDaniel():
 def aboutHamza():
     return render_template("aboutHamza.html")
 
+@app.route('/journal0/')
+def journal0():
+    return render_template("journal0.html")
+
+@app.route('/pairShareKK/')
+def pairShareKK():
+    return render_template("pairShareKK.html")
+
+@app.route('/pairShareKDH/')
+def pairShareKDH():
+    return render_template("pairShareKDH.html")
+
+@app.route('/technicalResearch/')
+def technicalResearch():
+    return render_template("technicalResearch.html")
+
+@app.route('/wireframe/')
+def wireframe():
+    return render_template("wireframe.html")
 
 @app.route('/bermudaTriangle/')
 def bermudaTriangle():

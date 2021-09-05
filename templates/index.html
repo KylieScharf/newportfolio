@@ -2,7 +2,7 @@
 <!--this sets up the home page of the site-->
 {% extends "layouts/base.html" %}
 
-{% set project = "Wonders Of The World!"%}
+{% set project = "The World's Wonders!"%}
 {% set github = "https://github.com/KylieScharf/flask_portfolio" %}
 
 {% block body %}
@@ -10,13 +10,18 @@
 
     <div class="container-fluid">
         <div class="product" style="margin-top: 1%;">
-            <div class="row" style="padding: 9%; padding-top: 1%; padding-bottom: 0%; padding-left: 10%;">
+            <div class="row" style="padding: 9%; padding-top: 1%; padding-bottom: 0%; padding-left: 0%;">
+                <div class="col-2">
+                    <button>
+                        <a class="button" onclick=href="https://github.com/KylieScharf/flask_portfolio">Our Github!</a>
+                    </button>
+                </div>
                 <div class="col-10" >
                     <h1>{{ project }}</h1>
                 </div>
                 <div class="col-2">
                     <button>
-                        <a class="button" onclick=href="https://github.com/KylieScharf/flask_portfolio">Our Github!</a>
+                        <a class="button" onclick=href="/wireframe">Wireframe!</a>
                     </button>
                 </div>
             </div>
@@ -32,7 +37,6 @@
             <p style="text-indent: 50px; font-size: 25px;"> Here, you will learn about 3 of the greatest wonders of the world: Area 51, The Great Pyramid of Giza, and The Bermuda Triangle. And it doesn't stop there! You will also be taken on an adventure within each wonder where you will get to decide your own fate by picking between different options within the adventure. You create your story!</p>
             <p style="text-indent: 50px; font-size: 25px;"> If you would like to begin, choose one of the 3 adventures to start by clicking on the "choose your destination" drop-down menu and selecting the wonder you are most interested in. Don't worry, you can always choose another adventure when you finish! Choose now to begin!</p>
         </div>
-
     </div>
 </div>
 

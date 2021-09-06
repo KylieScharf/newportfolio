@@ -1,12 +1,14 @@
 <!-- Extending the predefined project layout -->
-{% extends "layouts/base.html" %}
+{% extends "layouts/project.html" %}
 
-<!- This variable sets name of browser tab  -->
-{% set project = "About Kylie" %}
+<!--This sets the variables in the predefined layout within the project.html file so that every page has the same layout and is efficient-->
+{% set basename = "About Creators" %}
+{% set project = "Kylie Scharf" %}
+{% set para1 = "My name is Kylie Scharf and I’m a current senior at Del Norte high school. I currently live in San Diego, but I grew up in Beverly Massachusetts with my parents and my younger sister. I would say the most eventful thing that happened to me in Massachusetts was breaking my leg in kindergarten by jumping off a snow pile. This was my most painful experience so far but I got to miss a month of school because of it so it was a pretty fun time.  I moved to San Diego when I was 8 and am still here today. " %}
+{% set para2 = "In my free time, my favorite thing to do is ride my skateboard. I got my first board for my 14th birthday and have been skating ever since. I spend a lot of my time at the skate park by my house learning anything I can. I either go alone or with my younger sister who likes to learn tricks from me. I also love watching cooking shows. My favorite is the Great British Baking Show but I’ll spend hours watching any show on food network as long as it’s cooking-related. Although I do like coding, my favorite subject is and has always been math. I plan to major in applied math or accounting in college." %}
+{% set imageSRC = "/static/aKylie.jpg" %}
+{% set imageWidth = "425" %}
+{% set imageHeight = "425" %}
 
-<!- This is a replacement block for Body in base.html -->
-{% block body %}
-    <!- Try building a new body here ->
-    <h1>{{ project }}</h1>
-    <p>Tech Talk 1 - Body Stub</p>
+{% block button %}
 {% endblock %}

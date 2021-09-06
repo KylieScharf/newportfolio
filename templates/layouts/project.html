@@ -3,7 +3,6 @@
 {% extends "layouts/base.html" %}
 
 {% block body %}
-    {% block links %}
         <!--this created the "wonders of the world" text displayed at the top right-->
         {% block background %}
             <body style= "background: linear-gradient(55deg, palevioletred, mediumpurple, deepskyblue);">
@@ -37,18 +36,18 @@
             </div>
         {% endblock %}
 
-        <div class="center-block" style="margin: 2% 5% 5%; text-align:left;">
+        <div class="center-block" style="margin: 2% 0% 5%; text-align:left;">
 
             <!--this creates the basic text layout with indents and up to 5 paragraphs(and you can add more paragraphs easily)-->
             <div class="container-fluid">
                 <div class="row">
                     {% block text %}
                         <div class="col-8">
-                            <p style="text-indent: 50px; font-size: 15px;"> {{ para1 }}</p>
-                            <p style="text-indent: 50px; font-size: 15px;"> {{ para2 }}</p>
-                            <p style="text-indent: 50px; font-size: 15px;"> {{ para3 }}</p>
-                            <p style="text-indent: 50px; font-size: 15px;"> {{ para4 }}</p>
-                            <p style="text-indent: 50px; font-size: 15px;"> {{ para5 }}</p>
+                            <p style="text-indent: 50px; font-size: 18px;"> {{ para1 }}</p>
+                            <p style="text-indent: 50px; font-size: 18px;"> {{ para2 }}</p>
+                            <p style="text-indent: 50px; font-size: 18px;"> {{ para3 }}</p>
+                            <p style="text-indent: 50px; font-size: 18px;"> {{ para4 }}</p>
+                            <p style="text-indent: 50px; font-size: 18px;"> {{ para5 }}</p>
                         </div>
                     {% endblock %}
                     <!--this sets up the basic layout for the image and you set the imageSRC and imageText variable to the image file name for the SRC and what text you want it to display when it doesn't work for the imagetext-->
@@ -76,7 +75,5 @@
         </div>
     </div>
     </body>
-
-    {% endblock %}
 {% endblock %}
 

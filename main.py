@@ -6,16 +6,13 @@ app = Flask(__name__)
 
 # The following create new routes for the top navigation bar buttons and must be connected to an HTML page
 # connects default URL to render index.html
+#home page
 @app.route('/', methods=['GET', 'POST'])
 def index():
     return render_template("index.html")
+#end home page
 
-
-# connects /kangaroos path to render greatPyramid.html
-@app.route('/greatPyramid/')
-def greatPyramid():
-    return render_template("greatPyramid.html")
-
+#about pages
 @app.route('/aboutKylie/')
 def aboutKylie():
     return render_template("aboutKylie.html")
@@ -35,7 +32,9 @@ def aboutDaniel():
 @app.route('/aboutHamza/')
 def aboutHamza():
     return render_template("aboutHamza.html")
+#end about pages
 
+#technical info drop down
 @app.route('/journal0/')
 def journal0():
     return render_template("journal0.html")
@@ -56,15 +55,27 @@ def technicalResearch():
 def wireframe():
     return render_template("wireframe.html")
 
-@app.route('/bermudaTriangle/')
-def bermudaTriangle():
-    return render_template("bermudaTriangle.html")
+@app.route('/brainwrite/')
+def brainwrite():
+    return render_template("brainwrite.html")
+#end technical info drop down
 
+#theme pages
+# connects /greatPyramid path to render greatPyramid.html
+@app.route('/greatPyramid/')
+def greatPyramid():
+    return render_template("greatPyramid.html")
 
 @app.route('/area51/')
 def area51():
     return render_template("Area51.html")
 
+@app.route('/bermudaTriangle/')
+def bermudaTriangle():
+    return render_template("bermudaTriangle.html")
+#end theme pages
+
+#greet pages
 @app.route('/kylie/', methods=['GET', 'POST'])
 def kylie():
     # submit button has been pushed
@@ -117,6 +128,7 @@ def kevin():
             return render_template("kevin.html", kevinDisplayName=kevinInput)
     # starting and empty input default
     return render_template("kevin.html", kevinDisplayName="World")
+#end greet pages
 
 
 

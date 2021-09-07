@@ -2,11 +2,9 @@
 <!--this sets up the basic layout for the theme page HTML files-->
 {% extends "layouts/base.html" %}
 
+<body>
 {% block body %}
         <!--this created the "wonders of the world" text displayed at the top right-->
-        {% block background %}
-            <body style= "background: linear-gradient(55deg, palevioletred, mediumpurple, deepskyblue);">
-        {% endblock %}
 
     <div class="container-fluid">
         <div class="row justify-content-end">
@@ -61,12 +59,18 @@
                         <div class="col-4">
                             <!--this creates the button to navigate to the choose your adventure page and you chose the HTML you want to go to next and set that to the HTML variable-->
                             <button>
-                                <a class="button" onclick=href="/{{ HTML }}">Start your adventure!</a>
+                                <a class="button" onclick=href="/{{ HTML }}">{{ buttonText }}!</a>
                             </button>
                         </div>
                     {% endblock %}
 
                     {% block button2 %}
+                        <div class="col-4">
+                            <!--this creates the button to navigate to the choose your adventure page and you chose the HTML you want to go to next and set that to the HTML variable-->
+                            <button>
+                                <a class="button" onclick=href="/{{ HTML2 }}">{{ buttonText2 }}</a>
+                            </button>
+                        </div>
                     {% endblock %}
 
                 </div>
@@ -74,6 +78,10 @@
 
         </div>
     </div>
-    </body>
+{% endblock %}
+</body>
+
+{% block background %}
+    <body style= "background: linear-gradient(55deg, palevioletred, mediumpurple, deepskyblue);">
 {% endblock %}
 

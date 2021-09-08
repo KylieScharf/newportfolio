@@ -13,90 +13,90 @@ def index():
 #end home page
 
 #about pages
-@app.route('/aboutKylie/')
+@app.route('/aboutPages/aboutKylie/')
 def aboutKylie():
-    return render_template("aboutKylie.html")
+    return render_template("aboutPages/aboutKylie.html")
 
-@app.route('/aboutKhushi/')
+@app.route('/aboutPages/aboutKhushi/')
 def aboutKhushi():
-    return render_template("aboutKhushi.html")
+    return render_template("aboutPages/aboutKhushi.html")
 
-@app.route('/aboutKevin/')
+@app.route('/aboutPages/aboutKevin/')
 def aboutKevin():
-    return render_template("aboutKevin.html")
+    return render_template("aboutPages/aboutKevin.html")
 
-@app.route('/aboutDaniel/')
+@app.route('/aboutPages/aboutDaniel/')
 def aboutDaniel():
-    return render_template("aboutDaniel.html")
+    return render_template("aboutPages/aboutDaniel.html")
 
-@app.route('/aboutHamza/')
+@app.route('/aboutPages/aboutHamza/')
 def aboutHamza():
-    return render_template("aboutHamza.html")
+    return render_template("aboutPages/aboutHamza.html")
 #end about pages
 
 #technical info drop down
-@app.route('/journal0/')
+@app.route('/technicalInfo/journal0/')
 def journal0():
-    return render_template("journal0.html")
+    return render_template("technicalInfo/journal0.html")
 
-@app.route('/pairShareKK/')
+@app.route('/technicalInfo/pairShareKK/')
 def pairShareKK():
-    return render_template("pairShareKK.html")
+    return render_template("technicalInfo/pairShareKK.html")
 
-@app.route('/pairShareKDH/')
-def pairShareKDH():
-    return render_template("pairShareKDH.html")
+@app.route('/technicalInfo/designInfo/')
+def designInfo():
+    return render_template("technicalInfo/designInfo.html")
 
-@app.route('/technicalResearch/')
+@app.route('/technicalInfo/technicalResearch/')
 def technicalResearch():
-    return render_template("technicalResearch.html")
+    return render_template("technicalInfo/technicalResearch.html")
 
-@app.route('/wireframe/')
+@app.route('/technicalInfo/wireframe/')
 def wireframe():
-    return render_template("wireframe.html")
+    return render_template("technicalInfo/wireframe.html")
 
-@app.route('/brainwrite/')
+@app.route('/technicalInfo/brainwrite/')
 def brainwrite():
-    return render_template("brainwrite.html")
+    return render_template("technicalInfo/brainwrite.html")
 #end technical info drop down
 
 #theme pages
 # connects /greatPyramid path to render greatPyramid.html
-@app.route('/greatPyramid/')
+@app.route('/themePages/greatPyramid/')
 def greatPyramid():
-    return render_template("greatPyramid.html")
+    return render_template("themePages/greatPyramid.html")
 
-@app.route('/area51/')
-def area51():
-    return render_template("Area51.html")
+@app.route('/themePages/area51/')
+def Area51():
+    return render_template("themePages/Area51.html")
 
-@app.route('/bermudaTriangle/')
+@app.route('/themePages/bermudaTriangle/')
 def bermudaTriangle():
-    return render_template("bermudaTriangle.html")
+    return render_template("themePages/bermudaTriangle.html")
 #end theme pages
 
 #greet pages
-@app.route('/kylie/', methods=['GET', 'POST'])
+@app.route('/greet/kylie/', methods=['GET', 'POST'])
 def kylie():
     # submit button has been pushed
     if request.form: #if the submit button has been pressed
         kylieInput = request.form.get("kylieForm") #store the input into a variable
         if len(kylieInput) != 0:  # if the length of the input stored in the variable is greater than 0/field has content
-            return render_template("kylie.html", kylieDisplayName=kylieInput) #render the same page and set the variable already created in jinja to whatever the user inputed-->
+            return render_template("greet/kylie.html", kylieDisplayName=kylieInput) #render the same page and set the variable already created in jinja to whatever the user inputed-->
     # starting and empty input default
-    return render_template("kylie.html", kylieDisplayName="World")#if nothing has happened render the page and set the variable in jinja to a default value "world"-->
+    return render_template("greet/kylie.html", kylieDisplayName="World")#if nothing has happened render the page and set the variable in jinja to a default value "world"-->
 
-@app.route('/daniel/', methods=['GET', 'POST'])
+@app.route('/greet/daniel/', methods=['GET', 'POST'])
 def daniel():
     # submit button has been pushed
     if request.form:
         danielInput = request.form.get("danielForm")
         if len(danielInput) != 0:  # input field has content
-            return render_template("daniel.html", danielDisplayName=danielInput)
+            return render_template("greet/daniel.html", danielDisplayName=danielInput)
     # starting and empty input default
-    return render_template("daniel.html", danielDisplayName="World")
+    return render_template("greet/daniel.html", danielDisplayName="World")
 
-@app.route('/khushi/', methods=['GET', 'POST'])
+@app.route('/greet/khushi/', methods=['GET', 'POST'])
 def khushi():
     # submit button has been pushed
     print("1")
@@ -105,29 +105,29 @@ def khushi():
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
             print("3")
-            return render_template("khushi.html", name1=name)
+            return render_template("greet/khushi.html", name1=name)
     # starting and empty input default
-    return render_template("khushi.html", name1="World")
+    return render_template("greet/khushi.html", name1="World")
 
-@app.route('/hamza/', methods=['GET', 'POST'])
+@app.route('/greet/hamza/', methods=['GET', 'POST'])
 def hamza():
     # submit button has been pushed
     if request.form:
         hamzaInput = request.form.get("hamzaForm")
         if len(hamzaInput) != 0:  # input field has content
-            return render_template("hamza.html", hamzaDisplayName=hamzaInput)
+            return render_template("greet/hamza.html", hamzaDisplayName=hamzaInput)
     # starting and empty input default
-    return render_template("hamza.html", hamzaDisplayName="World")
+    return render_template("greet/hamza.html", hamzaDisplayName="World")
 
-@app.route('/kevin/', methods=['GET', 'POST'])
+@app.route('/greet/kevin/', methods=['GET', 'POST'])
 def kevin():
     # submit button has been pushed
     if request.form:
         kevinInput = request.form.get("kevinForm")
         if len(kevinInput) != 0:  # input field has content
-            return render_template("kevin.html", kevinDisplayName=kevinInput)
+            return render_template("greet/kevin.html", kevinDisplayName=kevinInput)
     # starting and empty input default
-    return render_template("kevin.html", kevinDisplayName="World")
+    return render_template("greet/kevin.html", kevinDisplayName="World")
 #end greet pages
 
 

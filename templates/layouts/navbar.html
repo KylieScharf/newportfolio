@@ -16,11 +16,11 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             Choose Your Destination
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/area51">Area 51</a>
+            <a class="dropdown-item" href="{{ url_for('Area51') }}">Area 51</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/greatPyramid">The Great Pyramid</a>
+            <a class="dropdown-item" href="{{ url_for('greatPyramid') }}">The Great Pyramid</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/bermudaTriangle">The Bermuda Triangle</a>
+            <a class="dropdown-item" href="{{ url_for('bermudaTriangle') }}">The Bermuda Triangle</a>
             <div class="dropdown-divider"></div>
         </div>
     </li>
@@ -30,27 +30,19 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             Technical Info
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/kylie">Kylie Lab 1</a>
+            <a class="dropdown-item" href="{{ url_for('kylie') }}">Kylie Lab 1</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/daniel">Daniel Lab 1</a>
+            <a class="dropdown-item" href="{{ url_for('daniel') }}">Daniel Lab 1</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/khushi">Khushi Lab 1</a>
+            <a class="dropdown-item" href="{{ url_for('khushi') }}">Khushi Lab 1</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/hamza">Hamza Lab 1</a>
+            <a class="dropdown-item" href="{{ url_for('hamza') }}">Hamza Lab 1</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/kevin">Kevin Lab 1</a>
+            <a class="dropdown-item" href="{{ url_for('kevin') }}">Kevin Lab 1</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/journal0">Journal 0</a>
+            <a class="dropdown-item" href="{{ url_for('designInfo') }}">Journals, Wireframe, and Brainwrite</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/pairShareKK">Pair Share Journal: Kylie and Khushi</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/pairShareKDH">Pair Share Journal: Kevin, Daniel, and Hamza</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/technicalResearch">Technical Research</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/wireframe">Wireframe</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/brainwrite">Brainwrite</a>
+            <a class="dropdown-item" href="{{ url_for('technicalResearch') }}">Journal0, Project Plan, and Technical Research</a>
         </div>
     </li>
     <li class="nav-item dropdown">
@@ -60,13 +52,13 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="{{ url_for('aboutKylie') }}">About Kylie </a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/aboutDaniel">About Daniel </a>
+            <a class="dropdown-item" href="{{ url_for('aboutDaniel') }}">About Daniel </a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/aboutKhushi">About Khushi </a>
+            <a class="dropdown-item" href="{{ url_for('aboutKhushi') }}">About Khushi </a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/aboutKevin">About Kevin </a>
+            <a class="dropdown-item" href="{{ url_for('aboutKevin') }}">About Kevin </a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/aboutHamza">About Hamza </a>
+            <a class="dropdown-item" href="{{ url_for('aboutHamza') }}">About Hamza </a>
         </div>
     </li>
         </div>

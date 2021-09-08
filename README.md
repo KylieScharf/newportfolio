@@ -25,7 +25,7 @@ In this adventure page they will go through a story where they will be able to p
 ## Sprint 3,4 (9/7-9/17)
 Table Of Contents
 1. Self Grades https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing
-2. Our Design Progress https://docs.google.com/document/d/1TDMcFtOi-Eh1hm8yJ1fT1G0TcEjQq1bJIr351FcD-zw/edit?usp=sharing
+2. 
 3. Code Journals and Weekly Learnings https://docs.google.com/document/d/1Xgt4rzVnuPTBmNP03dyNoXvLqfYJEjnjjZVCNtdme4A/edit?usp=sharing
 4. Issues
 
@@ -35,26 +35,20 @@ Notes
 ## Sprint 1,2 (8/16-9/3) 
 Table Of Contents
 1. Self Grades https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing
-2. Our Design Progress: https://docs.google.com/document/d/1TDMcFtOi-Eh1hm8yJ1fT1G0TcEjQq1bJIr351FcD-zw/edit?usp=sharing
-3. Code Journals and Weekly learnings: https://docs.google.com/document/d/1Xgt4rzVnuPTBmNP03dyNoXvLqfYJEjnjjZVCNtdme4A/edit?usp=sharing
-4. About Me Kylie https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/aboutKylie.html
-5. About Me Kevin https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/aboutKevin.html
-6. About Me Khushi https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/aboutKhushi.html
-7. About Me Daniel https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/aboutDaniel.html
-8. About Me Hamza https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/aboutHamza.html
-9. Kevin Greet https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/kevin.html
-10. Kylie Greet https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/kylie.html
-11. Daniel Greet https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/daniel.html
-12. Khushi Greet https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/khushi.html
-13. Hamza Greet https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/hamza.html
-14. Project.html changes/lazy coding https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/layouts/project.html
-15. Area 51 page https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/Area51.html
-16. Bermuda Triangle Page https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/bermudaTriangle.html
-17. Great Pyramid Page https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/greatPyramid.html
-18. Navbar Dropdowns https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/layouts/navbar.html
-19. Home/index page https://github.com/KylieScharf/flask_portfolio/blob/144e6890e33552ddba5e544fdeaf44155bda68de/templates/hamza.html
-20. Sprint 1,2 overview video https://drive.google.com/file/d/15xS0Bw-z90teq21cxNn715eoTnT3adC8/view
-21. Journal 0 Video https://drive.google.com/file/d/11eVvCi-PXmcRM0L1WIbLWY5jecKcZktF/view
+2. Drop-down for theme pages https://github.com/KylieScharf/flask_portfolio/issues/19
+3. Template page for "lazy coding" https://github.com/KylieScharf/flask_portfolio/issues/18
+4. Greet pages https://github.com/KylieScharf/flask_portfolio/issues/3
+5. Drop-down for about-you pages https://github.com/KylieScharf/flask_portfolio/issues/7
+6. Stub pages https://github.com/KylieScharf/flask_portfolio/issues/11
+7. Mini-lab drop down https://github.com/KylieScharf/flask_portfolio/issues/6
+8. Background https://github.com/KylieScharf/flask_portfolio/issues/8
+9. Finalize Wireframes https://github.com/KylieScharf/flask_portfolio/issues/4
+10. Edit Read Me https://github.com/KylieScharf/flask_portfolio/issues/5
+11. Design Home Page https://github.com/KylieScharf/flask_portfolio/issues/13
+12. Our Design Progress: https://docs.google.com/document/d/1TDMcFtOi-Eh1hm8yJ1fT1G0TcEjQq1bJIr351FcD-zw/edit?usp=sharing
+13. Code Journals and Weekly learnings: https://docs.google.com/document/d/1Xgt4rzVnuPTBmNP03dyNoXvLqfYJEjnjjZVCNtdme4A/edit?usp=sharing
+14. Sprint 1,2 overview video https://drive.google.com/file/d/15xS0Bw-z90teq21cxNn715eoTnT3adC8/view
+15. Journal 0 Video https://drive.google.com/file/d/11eVvCi-PXmcRM0L1WIbLWY5jecKcZktF/view
 
 Notes:
 1. General Notes: https://docs.google.com/document/d/1Sk4kdFS8o3iUE9MSoS8R0oeG13owbyw91XDAEudpfVo/edit?usp=sharing

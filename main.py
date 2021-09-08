@@ -35,14 +35,6 @@ def aboutHamza():
 #end about pages
 
 #technical info drop down
-@app.route('/technicalInfo/journal0/')
-def journal0():
-    return render_template("technicalInfo/journal0.html")
-
-@app.route('/technicalInfo/pairShareKK/')
-def pairShareKK():
-    return render_template("technicalInfo/pairShareKK.html")
-
 @app.route('/technicalInfo/designInfo/')
 def designInfo():
     return render_template("technicalInfo/designInfo.html")
@@ -51,14 +43,6 @@ def designInfo():
 @app.route('/technicalInfo/technicalResearch/')
 def technicalResearch():
     return render_template("technicalInfo/technicalResearch.html")
-
-@app.route('/technicalInfo/wireframe/')
-def wireframe():
-    return render_template("technicalInfo/wireframe.html")
-
-@app.route('/technicalInfo/brainwrite/')
-def brainwrite():
-    return render_template("technicalInfo/brainwrite.html")
 #end technical info drop down
 
 #theme pages
@@ -130,6 +114,20 @@ def kevin():
     # starting and empty input default
     return render_template("greet/kevin.html", kevinDisplayName="World")
 #end greet pages
+
+#A51 stories
+@app.route('/A51stories/A51story1/')
+def A51story1():
+    return render_template("A51stories/A51story1.html")
+
+@app.route('/A51stories/A51story11/')
+def A51story11():
+    return render_template("A51stories/A51story11.html")
+
+@app.route('/A51stories/A51story12/')
+def A51story12():
+    return render_template("A51stories/A51story12.html")
+
 
 
 

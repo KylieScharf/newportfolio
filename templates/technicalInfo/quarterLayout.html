@@ -1,4 +1,5 @@
 {% extends "layouts/base.html" %}
+<!-- creating a layout for equal sized columns -->
 <body>
 {% block body %}
     <div class="container-fluid">
@@ -7,7 +8,7 @@
                 <div class="table">
                     <tr>
                         {% for item in src %}
-                            <td><iframe src="{{ item }}" width="45%" height="300" allow="autoplay"></iframe>
+                            <td><iframe src="{{ item }}" class="half-height" width="45%" allow="autoplay"></iframe>
                             </td>
                         {% endfor %}
                     </tr>

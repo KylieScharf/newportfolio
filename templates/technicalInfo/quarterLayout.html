@@ -1,0 +1,19 @@
+{% extends "layouts/base.html" %}
+<body>
+{% block body %}
+    <div class="container-fluid">
+        <div class="row" style="text-align:center">
+            <div class="col-12">
+                <div class="table">
+                    <tr>
+                        {% for item in src %}
+                            <td><iframe src="{{ item }}" width="45%" height="300" allow="autoplay"></iframe>
+                            </td>
+                        {% endfor %}
+                    </tr>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+</body>

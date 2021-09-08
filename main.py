@@ -47,6 +47,7 @@ def pairShareKK():
 def designInfo():
     return render_template("technicalInfo/designInfo.html")
 
+
 @app.route('/technicalInfo/technicalResearch/')
 def technicalResearch():
     return render_template("technicalInfo/technicalResearch.html")

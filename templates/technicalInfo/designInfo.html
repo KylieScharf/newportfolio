@@ -1,26 +1,34 @@
 {% extends "layouts/base.html" %}
+{% set n = 1 %}
+{% set src1 = "https://docs.google.com/document/d/1fy-J_PVrvafykD-OTxMm-Pe0L_UKrYUTC4-DP4vGXEw/edit?usp=sharing" %}
+{% set src2 = "https://docs.google.com/document/d/1eyTgQhMv7jFi28SIGlwOs3k95a9KklfJFCS0O9pXCzA/edit?usp=sharing" %}
+{% set src3 = "https://docs.google.com/document/d/1t8cRoSjdcl2BHJ1eOqjS7T4RPHXwugz9jqXOsz4qo_w/edit?usp=sharing" %}
+{% set src4 = "https://docs.google.com/document/d/1UP5qIdkQOmEhP3YhnNH2CsiziexECjVGex2CcQaKxX0/edit?usp=sharing" %}
+
 <body>
 {% block body %}
-    <div class="container-fluid">
-    <div class="product" style="margin:0px 0px 0px 0px">
+<div class="container-fluid">
     <div class="row">
-
-        <div class="col-6">
-            <iframe src="https://docs.google.com/document/d/1fy-J_PVrvafykD-OTxMm-Pe0L_UKrYUTC4-DP4vGXEw/edit?usp=sharing" width="100%" height="275" allow="autoplay"></iframe>
+        <div class="col-12">
+            <div class="table">
+                <tr>
+                    {% for i in range(n) %}
+                    <td><iframe src="{{ src1 }}" width="45%" height="auto" allow="autoplay"></iframe>
+                    </td>
+                    <td><iframe src="{{ src2 }}" width="45%" height=auto" allow="autoplay"></iframe>
+                    </td>
+                    <td><iframe src="{{ src3 }}" width="45%" height="auto" allow="autoplay"></iframe>
+                    </td>
+                    <td><iframe src="{{ src4 }}" width="45%" height="auto" allow="autoplay"></iframe>
+                    </td>
+                    {% endfor %}
+                </tr>
+            </div>
         </div>
-        <div class="col-6">
-            <iframe src="https://docs.google.com/document/d/1eyTgQhMv7jFi28SIGlwOs3k95a9KklfJFCS0O9pXCzA/edit?usp=sharing" width="100%" height=275" allow="autoplay"></iframe>
-        </div>
     </div>
-<div class="row">
-    <div class="col-6">
-        <iframe src="https://docs.google.com/document/d/1t8cRoSjdcl2BHJ1eOqjS7T4RPHXwugz9jqXOsz4qo_w/edit?usp=sharing" width="100%" height="275" allow="autoplay"></iframe>
-    </div>
-    <div class="col-6">
-        <iframe src="https://docs.google.com/document/d/1UP5qIdkQOmEhP3YhnNH2CsiziexECjVGex2CcQaKxX0/edit?usp=sharing" width="100%" height="275" allow="autoplay"></iframe>
-    </div>
-</div>
-</div>
 </div>
 {% endblock %}
 </body>
+
+
+

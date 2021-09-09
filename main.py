@@ -129,6 +129,9 @@ def A51story12():
     return render_template("A51stories/A51story12.html")
 
 
+@app.route('/binary/')
+def binary():
+    return render_template("binary.html")
 
 
 # runs the application on the development server

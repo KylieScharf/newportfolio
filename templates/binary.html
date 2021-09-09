@@ -6,7 +6,6 @@
            use HTML Input Form in Frontend, ie toward top of Page
            send initial value and updated values to form via Python render_template -->
 <!-- Hack: use 8 as default -->
-{% set BITS = 8 %}
 {% set MAX = ((2 ** BITS) - 1) %}
 
 <!-- Hack: Set bulbs and pass as variables via Python render_template
@@ -19,6 +18,23 @@
 
 {% block meta %}
     <title>Binary page</title>
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:left;">
+
+    <div class="container-fluid">
+    <div class="row" style="padding-left:0%;">
+    <!--this creates the text displayed at the top that changed and sets the thing to be changed to a variable so you can set it to different values in python so it can change-->
+    <div class="col-12">
+        <!--this form tag creates the search bar that is tied to a label which is displayed text and to a submit button so the user can input information-->
+        <form action="/binary/" id="binaryForm" method="POST" >
+            <label for="binaryForm">Set Number of Bits</label>
+            <input name="bits" id="bits">
+            <input type="submit" value="Greetings!">
+        </form>
+    </div>
+    </div>
+    </div>
+    </div>
+
     <script>
         const BITS = '{{ BITS }}'; let max = '{{ MAX }}'; let MAX = parseInt(max, 10);
         // return string with current value of each bit

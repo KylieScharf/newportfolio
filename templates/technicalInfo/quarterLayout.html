@@ -11,7 +11,6 @@
                             {% if loop.index is not divisibleby 2 %}
                                 <tr>
                             {% endif %}
-                            <label>{{ text[loop.index0] }}</label>
                             <td><iframe src="{{ item }}" class="half-height" width="45%" allow="autoplay"></iframe>
                             </td>
                             {% if loop.index is divisibleby 2 or loop.length == loop.index %}

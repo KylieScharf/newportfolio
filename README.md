@@ -20,17 +20,25 @@ https://chooseyourstory.com/
 Our website is going to be a design your own adventure website based on different wonders of the world. 
 These wonders will include Area 51, the Bermuda Triangle, and the Great Pyramid of Giza. 
 The user will be able to pick any wonder they want and will learn about that wonder with an informative page and then be directed to an adventure page.
-In this adventure page they will go through a story where they will be able to pick how they react to different situation within the story. 
+In this adventure page they will go through a story where they will be able to pick how they react to different situation within the story.
 
-## Sprint 3,4 (9/7-9/17)
+## Sprint 3,4 Week 3 ([9/7-9/10 self grades](https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing))
 Table Of Contents
-1. Self Grades https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing
-2. 
-3. Code Journals and Weekly Learnings https://docs.google.com/document/d/1Xgt4rzVnuPTBmNP03dyNoXvLqfYJEjnjjZVCNtdme4A/edit?usp=sharing
-4. Issues
+1. Write what you want in the about you https://github.com/KylieScharf/flask_portfolio/issues/10
+2. Add blocks to project.html https://github.com/KylieScharf/flask_portfolio/issues/29
+3. Add text and images to theme pages https://github.com/KylieScharf/flask_portfolio/issues/30
+4. Reorganize HTML files https://github.com/KylieScharf/flask_portfolio/issues/20
+5. Add wireframe embed to home page https://github.com/KylieScharf/flask_portfolio/issues/26
+6. Finalize research on the 3 wonders https://github.com/KylieScharf/flask_portfolio/issues/24
+7. Write some stories for each wonder https://github.com/KylieScharf/flask_portfolio/issues/27
+8. Complete weekly pair-share journals https://github.com/KylieScharf/flask_portfolio/issues/31
+9. Replace links in mini-lab drop-down with embeds https://github.com/KylieScharf/flask_portfolio/issues/28
+10. Make CSS/style chages https://github.com/KylieScharf/flask_portfolio/issues/22
+11. Edit read me https://github.com/KylieScharf/flask_portfolio/issues/21
 
 Notes
-1. 
+1. Kylie-binary notes https://docs.google.com/document/d/1GWPAkqgnyXdx0KQonyZHwziSlu-xgMSj0kqAocDzLS8/edit?usp=sharing
+2. Kylie-harvard vid notes https://docs.google.com/document/d/1qCGaHVhgTabXFHMAZTSckMN52-yQoiZRKd950R7rkKY/edit?usp=sharing
 
 ## Sprint 1,2 (8/16-9/3) 
 Table Of Contents

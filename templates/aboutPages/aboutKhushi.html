@@ -1,12 +1,18 @@
 <!-- Extending the predefined project layout -->
-{% extends "layouts/base.html" %}
+{% extends "layouts/project.html" %}
 
-<!- This variable sets name of browser tab  -->
-{% set project = "About Khushi" %}
+<!--This sets the variables in the predefined layout within the project.html file so that every page has the same layout and is efficient-->
+{% set project = "Khushi Bagri" %}
+{% set para1 = "My name is Khushi Bagri and I'm a senior this school year. I live in SoCal where San Diego is one of the sunniest cities in the country. I have been to 4 other states besides California for travel and tourist visits. Also, I have been to only two other countries, which are India and Mexico. I love to travel, so I'm looking forward to traveling within Asia, Europe, and South America. " %}
+{% set para2 = "Hi, I'm Khushi! Some of my hobbies are to dance, listen to music, and practice cursive writing. My extracurriculars include doing Kathak dance from an Indian classical school here in San Diego, I'm an active member of Del Norte Key Club, and I'm a Youth Ambassador from Akshaya Patra San Diego Chapter. Also, I have been part of a team at Del Norte Girls in Computer Science Club during my sophomore year. I plan to major in Computer Science in college and further study in Computer Engineering to solidify my software skills." %}
+{% set imageSRC = "/static/happykhushi.jpg" %}
+{% set imageWidth = "425" %}
+{% set imageHeight = "425" %}
 
-<!- This is a replacement block for Body in base.html -->
-{% block body %}
-    <!- Try building a new body here ->
-    <h1>{{ project }}</h1>
-    <p>Tech Talk 1 - Body Stub</p>
+<body>
+{% block button %}
 {% endblock %}
+
+{% block button2 %}
+{% endblock %}
+</body>

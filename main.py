@@ -129,6 +129,15 @@ def A51story12():
     return render_template("A51stories/A51story12.html")
 
 
+@app.route('/binary/', methods=['GET', 'POST'])
+def binary():
+    if request.form:
+        bitNumber = request.form.get("bits")
+        if len(bitNumber) != 0:  # input field has content
+            return render_template("binary.html", BITS=int(bitNumber))
+    # starting and empty input default
+    return render_template("binary.html", BITS=8)
+
 
 
 # runs the application on the development server

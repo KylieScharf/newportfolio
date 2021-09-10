@@ -1,4 +1,5 @@
 {% extends "layouts/base.html" %}
+{% set n = 4  %}
 <!-- creating a layout for equal sized columns -->
 <body>
 {% block body %}
@@ -6,12 +7,16 @@
         <div class="row" style="text-align:center">
             <div class="col-12">
                 <div class="table">
-                    <tr>
-                        {% for item in src %}
+                        {% for item in src%}
+                            {% if loop.index is not divisibleby 2 %}
+                                <tr>
+                            {% endif %}
                             <td><iframe src="{{ item }}" class="half-height" width="45%" allow="autoplay"></iframe>
                             </td>
+                            {% if loop.index is divisibleby 2 or loop.length == loop.index %}
+                                </tr>
+                            {% endif %}
                         {% endfor %}
-                    </tr>
                 </div>
             </div>
         </div>

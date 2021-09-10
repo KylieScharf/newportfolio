@@ -5,22 +5,9 @@
 https://github.com/KylieScharf/flask_portfolio
 ### Scrum Board:
 https://github.com/KylieScharf/flask_portfolio/projects/2
-### Inspiration for our website
-https://chooseyourstory.com/
-### Roles
-1. Kylie: Scrum Master
-2. Daniel: Developer
-3. Hamza: Designer
-4. Kevin: Navigator
-5. Khushi: Technical Lead
 ### Pair Share Journals
 1. Kylie and Khushi: https://docs.google.com/document/d/1eyTgQhMv7jFi28SIGlwOs3k95a9KklfJFCS0O9pXCzA/edit
 2. Danny, Hamza, and Kevin: https://docs.google.com/document/d/1fy-J_PVrvafykD-OTxMm-Pe0L_UKrYUTC4-DP4vGXEw/edit?usp=sharing
-### Objective
-Our website is going to be a design your own adventure website based on different wonders of the world. 
-These wonders will include Area 51, the Bermuda Triangle, and the Great Pyramid of Giza. 
-The user will be able to pick any wonder they want and will learn about that wonder with an informative page and then be directed to an adventure page.
-In this adventure page they will go through a story where they will be able to pick how they react to different situation within the story.
 
 ## Team Members
 | Team Member Name        | Github ID     | Github Profile  | Filtered Issues | Filtered Scrum Board | Filtered Committs |
@@ -30,6 +17,20 @@ In this adventure page they will go through a story where they will be able to p
 | Daniel     | Danny4w | [Daniel Profile](https://github.com/Danny4w)| [Daniel Issues](https://github.com/KylieScharf/flask_portfolio/issues/assigned/Danny4w) |  [Daniel Scrum Board](https://github.com/KylieScharf/flask_portfolio/projects/2?card_filter_query=assignee%3ADanny4w)| [Daniel Commits](https://github.com/KylieScharf/flask_portfolio/commits?author=Danny4w) |
 | Hamza    | hamzahakak | [Hamza Profile](https://github.com/hamzahakak) | [Hamza Issues](https://github.com/KylieScharf/flask_portfolio/issues/assigned/hamzahakak) |  [Hamza Scrum Board](https://github.com/KylieScharf/flask_portfolio/projects/2?card_filter_query=assignee%3Ahamzahakak)| [Hamza Commits](https://github.com/KylieScharf/flask_portfolio/commits?author=hamzahakak) |
 | Kevin     | Kevinc023032 | [Kevin Profile](https://github.com/Kevinc023032) | [Kevin Issues](https://github.com/KylieScharf/flask_portfolio/issues/assigned/Kevinc023032) |  [Kevin Scrum Boardhttps](://github.com/KylieScharf/flask_portfolio/projects/2?card_filter_query=assignee%3AKevinc023032)| [Kevin Commits](https://github.com/KylieScharf/flask_portfolio/commits?author=Kevinc023032) |
+
+### Inspiration for our website
+https://chooseyourstory.com/
+### Roles
+1. Kylie: Scrum Master
+2. Daniel: Developer
+3. Hamza: Designer
+4. Kevin: Navigator
+5. Khushi: Technical Lead
+### Objective
+Our website is going to be a design your own adventure website based on different wonders of the world.
+These wonders will include Area 51, the Bermuda Triangle, and the Great Pyramid of Giza.
+The user will be able to pick any wonder they want and will learn about that wonder with an informative page and then be directed to an adventure page.
+In this adventure page they will go through a story where they will be able to pick how they react to different situation within the story.
 
 
 ## Sprint 3,4 Week 3 ([9/7-9/10 self grades](https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing))

@@ -13,55 +13,55 @@ def index():
 #end home page
 
 #about pages
-@app.route('/aboutPages/aboutKylie/')
+@app.route('/aboutKylie/')
 def aboutKylie():
     return render_template("aboutPages/aboutKylie.html")
 
-@app.route('/aboutPages/aboutKhushi/')
+@app.route('/aboutKhushi/')
 def aboutKhushi():
     return render_template("aboutPages/aboutKhushi.html")
 
-@app.route('/aboutPages/aboutKevin/')
+@app.route('/aboutKevin/')
 def aboutKevin():
     return render_template("aboutPages/aboutKevin.html")
 
-@app.route('/aboutPages/aboutDaniel/')
+@app.route('/aboutDaniel/')
 def aboutDaniel():
     return render_template("aboutPages/aboutDaniel.html")
 
-@app.route('/aboutPages/aboutHamza/')
+@app.route('/aboutHamza/')
 def aboutHamza():
     return render_template("aboutPages/aboutHamza.html")
 #end about pages
 
 #technical info drop down
-@app.route('/technicalInfo/designInfo/')
+@app.route('/designInfo/')
 def designInfo():
     return render_template("technicalInfo/designInfo.html")
 
 
-@app.route('/technicalInfo/technicalResearch/')
+@app.route('/technicalResearch/')
 def technicalResearch():
     return render_template("technicalInfo/technicalResearch.html")
 #end technical info drop down
 
 #theme pages
 # connects /greatPyramid path to render greatPyramid.html
-@app.route('/themePages/greatPyramid/')
+@app.route('/greatPyramid/')
 def greatPyramid():
     return render_template("themePages/greatPyramid.html")
 
-@app.route('/themePages/area51/')
+@app.route('/area51/')
 def Area51():
     return render_template("themePages/Area51.html")
 
-@app.route('/themePages/bermudaTriangle/')
+@app.route('/bermudaTriangle/')
 def bermudaTriangle():
     return render_template("themePages/bermudaTriangle.html")
 #end theme pages
 
 #greet pages
-@app.route('/greet/kylie/', methods=['GET', 'POST'])
+@app.route('/kylie/', methods=['GET', 'POST'])
 def kylie():
     # submit button has been pushed
     if request.form: #if the submit button has been pressed
@@ -71,7 +71,7 @@ def kylie():
     # starting and empty input default
     return render_template("greet/kylie.html", kylieDisplayName="World")#if nothing has happened render the page and set the variable in jinja to a default value "world"-->
 
-@app.route('/greet/daniel/', methods=['GET', 'POST'])
+@app.route('/daniel/', methods=['GET', 'POST'])
 def daniel():
     # submit button has been pushed
     if request.form:
@@ -81,7 +81,7 @@ def daniel():
     # starting and empty input default
     return render_template("greet/daniel.html", danielDisplayName="World")
 
-@app.route('/greet/khushi/', methods=['GET', 'POST'])
+@app.route('/khushi/', methods=['GET', 'POST'])
 def khushi():
     # submit button has been pushed
     print("1")
@@ -94,7 +94,7 @@ def khushi():
     # starting and empty input default
     return render_template("greet/khushi.html", name1="World")
 
-@app.route('/greet/hamza/', methods=['GET', 'POST'])
+@app.route('/hamza/', methods=['GET', 'POST'])
 def hamza():
     # submit button has been pushed
     if request.form:
@@ -104,7 +104,7 @@ def hamza():
     # starting and empty input default
     return render_template("greet/hamza.html", hamzaDisplayName="World")
 
-@app.route('/greet/kevin/', methods=['GET', 'POST'])
+@app.route('/kevin/', methods=['GET', 'POST'])
 def kevin():
     # submit button has been pushed
     if request.form:
@@ -116,15 +116,15 @@ def kevin():
 #end greet pages
 
 #A51 stories
-@app.route('/A51stories/A51story1/')
+@app.route('/A51story1/')
 def A51story1():
     return render_template("A51stories/A51story1.html")
 
-@app.route('/A51stories/A51story11/')
+@app.route('/A51story11/')
 def A51story11():
     return render_template("A51stories/A51story11.html")
 
-@app.route('/A51stories/A51story12/')
+@app.route('/A51story12/')
 def A51story12():
     return render_template("A51stories/A51story12.html")
 
@@ -134,9 +134,9 @@ def binary():
     if request.form:
         bitNumber = request.form.get("bits")
         if len(bitNumber) != 0:  # input field has content
-            return render_template("binary.html", BITS=int(bitNumber))
+            return render_template("technicalInfo/binary.html", BITS=int(bitNumber))
     # starting and empty input default
-    return render_template("binary.html", BITS=8)
+    return render_template("technicalInfo/binary.html", BITS=8)
 
 
 

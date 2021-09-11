@@ -5,6 +5,9 @@
 https://github.com/KylieScharf/flask_portfolio
 ### Scrum Board:
 https://github.com/KylieScharf/flask_portfolio/projects/2
+### Insights
+https://github.com/KylieScharf/flask_portfolio/graphs/contributors
+
 ### Pair Share Journals
 1. Kylie and Khushi: https://docs.google.com/document/d/1eyTgQhMv7jFi28SIGlwOs3k95a9KklfJFCS0O9pXCzA/edit
 2. Danny, Hamza, and Kevin: https://docs.google.com/document/d/1fy-J_PVrvafykD-OTxMm-Pe0L_UKrYUTC4-DP4vGXEw/edit?usp=sharing
@@ -46,6 +49,8 @@ Table Of Contents
 9. Replace links in mini-lab drop-down with embeds https://github.com/KylieScharf/flask_portfolio/issues/28
 10. Make CSS/style chages https://github.com/KylieScharf/flask_portfolio/issues/22
 11. Edit read me https://github.com/KylieScharf/flask_portfolio/issues/21
+12. Complete self grade https://github.com/KylieScharf/flask_portfolio/projects/2
+13. Complete tpt3 hacks https://github.com/KylieScharf/flask_portfolio/issues/32
 
 
 ## Sprint 1,2 (8/16-9/3) 

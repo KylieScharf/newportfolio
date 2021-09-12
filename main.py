@@ -129,6 +129,22 @@ def A51story12():
     return render_template("A51stories/A51story12.html")
 
 
+#BT stories
+@app.route('/BTstory1/')
+def BTstory1():
+    return render_template("BTstories/BTstory1.html")
+
+@app.route('/BTstory11/')
+def BTstory11():
+    return render_template("BTstories/BTstory11.html")
+
+@app.route('/BTstory12/')
+def BTstory12():
+    return render_template("BTstories/BTstory12.html")
+
+#GP stories
+
+
 @app.route('/binary/', methods=['GET', 'POST'])
 def binary():
     if request.form:

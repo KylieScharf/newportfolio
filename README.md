@@ -47,7 +47,6 @@ Table Of Contents
 10. [Make CSS/style changes](https://github.com/KylieScharf/flask_portfolio/issues/22)
 11. [Edit read me](https://github.com/KylieScharf/flask_portfolio/issues/21)
 12. [Complete self grade](https://github.com/KylieScharf/flask_portfolio/projects/2)
-13. [Complete tpt3 hacks](https://github.com/KylieScharf/flask_portfolio/issues/32)
 
 
 ## Sprint 1,2 (8/16-9/3) 

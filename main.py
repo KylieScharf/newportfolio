@@ -128,6 +128,22 @@ def A51story11():
 def A51story12():
     return render_template("A51stories/A51story12.html")
 
+@app.route('/A51story111/')
+def A51story111():
+    return render_template("A51stories/A51story111.html")
+
+@app.route('/A51story112/')
+def A51story112():
+    return render_template("A51stories/A51story112.html")
+
+@app.route('/A51story121/')
+def A51story121():
+    return render_template("A51stories/A51story121.html")
+
+@app.route('/A51story122/')
+def A51story122():
+    return render_template("A51stories/A51story122.html")
+
 
 #BT stories
 @app.route('/BTstory1/')

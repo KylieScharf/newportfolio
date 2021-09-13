@@ -76,9 +76,9 @@
             // loop to convert to base
             do {
                 let digit = decimal % base;
-                conversion = "" + digit + conversion; // what does this do?
-                decimal = ~~(decimal / base);         // what does this do?  what is ~~?
-            } while (decimal > 0);                  // why while at the end?
+                conversion = "" + digit + conversion; // what does this do? this creates a string containing the new digit in front of the rest of the string so far
+                decimal = ~~(decimal / base);         // what does this do? this gets the whole number part out of the result of the division of decimal/base. what is ~~? this is the math "floor" that gets the whole number part out
+            } while (decimal > 0);                  // why while at the end? this allows you to loop until the condition is false
             // loop to pad with zeros
             if (base === 2) {                        // only pad for binary conversions
                 for (let i = 0; conversion.length < BITS; i++) {

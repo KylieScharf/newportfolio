@@ -116,7 +116,7 @@ def kevin():
 #end greet pages
 
 #A51 stories
-@app.route('/A51story1/')
+@app.route('/A51story1')
 def A51story1():
     return render_template("A51stories/A51story1.html")
 
@@ -157,6 +157,22 @@ def BTstory11():
 @app.route('/BTstory12/')
 def BTstory12():
     return render_template("BTstories/BTstory12.html")
+
+@app.route('/BTstory111/')
+def BTstory111():
+    return render_template("BTstories/BTstory111.html")
+
+@app.route('/BTstory112/')
+def BTstory112():
+    return render_template("BTstories/BTstory112.html")
+
+@app.route('/BTstory121/')
+def BTstory121():
+    return render_template("BTstories/BTstory121.html")
+
+@app.route('/BTstory122/')
+def BTstory122():
+    return render_template("BTstories/BTstory122.html")
 
 #GP stories
 @app.route('/GPstory1/')

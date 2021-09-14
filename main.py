@@ -143,7 +143,33 @@ def BTstory12():
     return render_template("BTstories/BTstory12.html")
 
 #GP stories
+@app.route('/GPstory1/')
+def GPstory1():
+    return render_template("GPstories/GPstory1.html")
 
+@app.route('/GPstory11/')
+def GPstory11():
+    return render_template("GPstories/GPstory11.html")
+
+@app.route('/GPstory12/')
+def GPstory12():
+    return render_template("GPstories/GPstory12.html")
+
+@app.route('/GPstory111/')
+def GPstory111():
+    return render_template("GPstories/GPstory111.html")
+
+@app.route('/GPstory112/')
+def GPstory112():
+    return render_template("GPstories/GPstory112.html")
+
+@app.route('/GPstory121/')
+def GPstory121():
+    return render_template("GPstories/GPstory121.html")
+
+@app.route('/GPstory122/')
+def GPstory122():
+    return render_template("GPstories/GPstory122.html")
 
 @app.route('/binary/', methods=['GET', 'POST'])
 def binary():

@@ -8,8 +8,14 @@
 {% block body %}
 <!- Try building a new body here ->
 <div class="center-block" style="margin: 2% 5% 5%; text-align:left;">
-    <div class="col-8">
+
+    <div class="container-fluid">
+        <div class="row justify-content-end">
+            <div class="col-8">
+            </div>
+            <div class="col-8">
         <p>Hello, {{name1}}!</p>
+            </div>
     </div>
     <div class="col-8">
         <form action="/khushi/" id="greet" method="POST" >
@@ -19,6 +25,3 @@
         </form>
     </div>
 {% endblock %}
-
-<!- This is turning off birds background from base.html -->
-</div>

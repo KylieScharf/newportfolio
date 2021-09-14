@@ -116,7 +116,7 @@ def kevin():
 #end greet pages
 
 #A51 stories
-@app.route('/A51story1/')
+@app.route('/A51story1')
 def A51story1():
     return render_template("A51stories/A51story1.html")
 
@@ -127,6 +127,22 @@ def A51story11():
 @app.route('/A51story12/')
 def A51story12():
     return render_template("A51stories/A51story12.html")
+
+@app.route('/A51story111/')
+def A51story111():
+    return render_template("A51stories/A51story111.html")
+
+@app.route('/A51story112/')
+def A51story112():
+    return render_template("A51stories/A51story112.html")
+
+@app.route('/A51story121/')
+def A51story121():
+    return render_template("A51stories/A51story121.html")
+
+@app.route('/A51story122/')
+def A51story122():
+    return render_template("A51stories/A51story122.html")
 
 
 #BT stories
@@ -142,8 +158,50 @@ def BTstory11():
 def BTstory12():
     return render_template("BTstories/BTstory12.html")
 
-#GP stories
+@app.route('/BTstory111/')
+def BTstory111():
+    return render_template("BTstories/BTstory111.html")
 
+@app.route('/BTstory112/')
+def BTstory112():
+    return render_template("BTstories/BTstory112.html")
+
+@app.route('/BTstory121/')
+def BTstory121():
+    return render_template("BTstories/BTstory121.html")
+
+@app.route('/BTstory122/')
+def BTstory122():
+    return render_template("BTstories/BTstory122.html")
+
+#GP stories
+@app.route('/GPstory1/')
+def GPstory1():
+    return render_template("GPstories/GPstory1.html")
+
+@app.route('/GPstory11/')
+def GPstory11():
+    return render_template("GPstories/GPstory11.html")
+
+@app.route('/GPstory12/')
+def GPstory12():
+    return render_template("GPstories/GPstory12.html")
+
+@app.route('/GPstory111/')
+def GPstory111():
+    return render_template("GPstories/GPstory111.html")
+
+@app.route('/GPstory112/')
+def GPstory112():
+    return render_template("GPstories/GPstory112.html")
+
+@app.route('/GPstory121/')
+def GPstory121():
+    return render_template("GPstories/GPstory121.html")
+
+@app.route('/GPstory122/')
+def GPstory122():
+    return render_template("GPstories/GPstory122.html")
 
 @app.route('/binary/', methods=['GET', 'POST'])
 def binary():

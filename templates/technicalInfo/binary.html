@@ -171,18 +171,25 @@
 
             <div class="col-12">
                 <table class="table">
+                {% for j in range((BITS/8)|round(0, 'ceil')|int) %}
                     <tr>
-                        {% for i in range(BITS) %}
+                        {% if j*8 + 8 > BITS %}
+                            {% set h = BITS %}
+                        {% else %}
+                            {% set h = j*8 + 8 %}
+                        {% endif %}
+                        {% for i in range(j*8,h) %} {# we just want 8 bits per row #}
                             <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
                                 <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
                             </td>
                         {% endfor %}
                     </tr>
                     <tr>
-                        {% for i in range(BITS) %}
+                        {% for i in range(j*8,h) %}
                             <td><input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>
                         {% endfor %}
                     </tr>
+                {% endfor %}
                 </table>
             </div>
 

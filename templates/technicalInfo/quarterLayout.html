@@ -4,28 +4,26 @@
 <body>
 {% block body %}
     <div class="container-fluid">
-        <div class="row" style="text-align:center">
-            <div class="col-12">
+        {% for item in src%}
+            {% if loop.index is not divisibleby 2 %}
+                <div class="row" style="text-align:center">
+            {% endif %}
+            <div class="col-6">
                 <div class="table">
                     <div class="card-deck">
-                        {% for item in src%}
-                            {% if loop.index is not divisibleby 2 %}
-                                <tr>
-                            {% endif %}
                             <div class="card">
                                 <td><iframe src="{{ item }}" class="half-height" width="100%" allow="autoplay"></iframe>
                                 </td>
                                 <h4>{{ cardText[loop.index - 1]}}</h4>
                             </div>
 
-                            {% if loop.index is divisibleby 2 or loop.length == loop.index %}
-                                </tr>
-                            {% endif %}
-                        {% endfor %}
                     </div>
                 </div>
             </div>
+        {% if loop.index is divisibleby 2 or loop.length == loop.index %}
         </div>
+        {% endif %}
+        {% endfor %}
     </div>
 {% endblock %}
 </body>

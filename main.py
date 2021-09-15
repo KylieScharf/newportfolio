@@ -116,7 +116,8 @@ def kevin():
 #end greet pages
 
 #A51 stories
-@app.route('/A51story1')
+
+@app.route('/A51story1/')
 def A51story1():
     return render_template("A51stories/A51story1.html")
 

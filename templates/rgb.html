@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 {% extends "layouts/base.html" %}
-
+{% set greyscale = "Greyscale" %}
+{% set color = "Color" %}
 
 {% block meta %}
     <script>
-        function setImg(img, base64) {
+        function setImg(img, base64, base64GRAY, button) {
             // add button and rotate image from original to gray and back (toggle)
-            document.getElementById(img).src = base64;  //change img src to inner html on <p> tag
+            if (document.getElementById(img).src == document.getElementById(base64).innerHTML) {
+                document.getElementById(img).src = document.getElementById(base64GRAY).innerHTML;  //change img src to inner html on <p> tag
+                document.getElementById(button).innerHTML = "{{ color }}";
+            }
+            else {
+                document.getElementById(img).src = document.getElementById(base64).innerHTML;
+                document.getElementById(button).innerHTML = "{{ greyscale }}";
+            }
         }
     </script>
 
@@ -39,7 +47,7 @@
                         </td>
                         <td>
                             <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64}}" >
-                            <button type="button" id="butt{{loop.index}}" onclick="setImg('img{{loop.index}}', '{{ image.base64_GRAY }}')">Greyscale</button>
+                            <button type="button" id="butt{{loop.index}}" onclick="setImg('img{{loop.index}}', 'img_orig{{loop.index}}', 'img_gray{{loop.index}}', 'butt{{loop.index}}')">{{ greyscale }}</button>
                             <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p>
                             <p hidden id="img_gray{{loop.index}}">{{image.base64_GRAY}}</p>
                         </td>

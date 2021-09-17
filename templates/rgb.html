@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+{% set greyscale = "Greyscale" %}
+{% set color = "Color" %}
+
+{% block meta %}
+    <script>
+        function setImg(img, base64, base64GRAY, button) {
+            // add button and rotate image from original to gray and back (toggle)
+            const imgLink = document.getElementById(img)
+            const btn = document.getElementById(button)
+            if (imgLink.src == document.getElementById(base64).innerHTML) {
+                imgLink.src = document.getElementById(base64GRAY).innerHTML;  //change img src to inner html on <p> tag
+                btn.innerHTML = "{{ color }}";
+            }
+            else {
+                imgLink.src = document.getElementById(base64).innerHTML;
+                btn.innerHTML = "{{ greyscale }}";
+            }
+        }
+    </script>
+
+
+    <title>RGB starter</title>
+{% endblock %}
+
+
+{% block body %}
+    <h1 class="text-center">RGB values within an Image</h1>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Meta Data</th>
+                    <th>Image</th>
+                    <th>Data</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for image in images %}
+                    <tr>
+                        <td>
+                            <div>{{image.file}}</div>
+                            <div>{{image.format}}</div>
+                            <div>{{image.size}}</div>
+                            <div>{{image.label}}</div>
+                            <div>{{image.source}}</div>
+                        </td>
+                        <td>
+                            <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64}}" >
+                            <button type="button" id="butt{{loop.index}}" onclick="setImg('img{{loop.index}}', 'img_orig{{loop.index}}', 'img_gray{{loop.index}}', 'butt{{loop.index}}')">{{ greyscale }}</button> {# these are parameters to be passed to the java script #}
+                            <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p> {# these are hidden so they are not displayed as text. We just want the inner HTML of these to use later #}
+                            <p hidden id="img_gray{{loop.index}}">{{image.base64_GRAY}}</p>
+                        </td>
+                        <td>
+                            <div class="overflow-auto" style="height: 256px">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>{{image.mode}}</th> {# RGB for JPG vs RGBA for PNG #}
+                                        <th>Hex Code</th>
+                                        <th>Binary</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for row in image.data[:256 + 1] %}
+                                        <tr>
+                                            <td>{{loop.index}}</td>
+                                            <td>{{row}}</td> {# binary #}
+                                            <td>{{image.hex_array[loop.index - 1]}}</td>  {# hex array is 0 based so the first item in the array is the zeroth item so to get that you do the loop.index - 1 or loop.index0 #}
+                                            <td>{{image.binary_array[loop.index - 1]}}
+                                        </tr>
+                                        {% if loop.index > 256 %}
+                                            <tr><td>...</td><td>truncated</td><td>...</td><td>...</td></tr>
+                                        {% endif %}
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+{% endblock %}

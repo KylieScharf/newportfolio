@@ -201,6 +201,30 @@ def BTstory121():
 def BTstory122():
     return render_template("BTstories/BTstory122.html")
 
+@app.route('/BTstory1121/')
+def BTstory1121():
+    return render_template("BTstories/BTstory1121.html")
+
+@app.route('/BTstory1122/')
+def BTstory1122():
+    return render_template("BTstories/BTstory1122.html")
+
+@app.route('/BTstory1211/')
+def BTstory1211():
+    return render_template("BTstories/BTstory1211.html")
+
+@app.route('/BTstory1212/')
+def BTstory1212():
+    return render_template("BTstories/BTstory1212.html")
+
+@app.route('/BTstory1221/')
+def BTstory1221():
+    return render_template("BTstories/BTstory1221.html")
+
+@app.route('/BTstory1222/')
+def BTstory1222():
+    return render_template("BTstories/BTstory1222.html")
+
 #GP stories
 @app.route('/GPstory1/')
 def GPstory1():

@@ -56,26 +56,3 @@ def image_data(path="static/", img_list=None):  # path of static images is defau
     return img_list  # list is returned with all the attributes for each image dictionary
 # run this as standalone tester to see data printed in terminal
 
-if __name__ == "__main__":
-    local_path = "static/"
-    img_test = [
-        {'source': "iconsdb.com", 'label': "Blue square", 'file': "rip.jpg"},
-    ]
-    items = image_data(local_path, img_test)  # path of local run
-    for row in items:
-        # print some details about the image so you can validate that it looks like it is working
-        # meta data
-        print("---- meta data -----")
-        print(row['label'])
-        print(row['format'])
-        print(row['mode'])
-        print(row['size'])
-        # data
-        print("----  data  -----")
-        print(row['data'])
-        filename = local_path + row['file']
-        image_ref = Image.open(filename)
-        draw = ImageDraw.Draw(image_ref)
-        draw.text((0, 0), "Size is {0} X {1}".format(*row['size']))  # draw in image
-        image_ref.show()
-

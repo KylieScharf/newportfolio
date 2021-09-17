@@ -7,13 +7,15 @@
     <script>
         function setImg(img, base64, base64GRAY, button) {
             // add button and rotate image from original to gray and back (toggle)
-            if (document.getElementById(img).src == document.getElementById(base64).innerHTML) {
-                document.getElementById(img).src = document.getElementById(base64GRAY).innerHTML;  //change img src to inner html on <p> tag
-                document.getElementById(button).innerHTML = "{{ color }}";
+            const imgLink = document.getElementById(img)
+            const btn = document.getElementById(button)
+            if (imgLink.src == document.getElementById(base64).innerHTML) {
+                imgLink.src = document.getElementById(base64GRAY).innerHTML;  //change img src to inner html on <p> tag
+                btn.innerHTML = "{{ color }}";
             }
             else {
-                document.getElementById(img).src = document.getElementById(base64).innerHTML;
-                document.getElementById(button).innerHTML = "{{ greyscale }}";
+                imgLink.src = document.getElementById(base64).innerHTML;
+                btn.innerHTML = "{{ greyscale }}";
             }
         }
     </script>
@@ -47,8 +49,8 @@
                         </td>
                         <td>
                             <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64}}" >
-                            <button type="button" id="butt{{loop.index}}" onclick="setImg('img{{loop.index}}', 'img_orig{{loop.index}}', 'img_gray{{loop.index}}', 'butt{{loop.index}}')">{{ greyscale }}</button>
-                            <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p>
+                            <button type="button" id="butt{{loop.index}}" onclick="setImg('img{{loop.index}}', 'img_orig{{loop.index}}', 'img_gray{{loop.index}}', 'butt{{loop.index}}')">{{ greyscale }}</button> {# these are parameters to be passed to the java script #}
+                            <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p> {# these are hidden so they are not displayed as text. We just want the inner HTML of these to use later #}
                             <p hidden id="img_gray{{loop.index}}">{{image.base64_GRAY}}</p>
                         </td>
                         <td>
@@ -57,17 +59,17 @@
                                     <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>{{image.mode}}</th>
+                                        <th>{{image.mode}}</th> {# RGB for JPG vs RGBA for PNG #}
                                         <th>Hex Code</th>
                                         <th>Binary</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    {% for row in image.data[:256+1] %}
+                                    {% for row in image.data[:256 + 1] %}
                                         <tr>
                                             <td>{{loop.index}}</td>
-                                            <td>{{row}}</td>
-                                            <td>{{image.hex_array[loop.index - 1]}}</td>
+                                            <td>{{row}}</td> {# binary #}
+                                            <td>{{image.hex_array[loop.index - 1]}}</td>  {# hex array is 0 based so the first item in the array is the zeroth item so to get that you do the loop.index - 1 or loop.index0 #}
                                             <td>{{image.binary_array[loop.index - 1]}}
                                         </tr>
                                         {% if loop.index > 256 %}

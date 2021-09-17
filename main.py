@@ -234,7 +234,7 @@ def image_formatter(img, img_type):
 def image_data(path="static/", img_list=None):  # path of static images is defaulted
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
-            {'source': "Peter Carolin", 'label': "Smiley", 'file': "smiley.jpg"},
+            {'source': "Romolo Tavani ", 'label': "Drowning Hand", 'file': "rip.jpg"}, # this is one dictionary where the source is the word and the "smiley" is the definition
         ]
     # gather analysis data and meta data for each image, adding attributes to each row in table
     for img_dict in img_list:
@@ -242,7 +242,7 @@ def image_data(path="static/", img_list=None):  # path of static images is defau
         file = path + img_dict['file']  # file with path for local access (backend)
         # Python Image Library operations
         img_reference = Image.open(file)  # PIL
-        img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
+        img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/ this gets the binary from the RGB without meta data
         img_dict['format'] = img_reference.format
         img_dict['mode'] = img_reference.mode
         img_dict['size'] = img_reference.size
@@ -266,7 +266,7 @@ def image_data(path="static/", img_list=None):  # path of static images is defau
         for pixel in img_dict['data']:
             average = (pixel[0] + pixel[1] + pixel[2]) // 3
             if len(pixel) > 3:
-                img_dict['gray_data'].append((average, average, average, pixel[3]))
+                img_dict['gray_data'].append((average, average, average, pixel[3])) # append means to add it like when you do "" + something to create a string
             else:
                 img_dict['gray_data'].append((average, average, average))
         img_reference.putdata(img_dict['gray_data'])

@@ -55,7 +55,10 @@ def greatPyramid():
 
 @app.route('/area51/')
 def Area51():
-    return render_template("themePages/Area51.html", images=image_data())
+    img_list = [
+        {'file': "A51.jpeg"}, # this is one dictionary where the source is the word and the "smiley" is the definition
+    ]
+    return render_template("themePages/Area51.html", images=image_data(path="static/", img_list=img_list))
 
 @app.route('/bermudaTriangle/')
 def bermudaTriangle():
@@ -265,7 +268,7 @@ def binary():
 
 @app.route('/rgb/', methods=["GET", "POST"])
 def rgb():
-    return render_template('rgb.html', images=image_data())
+    return render_template('rgb.html', images=image_data(shouldDraw=True))
 
 
 

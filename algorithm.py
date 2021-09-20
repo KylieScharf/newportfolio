@@ -13,7 +13,7 @@ def image_formatter(img, img_type):
     return "data:image/" + img_type + ";base64," + image_base64(img, img_type)
 # color_data prepares a series of images for data analysis
 
-def image_data(path="static/", img_list=None):  # path of static images is defaulted
+def image_data(path="static/", img_list=None, shouldDraw=False):  # path of static images is defaulted
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
             {'source': "Romolo Tavani ", 'label': "Drowning Hand", 'file': "rip(lower).jpg"}, # this is one dictionary where the source is the word and the "smiley" is the definition
@@ -24,8 +24,9 @@ def image_data(path="static/", img_list=None):  # path of static images is defau
         file = path + img_dict['file']  # file with path for local access (backend)
         # Python Image Library operations
         img_reference = Image.open(file)  # PIL: this is opeening the image like if we did image.open(static/smiley.jpg) adn this creates an instance of the image. image.open() is a function that loads the image and creates an image pbject that can be modified with the .save: the image object we recieve using image.open can later be used to resize, crop, or more the image
-        draw = ImageDraw.Draw(img_reference)
-        draw.text((75, 50), "Hello World", fill=(255, 0, 0))
+        if shouldDraw == True:
+            draw = ImageDraw.Draw(img_reference)
+            draw.text((75, 50), "Hello World", fill=(255, 0, 0))
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/ this gets the binary from the RGB without meta data :  Image.open() reads the image and gets all relevant info from the image.
         img_dict['format'] = img_reference.format #jpeg vs png (file format)
         img_dict['mode'] = img_reference.mode #pixel format s o RGB vs RGBA
@@ -55,11 +56,11 @@ def image_data(path="static/", img_list=None):  # path of static images is defau
                 img_dict['gray_data'].append((average, average, average))
         img_reference.putdata(img_dict['gray_data'])
         img_dict['base64_GRAY'] = image_formatter(img_reference, img_dict['format'])
-        draw = ImageDraw.Draw(img_reference)
-        draw.text((0, 0), "Size is 600 X 600")  # draw in image
+        #img_dict['flip'] = img_reference.transpose(Image.ROTATE_90)
+        #img_reference.save(img_dict['flip'])
+        #img_dict['base64_flip'] = image_formatter(img_reference, img_dict['format'])
     return img_list  # list is returned with all the attributes for each image dictionary
 # run this as standalone tester to see data printed in terminal
-
 
 if __name__ == "__main__":
     local_path = "static/"

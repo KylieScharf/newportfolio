@@ -55,7 +55,7 @@ def greatPyramid():
 
 @app.route('/area51/')
 def Area51():
-    return render_template("themePages/Area51.html")
+    return render_template("themePages/Area51.html", images=image_data())
 
 @app.route('/bermudaTriangle/')
 def bermudaTriangle():

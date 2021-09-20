@@ -49,11 +49,11 @@
                         </div>
                     {% endblock %}
                     <!--this sets up the basic layout for the image and you set the imageSRC and imageText variable to the image file name for the SRC and what text you want it to display when it doesn't work for the imagetext-->
-                    {% block image %}
                         <div class="col-4">
+                            {% block image %}
                             <img src={{ imageSRC }} alt={{ imageText }} width={{ imageWidth }} height={{ imageHeight }}>
+                            {% endblock %}
                         </div>
-                    {% endblock %}
 
                     {% block button %}
                         <div class="col-3">

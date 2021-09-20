@@ -48,6 +48,7 @@ Table of Contents
 12. [continue to code stub pages](https://github.com/KylieScharf/flask_portfolio/issues/52)
 13. [create wireframe of button options](https://github.com/KylieScharf/flask_portfolio/issues/51)
 14. [create an endpage for each story](https://github.com/KylieScharf/flask_portfolio/issues/50)
+15. [overview video](https://drive.google.com/file/d/13TsuiA2ROJbqLzRvHBzRDsAqtX53lzTn/view)
 
 ## Sprint 3,4 Week 3 ([9/7-9/10 self grades](https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing))
 Table Of Contents

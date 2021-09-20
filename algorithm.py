@@ -16,7 +16,7 @@ def image_formatter(img, img_type):
 def image_data(path="static/", img_list=None):  # path of static images is defaulted
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
-            {'source': "Romolo Tavani ", 'label': "Drowning Hand", 'file': "rip.jpg"}, # this is one dictionary where the source is the word and the "smiley" is the definition
+            {'source': "Romolo Tavani ", 'label': "Drowning Hand", 'file': "rip(lower).jpg"}, # this is one dictionary where the source is the word and the "smiley" is the definition
         ]
     # gather analysis data and meta data for each image, adding attributes to each row in table
     for img_dict in img_list:
@@ -25,8 +25,7 @@ def image_data(path="static/", img_list=None):  # path of static images is defau
         # Python Image Library operations
         img_reference = Image.open(file)  # PIL: this is opeening the image like if we did image.open(static/smiley.jpg) adn this creates an instance of the image. image.open() is a function that loads the image and creates an image pbject that can be modified with the .save: the image object we recieve using image.open can later be used to resize, crop, or more the image
         draw = ImageDraw.Draw(img_reference)
-        #myFont = ImageFont.truetype('E:/PythonPillow/Fonts/FreeMono.ttf', 30)
-        draw.text((75, 20), "APCSP IS COOL", fill=(255, 0, 0))
+        draw.text((75, 50), "Hello World", fill=(255, 0, 0))
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/ this gets the binary from the RGB without meta data :  Image.open() reads the image and gets all relevant info from the image.
         img_dict['format'] = img_reference.format #jpeg vs png (file format)
         img_dict['mode'] = img_reference.mode #pixel format s o RGB vs RGBA

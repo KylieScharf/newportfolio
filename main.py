@@ -51,7 +51,10 @@ def technicalResearch():
 # connects /greatPyramid path to render greatPyramid.html
 @app.route('/greatPyramid/')
 def greatPyramid():
-    return render_template("themePages/greatPyramid.html")
+    img_list = [
+        {'file': "GP.jpeg"}, # this is one dictionary where the source is the word and the "smiley" is the definition
+    ]
+    return render_template("themePages/greatPyramid.html", images=image_data(path="static/", img_list=img_list))
 
 @app.route('/area51/')
 def Area51():
@@ -62,7 +65,10 @@ def Area51():
 
 @app.route('/bermudaTriangle/')
 def bermudaTriangle():
-    return render_template("themePages/bermudaTriangle.html")
+    img_list = [
+        {'file': "BT.jpg"}, # this is one dictionary where the source is the word and the "smiley" is the definition
+    ]
+    return render_template("themePages/bermudaTriangle.html", images=image_data(path="static/", img_list=img_list))
 #end theme pages
 
 #greet pages

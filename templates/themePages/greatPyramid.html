@@ -1,5 +1,5 @@
 <!-- Extending from the predefined project layout -->
-{% extends "layouts/project.html" %}
+{% extends "themePages/grayLayout.html" %}
 
 <!--This sets the variables in the predefined layout within the project.html file so that every page has the same layout and is efficient-->
 {% set project = "The Great Pryramids" %}
@@ -11,8 +11,3 @@
 {% set imageHeight = "300" %}
 {% set HTML1 = "GPstory1" %}
 {% set buttonText1 = "Start Your Adventure" %}
-
-<body>
-{% block button2 %}
-{% endblock %}
-</body>

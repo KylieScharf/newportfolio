@@ -32,6 +32,14 @@ These wonders will include Area 51, the Bermuda Triangle, and the Great Pyramid 
 The user will be able to pick any wonder they want and will learn about that wonder with an informative page and then be directed to an adventure page.
 In this adventure page they will go through a story where they will be able to pick how they react to different situation within the story.
 
+## Sprint 5,6 Week 6([9/20-9.25 Self Grades](https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing))
+Table of Contents
+1. [complete pair share journal](https://github.com/KylieScharf/flask_portfolio/issues/55)
+2. [RGB project](https://github.com/KylieScharf/flask_portfolio/issues/49)
+3. [complete binary hacks on seperate binary page](https://github.com/KylieScharf/flask_portfolio/issues/59)
+4. [continue to code stub pages(PBL)](https://github.com/KylieScharf/flask_portfolio/issues/52)
+5. [continue to write stories (PBL)](https://github.com/KylieScharf/flask_portfolio/issues/40)
+
 ## Sprint 3,4 Week 4([9/13-9/17 Self Grades](https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing))
 Table of Contents
 1. [write stories for all wonders](https://github.com/KylieScharf/flask_portfolio/issues/27)

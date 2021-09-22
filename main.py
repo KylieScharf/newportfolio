@@ -51,15 +51,24 @@ def technicalResearch():
 # connects /greatPyramid path to render greatPyramid.html
 @app.route('/greatPyramid/')
 def greatPyramid():
-    return render_template("themePages/greatPyramid.html")
+    img_list = [
+        {'file': "GP.jpeg"}, # this is one dictionary where the source is the word and the "smiley" is the definition
+    ]
+    return render_template("themePages/greatPyramid.html", images=image_data(path="static/", img_list=img_list))
 
 @app.route('/area51/')
 def Area51():
-    return render_template("themePages/Area51.html", images=image_data())
+    img_list = [
+        {'file': "A51.jpeg"}, # this is one dictionary where the source is the word and the "smiley" is the definition
+    ]
+    return render_template("themePages/Area51.html", images=image_data(path="static/", img_list=img_list))
 
 @app.route('/bermudaTriangle/')
 def bermudaTriangle():
-    return render_template("themePages/bermudaTriangle.html")
+    img_list = [
+        {'file': "BT.jpg"}, # this is one dictionary where the source is the word and the "smiley" is the definition
+    ]
+    return render_template("themePages/bermudaTriangle.html", images=image_data(path="static/", img_list=img_list))
 #end theme pages
 
 #greet pages
@@ -256,16 +265,19 @@ def GPstory122():
 
 @app.route('/binary/', methods=['GET', 'POST'])
 def binary():
-    if request.form:
-        bitNumber = request.form.get("bits")
-        if len(bitNumber) != 0:  # input field has content
-            return render_template("technicalInfo/binary.html", BITS=int(bitNumber))
-    # starting and empty input default
-    return render_template("technicalInfo/binary.html", BITS=8)
+    if request.method == "POST":
+        if request.form:
+            bitNumber = request.form.get("bits")
+            if len(bitNumber) != 0:  # input field has content
+                return render_template("technicalInfo/binary.html", BITS=int(bitNumber), imageOn="/static/sun.jpg", imageOff="/static/moon.jpg")
+        # starting and empty input default
+        if request.form["bits2"]:
+            return render_template("technicalInfo/binary.html", BITS=8, imageOn="/static/smiley.jpg", imageOff="/static/rip1.jpg")
+    return render_template("technicalInfo/binary.html", BITS=8, imageOn="/static/sun.jpg", imageOff="/static/moon.jpg")
 
 @app.route('/rgb/', methods=["GET", "POST"])
 def rgb():
-    return render_template('rgb.html', images=image_data())
+    return render_template('rgb.html', images=image_data(shouldDraw=True))
 
 @app.route('/Binary2/')
 def binary2():

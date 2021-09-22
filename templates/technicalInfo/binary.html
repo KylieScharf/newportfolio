@@ -6,34 +6,19 @@
            use HTML Input Form in Frontend, ie toward top of Page
            send initial value and updated values to form via Python render_template -->
 <!-- Hack: use 8 as default -->
+<!-- got rid of the "set bits" and set them in python instead-->
 {% set MAX = ((2 ** BITS) - 1) %}
 
 <!-- Hack: Set bulbs and pass as variables via Python render_template
            add new images (ie PNGs) to project -->
 <!-- use your PNGs as default -->
-{% set imgBulbOn = "/static/sun.jpg" %}
-{% set imgBulbOff = "/static/moon.jpg" %}
+{% set imgBulbOn = imageOn %}
+{% set imgBulbOff = imageOff %}
 {% set msgTurnOn = "Turn On" %}
 {% set msgTurnOff = "Turn Off" %}
 
-{% block meta %}
-    <title>Binary page</title>
-    <div class="center-block" style="margin: 2% 5% 5%; text-align:left;">
 
-    <div class="container-fluid">
-    <div class="row" style="padding-left:0%;">
-    <!--this creates the text displayed at the top that changed and sets the thing to be changed to a variable so you can set it to different values in python so it can change-->
-    <div class="col-12">
-        <!--this form tag creates the search bar that is tied to a label which is displayed text and to a submit button so the user can input information-->
-        <form action="/binary/" id="binaryForm" method="POST" >
-            <label for="binaryForm">Set Number of Bits</label>
-            <input name="bits" id="bits">
-            <input type="submit" value="Set Bits!">
-        </form>
-    </div>
-    </div>
-    </div>
-    </div>
+{% block meta %}
 
     <script>
         const BITS = '{{ BITS }}'; let max = '{{ MAX }}'; let MAX = parseInt(max, 10);
@@ -56,8 +41,9 @@
             document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
             // DOM assignment to Decimal conversion
             document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString(10);
+            // the following is conditional logic that sets the ascii inner HTML to display "npc" or non printable character if the value is less than 32, space if 32, and ascii if greater than 32
             if (decimal<32) {
-                document.getElementById('ascii').innerHTML = 'null';
+                document.getElementById('ascii').innerHTML = 'NPC';
             } else if (decimal == 32){
                 document.getElementById('ascii').innerHTML = 'space';
             } else {
@@ -69,7 +55,6 @@
              below ASCII for more ideas of where to make changes
              */
         }
-
         // algorithm to convert decimal to base using division and remainder
         function decimal_2_base(decimal, base) {
             let conversion = "";
@@ -139,9 +124,23 @@
 {% endblock %}
 
 {% block body %}
-    <h1 class="text-center">Binary Math with Conversions</h1>
-    <div class="container">
-        <div class="row justify-content-md-center">
+        <h1 class="text-center">Binary Math with Conversions</h1>
+        <div class="container">
+            <div class="row justify-content-md-center">
+                    <div class="row" style="padding-left:0%;">
+                        <!--this creates the text displayed at the top that changed and sets the thing to be changed to a variable so you can set it to different values in python so it can change-->
+                        <div class="col-12">
+                            <!--this form tag creates the search bar that is tied to a label which is displayed text and to a submit button so the user can input information-->
+                            <form action="/binary/" id="binaryForm" method="POST" >
+                                <label for="binaryForm">Set Number of Bits</label>
+                                <input name="bits" id="bits">
+                                <input type="submit" name="bits1" value="Set Bits!">
+                                <input type="submit" name="bits2" value="Change Image!">
+                            </form>
+                        </div>
+                    </div>
+            </div>
+        </div>
 
             <div class="col-8">
                 <table class="table">
@@ -162,7 +161,7 @@
                         <td id="hexadecimal">0</td>
                         <td id="decimal">0</td>
                         <!-- Hack: display ASCII printable character(s)  -->
-                        <td id="ascii">null</td>
+                        <td id="ascii">NPC</td> <!-- this creates the inner HTML and ID of the ascii -->
                         <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
 
                     </tr>
@@ -171,28 +170,20 @@
 
             <div class="col-12">
                 <table class="table">
-                {% for j in range((BITS/8)|round(0, 'ceil')|int) %}
-                    <tr>
-                        {% if j*8 + 8 > BITS %}
-                            {% set h = BITS %}
-                        {% else %}
-                            {% set h = j*8 + 8 %}
-                        {% endif %}
-                        {% for i in range(j*8,h) %} {# we just want 8 bits per row #}
-                            <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
-                                <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
-                            </td>
+                        <div>
+                        {% for i in range(BITS) %} {# we just want 8 bits per row #}
+                            {% if i % 8 == 0 %} {# this is a modulo operation where if the index is divisible by 8 then a table row gets created and if the index + 1 is divisible by 8 then the table row is ended #}
+                            <tr>
+                            {% endif %}
+                                <td><input type='text' id='digit{{i}}' Value="0" size="1" readonly></td> {# added the digit at the top instead of its own for loop to make the code more efficient #}
+                                <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto"> {# this sets the default image to off and creates the id for the image #}
+                                    <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button> {# this sets the default message to off and calls the function "toggleBit" on the click of the button which is found in the javascript #}
+                                </td>
+                            {% if i + 1 % 8 == 0 or i == BITS %} {# this is the modulo operation for the end row #}
+                            </tr>
+                            {% endif %}
                         {% endfor %}
-                    </tr>
-                    <tr>
-                        {% for i in range(j*8,h) %}
-                            <td><input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>
-                        {% endfor %}
-                    </tr>
-                {% endfor %}
+                        </div>
                 </table>
             </div>
-
-        </div>
-    </div>
 {% endblock %}

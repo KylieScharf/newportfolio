@@ -265,12 +265,15 @@ def GPstory122():
 
 @app.route('/binary/', methods=['GET', 'POST'])
 def binary():
-    if request.form:
-        bitNumber = request.form.get("bits")
-        if len(bitNumber) != 0:  # input field has content
-            return render_template("technicalInfo/binary.html", BITS=int(bitNumber))
-    # starting and empty input default
-    return render_template("technicalInfo/binary.html", BITS=8)
+    if request.method == "POST":
+        if request.form:
+            bitNumber = request.form.get("bits")
+            if len(bitNumber) != 0:  # input field has content
+                return render_template("technicalInfo/binary.html", BITS=int(bitNumber), imageOn="/static/sun.jpg", imageOff="/static/moon.jpg")
+        # starting and empty input default
+        if request.form["bits2"]:
+            return render_template("technicalInfo/binary.html", BITS=8, imageOn="/static/smiley.jpg", imageOff="/static/rip1.jpg")
+    return render_template("technicalInfo/binary.html", BITS=8, imageOn="/static/sun.jpg", imageOff="/static/moon.jpg")
 
 @app.route('/rgb/', methods=["GET", "POST"])
 def rgb():

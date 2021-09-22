@@ -12,10 +12,11 @@
 <!-- Hack: Set bulbs and pass as variables via Python render_template
            add new images (ie PNGs) to project -->
 <!-- use your PNGs as default -->
-{% set imgBulbOn = "/static/sun.jpg" %}
-{% set imgBulbOff = "/static/moon.jpg" %}
+{% set imgBulbOn = imageOn %}
+{% set imgBulbOff = imageOff %}
 {% set msgTurnOn = "Turn On" %}
 {% set msgTurnOff = "Turn Off" %}
+
 
 {% block meta %}
 
@@ -54,7 +55,6 @@
              below ASCII for more ideas of where to make changes
              */
         }
-
         // algorithm to convert decimal to base using division and remainder
         function decimal_2_base(decimal, base) {
             let conversion = "";
@@ -134,7 +134,8 @@
                             <form action="/binary/" id="binaryForm" method="POST" >
                                 <label for="binaryForm">Set Number of Bits</label>
                                 <input name="bits" id="bits">
-                                <input type="submit" value="Set Bits!">
+                                <input type="submit" name="bits1" value="Set Bits!">
+                                <input type="submit" name="bits2" value="Change Image!">
                             </form>
                         </div>
                     </div>

@@ -279,7 +279,14 @@ def binary():
 def rgb():
     return render_template('rgb.html', images=image_data(shouldDraw=True))
 
-
+@app.route('/Binary2/')
+def binary2():
+    if request.form:
+        bitNumber = request.form.get("bits")
+        if len(bitNumber) != 0:  # input field has content
+            return render_template("technicalInfo/binary.html", BITS=int(bitNumber))
+    # starting and empty input default
+    return render_template("technicalInfo/binary.html", BITS=8)
 
 # runs the application on the development server
 #The rest just create routes that may be used but this actually runs the program on the server

@@ -1,9 +1,11 @@
-from PIL import Image, ImageDraw, ImageFont
-import numpy
+# image (PNG, JPG) to base64 conversion (string), learn about base64 on wikipedia https://en.wikipedia.org/wiki/Base64
 import base64
 from io import BytesIO
 
-# image (PNG, JPG) to base64 conversion (string), learn about base64 on wikipedia https://en.wikipedia.org/wiki/Base64
+import numpy
+from PIL import ImageDraw, Image
+
+
 def image_base64(img, img_type):
     with BytesIO() as buffer:
         img.save(buffer, img_type) #this saves the image as something different/converts it into binary for the data
@@ -38,6 +40,9 @@ def image_data(path="static/", img_list=None, shouldDraw=False):  # path of stat
         img_dict['hex_array'] = []
         img_dict['binary_array'] = []
         img_dict['gray_data'] = []
+        img_dict['flip'] = img_reference.transpose(Image.FLIP_LEFT_RIGHT)
+        degree_flippedImage = img_reference.transpose(Image.FLIP_LEFT_RIGHT)
+        img_dict['base64_flip'] = image_formatter(degree_flippedImage,img_dict['format'])
         # 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted
 
         #in this area made the code more efficient based on big O notation
@@ -59,7 +64,6 @@ def image_data(path="static/", img_list=None, shouldDraw=False):  # path of stat
                 img_dict['gray_data'].append((average, average, average))
         img_reference.putdata(img_dict['gray_data'])
         img_dict['base64_GRAY'] = image_formatter(img_reference, img_dict['format'])
-        #img_dict['flip'] = img_reference.transpose(Image.ROTATE_90)
         #img_reference.save(img_dict['flip'])
         #img_dict['base64_flip'] = image_formatter(img_reference, img_dict['format'])
     return img_list  # list is returned with all the attributes for each image dictionary

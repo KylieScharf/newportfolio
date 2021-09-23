@@ -54,6 +54,8 @@
     */
     // set the values of each conversion to match value of bits
     function setConversions(binary) {
+        const decimal = parseInt(binary, 2).toString(10);
+
         document.getElementById('binary').innerHTML = binary;
         // DOM assignment to Octal conversion
         document.getElementById('octal').innerHTML = parseInt(binary, 2).toString(8);
@@ -61,6 +63,14 @@
         document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
         // DOM assignment to Decimal conversion
         document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString(10);
+        if (decimal<32) {
+            document.getElementById('ascii').innerHTML = 'NPC';
+        } else if (decimal == 32){
+            document.getElementById('ascii').innerHTML = 'space';
+        } else {
+            document.getElementById('ascii').innerHTML = String.fromCharCode(parseInt(decimal));
+        }
+
         /* Hack: show ASCII printable character(s) for each 8 bits
          DOM assignment by converting decimal https://www.w3schools.com/jsref/jsref_fromcharcode.asp
          below ASCII for more ideas of where to make changes
@@ -168,6 +178,7 @@
                     <th>Hexadecimal</th>
                     <th>Decimal</th>
                     <!-- Hack: display ASCII label for printable character(s)  -->
+                    <th>ASCII</th>
                     <th>Minus</th>
                 </tr>
                 <tr>
@@ -177,6 +188,7 @@
                     <td id="hexadecimal">0</td>
                     <td id="decimal">0</td>
                     <!-- Hack: display ASCII printable character(s)  -->
+                    <td id="ascii">npc</td>
                     <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
 
 

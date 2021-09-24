@@ -1,9 +1,10 @@
 # image (PNG, JPG) to base64 conversion (string), learn about base64 on wikipedia https://en.wikipedia.org/wiki/Base64
 import base64
 from io import BytesIO
-
 import numpy
 from PIL import ImageDraw, Image
+from pathlib import Path # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
+
 
 
 def image_base64(img, img_type):
@@ -15,15 +16,14 @@ def image_formatter(img, img_type):
     return "data:image/" + img_type + ";base64," + image_base64(img, img_type)
 # color_data prepares a series of images for data analysis
 
-def image_data(path="static/", img_list=None, shouldDraw=False):  # path of static images is defaulted
+def image_data(path=Path("static/"), img_list=None, shouldDraw=False):  # path of static images is defaulted
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
             {'source': "Romolo Tavani ", 'label': "Drowning Hand", 'file': "rip(lower).jpg"}, # this is one dictionary where the source is the word and the "smiley" is the definition
         ]
     # gather analysis data and meta data for each image, adding attributes to each row in table
     for img_dict in img_list:
-        img_dict['path'] = '/' + path  # path for HTML access (frontend)
-        file = path + img_dict['file']  # file with path for local access (backend)
+        file = path / img_dict['file']  # file with path for local access (backend)
         # Python Image Library operations
         img_reference = Image.open(file)  # PIL: this is opeening the image like if we did image.open(static/smiley.jpg) adn this creates an instance of the image. image.open() is a function that loads the image and creates an image pbject that can be modified with the .save: the image object we recieve using image.open can later be used to resize, crop, or more the image
         if shouldDraw == True:

@@ -1,6 +1,7 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
 from algorithm import image_data
+from pathlib import Path # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
 
 
 # create a Flask instance
@@ -180,6 +181,45 @@ def A51story1221():
 def A51story1222():
     return render_template("A51stories/A51story1222.html")
 
+@app.route('/A51story11211/')
+def A51story11211():
+    return render_template("A51stories/A51story11211.html")
+
+@app.route('/A51story11212/')
+def A51story11212():
+    return render_template("A51stories/A51story11212.html")
+
+@app.route('/A51story11221/')
+def A51story11221():
+    return render_template("A51stories/A51story11221.html")
+
+@app.route('/A51story11222/')
+def A51story11222():
+    return render_template("A51stories/A51story11222.html")
+
+@app.route('/A51story12111/')
+def A51story12111():
+    return render_template("A51stories/A51story12111.html")
+
+@app.route('/A51story12112/')
+def A51story12112():
+    return render_template("A51stories/A51story12112.html")
+
+@app.route('/A51story12211/')
+def A51story12211():
+    return render_template("A51stories/A51story12211.html")
+
+@app.route('/A51story12212/')
+def A51story12212():
+    return render_template("A51stories/A51story12212.html")
+
+@app.route('/A51story12221/')
+def A51story12221():
+    return render_template("A51stories/A51story12221.html")
+
+@app.route('/A51story12222/')
+def A51story12222():
+    return render_template("A51stories/A51story12222.html")
 
 #BT stories
 @app.route('/BTstory1/')
@@ -277,7 +317,8 @@ def binary():
 
 @app.route('/rgb/', methods=["GET", "POST"])
 def rgb():
-    return render_template('rgb.html', images=image_data(shouldDraw=True))
+    path = Path(app.root_path) / "static"
+    return render_template('rgb.html', images=image_data(path, shouldDraw=True))
 
 @app.route('/Binary2/')
 def Binary2():

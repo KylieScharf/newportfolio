@@ -55,21 +55,24 @@ def greatPyramid():
     img_list = [
         {'file': "GP.jpeg"}, # this is one dictionary where the source is the word and the "smiley" is the definition
     ]
-    return render_template("themePages/greatPyramid.html", images=image_data(path="static/", img_list=img_list))
+    path = Path(app.root_path) / "static"
+    return render_template("themePages/greatPyramid.html", images=image_data(path=path, img_list=img_list))
 
 @app.route('/area51/')
 def Area51():
     img_list = [
         {'file': "A51.jpeg"}, # this is one dictionary where the source is the word and the "smiley" is the definition
     ]
-    return render_template("themePages/Area51.html", images=image_data(path="static/", img_list=img_list))
+    path = Path(app.root_path) / "static"
+    return render_template("themePages/Area51.html", images=image_data(path=path, img_list=img_list))
 
 @app.route('/bermudaTriangle/')
 def bermudaTriangle():
     img_list = [
         {'file': "BT.jpg"}, # this is one dictionary where the source is the word and the "smiley" is the definition
     ]
-    return render_template("themePages/bermudaTriangle.html", images=image_data(path="static/", img_list=img_list))
+    path = Path(app.root_path) / "static"
+    return render_template("themePages/bermudaTriangle.html", images=image_data(path=path, img_list=img_list))
 #end theme pages
 
 #greet pages

@@ -6,6 +6,7 @@ from pathlib import Path # https://medium.com/@ageitgey/python-3-quick-tip-the-e
 
 # create a Flask instance
 app = Flask(__name__)
+path = Path(app.root_path) / "static" / "assets"
 
 # The following create new routes for the top navigation bar buttons and must be connected to an HTML page
 # connects default URL to render index.html
@@ -18,7 +19,7 @@ def index():
 #about pages
 @app.route('/aboutKylie/')
 def aboutKylie():
-    return render_template("aboutPages/aboutKylie.html")
+    return render_template("aboutPages/aboutKylie.html", path=path)
 
 @app.route('/aboutKhushi/')
 def aboutKhushi():
@@ -30,7 +31,7 @@ def aboutKevin():
 
 @app.route('/aboutDaniel/')
 def aboutDaniel():
-    return render_template("aboutPages/aboutDaniel.html")
+    return render_template("aboutPages/aboutDaniel.html", path=path)
 
 @app.route('/aboutHamza/')
 def aboutHamza():
@@ -55,7 +56,6 @@ def greatPyramid():
     img_list = [
         {'file': "GP.jpeg"}, # this is one dictionary where the source is the word and the "smiley" is the definition
     ]
-    path = Path(app.root_path) / "static"
     return render_template("themePages/greatPyramid.html", images=image_data(path=path, img_list=img_list))
 
 @app.route('/area51/')
@@ -63,7 +63,6 @@ def Area51():
     img_list = [
         {'file': "A51.jpeg"}, # this is one dictionary where the source is the word and the "smiley" is the definition
     ]
-    path = Path(app.root_path) / "static"
     return render_template("themePages/Area51.html", images=image_data(path=path, img_list=img_list))
 
 @app.route('/bermudaTriangle/')
@@ -71,7 +70,6 @@ def bermudaTriangle():
     img_list = [
         {'file': "BT.jpg"}, # this is one dictionary where the source is the word and the "smiley" is the definition
     ]
-    path = Path(app.root_path) / "static"
     return render_template("themePages/bermudaTriangle.html", images=image_data(path=path, img_list=img_list))
 #end theme pages
 
@@ -312,16 +310,15 @@ def binary():
         if request.form:
             bitNumber = request.form.get("bits")
             if len(bitNumber) != 0:  # input field has content
-                return render_template("technicalInfo/binary.html", BITS=int(bitNumber), imageOn="/static/sun.jpg", imageOff="/static/moon.jpg")
+                return render_template("technicalInfo/binary.html", BITS=int(bitNumber), imageOn="/static/assets/sun.jpg", imageOff="/static/assets/moon.jpg")
         # starting and empty input default
         if request.form["bits2"]:
-            return render_template("technicalInfo/binary.html", BITS=8, imageOn="/static/smiley.jpg", imageOff="/static/rip1.jpg")
-    return render_template("technicalInfo/binary.html", BITS=8, imageOn="/static/sun.jpg", imageOff="/static/moon.jpg")
+            return render_template("technicalInfo/binary.html", BITS=8, imageOn="/static/assets/smiley.jpg", imageOff="/static/assets/rip1.jpg")
+    return render_template("technicalInfo/binary.html", BITS=8, imageOn="/static/assets/sun.jpg", imageOff="/static/assets/moon.jpg")
 
 @app.route('/rgb/', methods=["GET", "POST"])
 def rgb():
-    path = Path(app.root_path) / "static"
-    return render_template('rgb.html', images=image_data(path, shouldDraw=True))
+    return render_template('technicalInfo/rgb.html', images=image_data(path, shouldDraw=True))
 
 @app.route('/Binary2/')
 def Binary2():

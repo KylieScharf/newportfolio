@@ -1,6 +1,7 @@
 <!-- Extending the project layout, as this file will do minor customizations -->
 <!--this sets up the basic layout for the theme page HTML files-->
 {% extends "layouts/base.html" %}
+{% set path = path %}
 
 <body>
 {% block body %}
@@ -51,7 +52,7 @@
                     <!--this sets up the basic layout for the image and you set the imageSRC and imageText variable to the image file name for the SRC and what text you want it to display when it doesn't work for the imagetext-->
                         <div class="col-4">
                             {% block image %}
-                            <img src={{ imageSRC }} alt={{ imageText }} width={{ imageWidth }} height={{ imageHeight }}>
+                            <img src= /static/assets/{{ imageSRC }} alt={{ imageText }} width={{ imageWidth }} height={{ imageHeight }}>
                             {% endblock %}
                         </div>
 

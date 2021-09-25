@@ -16,7 +16,7 @@ def image_formatter(img, img_type):
     return "data:image/" + img_type + ";base64," + image_base64(img, img_type)
 # color_data prepares a series of images for data analysis
 
-def image_data(path=Path("static/"), img_list=None, shouldDraw=False):  # path of static images is defaulted
+def image_data(path=Path("static/assets/"), img_list=None, shouldDraw=False):  # path of static images is defaulted
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
             {'source': "Romolo Tavani ", 'label': "Drowning Hand", 'file': "rip(lower).jpg"}, # this is one dictionary where the source is the word and the "smiley" is the definition
@@ -25,7 +25,7 @@ def image_data(path=Path("static/"), img_list=None, shouldDraw=False):  # path o
     for img_dict in img_list:
         file = path / img_dict['file']  # file with path for local access (backend)
         # Python Image Library operations
-        img_reference = Image.open(file)  # PIL: this is opeening the image like if we did image.open(static/smiley.jpg) adn this creates an instance of the image. image.open() is a function that loads the image and creates an image pbject that can be modified with the .save: the image object we recieve using image.open can later be used to resize, crop, or more the image
+        img_reference = Image.open(file)  # PIL: this is opeening the image like if we did image.open(static/assets/smiley.jpg) adn this creates an instance of the image. image.open() is a function that loads the image and creates an image pbject that can be modified with the .save: the image object we recieve using image.open can later be used to resize, crop, or more the image
         if shouldDraw == True:
             draw = ImageDraw.Draw(img_reference)
             draw.text((75, 50), "Hello World", fill=(255, 0, 0))
@@ -70,7 +70,7 @@ def image_data(path=Path("static/"), img_list=None, shouldDraw=False):  # path o
 # run this as standalone tester to see data printed in terminal
 
 if __name__ == "__main__":
-    local_path = "static/"
+    local_path = "static/assets/"
     img_test = [
         {'source': "iconsdb.com", 'label': "Blue square", 'file': "rip.jpg"},
     ]

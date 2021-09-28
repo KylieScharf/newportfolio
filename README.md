@@ -32,19 +32,19 @@ These wonders will include Area 51, the Bermuda Triangle, and the Great Pyramid 
 The user will be able to pick any wonder they want and will learn about that wonder with an informative page and then be directed to an adventure page.
 In this adventure page they will go through a story where they will be able to pick how they react to different situation within the story.
 
-## Sprint 5,6 Week 6([9/20-9.25 Self Grades](https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing))
+## Sprint 5,6 Week 6([9/28-10/1 Self Grades](https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing))
 Table of Contents
-1. [edit pair share journal for the week](https://github.com/KylieScharf/flask_portfolio/issues/64)
-2. [complete RGB project](https://github.com/KylieScharf/flask_portfolio/issues/49)
-3. [create documentation of project layout](https://github.com/KylieScharf/flask_portfolio/issues/62)
-4. [create tech talk 6 document](https://github.com/KylieScharf/flask_portfolio/issues/65)
-5. [edit binary lab](https://github.com/KylieScharf/flask_portfolio/issues/66)
-6. [teacher review](https://github.com/KylieScharf/flask_portfolio/issues/61)
+1. [teacher review](https://github.com/KylieScharf/flask_portfolio/issues/61)
+2. [edit binary lab](https://github.com/KylieScharf/flask_portfolio/issues/66)
+3. [edit pair share journal for the week](https://github.com/KylieScharf/flask_portfolio/issues/64)
+4. [complete RGB project](https://github.com/KylieScharf/flask_portfolio/issues/49)
+5. [create documentation of project layout](https://github.com/KylieScharf/flask_portfolio/issues/62)
+6. [complete tech talk 6 document](https://github.com/KylieScharf/flask_portfolio/issues/65)
 7. [write more stories](https://github.com/KylieScharf/flask_portfolio/issues/60)
 8. [code stub pages](https://github.com/KylieScharf/flask_portfolio/issues/52)
 
 
-## Sprint 5,6 Week 5([9/20-9.25 Self Grades](https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing))
+## Sprint 5,6 Week 5([9/20-9/25 Self Grades](https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing))
 Table of Contents
 1. [complete pair share journal](https://github.com/KylieScharf/flask_portfolio/issues/55)
 2. [RGB project](https://github.com/KylieScharf/flask_portfolio/issues/49)

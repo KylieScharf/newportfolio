@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+
+{% set imageList = ["And-gate.png", "nand.png", "or.png", "nor.png", "xor.png", "not.png"]  %}
+{% set textList = ["And Gate", "Nand Gate", "Or Gate", "Nor Gate", "Xor Gate", "Inverter (Not Gate)"] %}
+{% set result = "0"  %}
+
+
+{% block meta %}
+    <script>
+    </script>
+{% endblock %}
+
+{% block body %}
+    <h1 class="text-center">Logic Gate Lab</h1>
+    <div class="dark1border" style="text-align: center; margin: 0px 30px 10px 30px;border-top-width: 0.5px; border-bottom-width: 0.5px; border-top-style: dashed; border-bottom-style: dashed;"></div>
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-3">
+        <h2 class="text-left">Inputs</h2>
+            <button type="button" id="butt" onclick="setImg()">button</button>
+            <button type="button" id="butt2" onclick="setImg()">button</button>
+        </div>
+        <div class="col-9">
+            <h2 class="text-left">Logic Gates</h2>
+        <table>
+            <tr>
+                <th>Symbol</th>
+                <th>Logic Gate</th>
+                <th>Result</th>
+            </tr>
+            {% for item in imageList %}
+            <tr>
+                <td class="col-3">
+                    <img class="img-responsive py-3" id="and" alt="" width="256" height="Auto" src="/static/assets/{{ item }}" >
+                </td>
+                <td class="col-3"> {{ textList[loop.index0] }}</td>
+                <td id="textList{{ loop.index }}" class="col-3">{{ result }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    </div>
+    </div>
+{% endblock %}

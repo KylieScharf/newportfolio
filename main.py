@@ -73,7 +73,6 @@ def bermudaTriangle():
     return render_template("themePages/bermudaTriangle.html", images=image_data(path=path, img_list=img_list))
 #end theme pages
 
-#greet pages
 @app.route('/kylie/', methods=['GET', 'POST'])
 def kylie():
     # submit button has been pushed
@@ -316,13 +315,20 @@ def binary():
             return render_template("technicalInfo/binary.html", BITS=8, imageOn="/static/assets/smiley.jpg", imageOff="/static/assets/rip1.jpg")
     return render_template("technicalInfo/binary.html", BITS=8, imageOn="/static/assets/sun.jpg", imageOff="/static/assets/moon.jpg")
 
-@app.route('/rgb/', methods=["GET", "POST"])
-def rgb():
-    return render_template('technicalInfo/rgb.html', images=image_data(path, shouldDraw=True))
-
 @app.route('/Binary2/')
 def Binary2():
     return render_template("technicalInfo/Binary2.html")
+
+@app.route('/rgb/', methods=["GET", "POST"])
+def rgb():
+    img_list = [
+        {'file': "BT.jpg"}
+    ]
+    return render_template('technicalInfo/rgb.html', images=image_data(path, shouldDraw=True))
+
+@app.route('/logicGate/', methods=['GET', 'POST'])
+def logicGate():
+    return render_template("logicGate.html")
 
 # runs the application on the development server
 #The rest just create routes that may be used but this actually runs the program on the server

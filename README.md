@@ -34,6 +34,16 @@ In this adventure page they will go through a story where they will be able to p
 
 ## Sprint 5,6 Week 6([9/20-9.25 Self Grades](https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing))
 Table of Contents
+1. [edit pair share journal for the week](https://github.com/KylieScharf/flask_portfolio/issues/64)
+2. [complete RGB project(kylie and khushi)](https://github.com/KylieScharf/flask_portfolio/issues/49)
+3. [complete RGB project(kevin and daniel and hamza)](https://github.com/KylieScharf/flask_portfolio/issues/63)
+4. [create documentation of project layout](https://github.com/KylieScharf/flask_portfolio/issues/62)
+5. [create tech talk 6 document](https://github.com/KylieScharf/flask_portfolio/issues/65)
+6. [edit binary lab](https://github.com/KylieScharf/flask_portfolio/issues/66)
+
+
+## Sprint 5,6 Week 5([9/20-9.25 Self Grades](https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing))
+Table of Contents
 1. [complete pair share journal](https://github.com/KylieScharf/flask_portfolio/issues/55)
 2. [RGB project](https://github.com/KylieScharf/flask_portfolio/issues/49)
 3. [complete binary hacks on seperate binary page](https://github.com/KylieScharf/flask_portfolio/issues/59)

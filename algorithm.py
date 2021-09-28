@@ -44,7 +44,6 @@ def image_data(path=Path("static/assets/"), img_list=None, shouldDraw=False):  #
         degree_flippedImage = img_reference.transpose(Image.FLIP_LEFT_RIGHT)
         img_dict['base64_flip'] = image_formatter(degree_flippedImage,img_dict['format'])
         # 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted
-
         #in this area made the code more efficient based on big O notation
         for pixel in img_dict['data']:
             # hexadecimal conversions
@@ -70,7 +69,7 @@ def image_data(path=Path("static/assets/"), img_list=None, shouldDraw=False):  #
 # run this as standalone tester to see data printed in terminal
 
 if __name__ == "__main__":
-    local_path = "static/assets/"
+    local_path = Path("static/assets/")
     img_test = [
         {'source': "iconsdb.com", 'label': "Blue square", 'file': "rip.jpg"},
     ]
@@ -80,8 +79,9 @@ if __name__ == "__main__":
         # meta data
         print("---- meta data -----")
         print(row['size'])
+        print(local_path)
         print("----  render and write in image  -----")
-        filename = local_path + row['file']
+        filename = local_path / row['file']
         image_ref = Image.open(filename)
         draw = ImageDraw.Draw(image_ref)
         draw.text((0, 0), "Size is {0} X {1}".format(*row['size']))  # draw in image

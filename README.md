@@ -39,7 +39,6 @@ Table of Contents
 3. [edit pair share journal for the week](https://github.com/KylieScharf/flask_portfolio/issues/64)
 4. [complete RGB project](https://github.com/KylieScharf/flask_portfolio/issues/49)
 5. [create documentation of project layout](https://github.com/KylieScharf/flask_portfolio/issues/62)
-6. [complete tech talk 6 document](https://github.com/KylieScharf/flask_portfolio/issues/65)
 7. [write more stories](https://github.com/KylieScharf/flask_portfolio/issues/60)
 8. [code stub pages](https://github.com/KylieScharf/flask_portfolio/issues/52)
 

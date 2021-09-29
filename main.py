@@ -13,7 +13,7 @@ path = Path(app.root_path) / "static" / "assets"
 #home page
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template("index.html")
+    return render_template("themePages/index.html")
 #end home page
 
 #about pages
@@ -73,6 +73,7 @@ def bermudaTriangle():
     return render_template("themePages/bermudaTriangle.html", images=image_data(path=path, img_list=img_list))
 #end theme pages
 
+#greet pages
 @app.route('/kylie/', methods=['GET', 'POST'])
 def kylie():
     # submit button has been pushed
@@ -128,7 +129,6 @@ def kevin():
 #end greet pages
 
 #A51 stories
-
 @app.route('/A51story1/')
 def A51story1():
     return render_template("A51stories/A51story1.html")
@@ -303,6 +303,7 @@ def GPstory121():
 def GPstory122():
     return render_template("GPstories/GPstory122.html")
 
+#labs
 @app.route('/binary/', methods=['GET', 'POST'])
 def binary():
     if request.method == "POST":
@@ -328,7 +329,7 @@ def rgb():
 
 @app.route('/logicGate/', methods=['GET', 'POST'])
 def logicGate():
-    return render_template("logicGate.html")
+    return render_template("technicalInfo/logicGate.html")
 
 # runs the application on the development server
 #The rest just create routes that may be used but this actually runs the program on the server

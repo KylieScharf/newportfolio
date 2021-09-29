@@ -120,6 +120,29 @@
                 }
             }
         }
+        function shift(n) {
+            let binary = getBits();
+            let decimal = parseInt(binary, 2);
+            if (n > 0) {
+                decimal = decimal << 1;
+            }
+            if (n < 0) {
+                decimal = decimal >> 1;
+            }
+            binary = decimal_2_base(decimal, 2);
+            setConversions(binary);
+            for (let i = 0; i < binary.length; i++) {
+                let digit = binary.substr(i, 1);
+                document.getElementById('digit' + i).value = digit;
+                if (digit === "1") {
+                    document.getElementById('bulb' + i).src = "{{ imgBulbOn }}";
+                    document.getElementById('butt' + i).innerHTML = "{{ msgTurnOff }}";
+                } else {
+                    document.getElementById('bulb' + i).src = "{{ imgBulbOff }}";
+                    document.getElementById('butt' + i).innerHTML = "{{ msgTurnOn }}";
+                }
+            }
+        }
     </script>
 {% endblock %}
 
@@ -156,12 +179,14 @@
                     </tr>
                     <tr>
                         <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
+                        <td><button type="button" id="shiftRight" onclick="shift(1)"><<</button></td>
                         <td id="binary">00000000</td>
                         <td id="octal">0</td>
                         <td id="hexadecimal">0</td>
                         <td id="decimal">0</td>
                         <!-- Hack: display ASCII printable character(s)  -->
                         <td id="ascii">NPC</td> <!-- this creates the inner HTML and ID of the ascii -->
+                        <td><button type="button" id="shiftLeft" onclick="shift(-1)">>></button></td>
                         <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
 
                     </tr>

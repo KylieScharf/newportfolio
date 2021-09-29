@@ -335,6 +335,12 @@ def logicGate():
 def technicalInfo():
     return render_template("technicalInfo/unsignedaddition.html", path=path)
 
+
+@app.route('/signedAddition/', methods=['GET', 'POST'])
+def logicGate():
+    return render_template("technicalInfo/signedAddition.html")
+
+
 # runs the application on the development server
 #The rest just create routes that may be used but this actually runs the program on the server
 if __name__ == "__main__":

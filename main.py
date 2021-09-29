@@ -329,15 +329,19 @@ def rgb():
 
 @app.route('/logicGate/', methods=['GET', 'POST'])
 def logicGate():
-    return render_template("technicalInfo/logicGate.html")
+    return render_template("technicalInfo/logicGate.html", path=path,BITS=8)
 
 @app.route('/unsignedaddition/')
-def technicalInfo():
-    return render_template("technicalInfo/unsignedaddition.html", path=path)
+def unsignedaddition():
+    return render_template("technicalInfo/unsignedaddition.html", path=path,BITS=8)
 
 @app.route('/signedAddition/', methods=['GET', 'POST'])
 def signedAddition():
-    return render_template("technicalInfo/signedAddition.html")
+    return render_template("technicalInfo/signedAddition.html", path=path,BITS=8)
+
+@app.route('/unicode/', methods=['GET', 'POST'])
+def unicode():
+    return render_template("technicalInfo/unicode.html", path=path,BITS=8)
 
 # runs the application on the development server
 #The rest just create routes that may be used but this actually runs the program on the server

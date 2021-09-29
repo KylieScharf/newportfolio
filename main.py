@@ -331,9 +331,9 @@ def rgb():
 def logicGate():
     return render_template("technicalInfo/logicGate.html")
 
-@app.route('/unicode/')
-def unicode():
-    return render_template("technicalInfo/unicode.html")
+@app.route('/unsignedaddition/')
+def technicalInfo():
+    return render_template("technicalInfo/unsignedaddition.html", path=path)
 
 @app.route('/signedAddition/', methods=['GET', 'POST'])
 def signedAddition():

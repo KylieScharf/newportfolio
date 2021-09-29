@@ -335,11 +335,9 @@ def logicGate():
 def unicode():
     return render_template("technicalInfo/unicode.html")
 
-
 @app.route('/signedAddition/', methods=['GET', 'POST'])
-def logicGate():
+def signedAddition():
     return render_template("technicalInfo/signedAddition.html")
-
 
 # runs the application on the development server
 #The rest just create routes that may be used but this actually runs the program on the server

@@ -164,7 +164,7 @@
 
 
 {% block body %}
-<h1 class="text-center">Binary Math with Conversions</h1>
+<h1 class="text-center">Unicode vs ASCII</h1>
 <div class="container">
     <div class="row justify-content-md-center">
         <div class="row" style="padding-left:0%;">
@@ -208,6 +208,66 @@
 
 
             <div class="col-12">
+                <table class="table">
+                    <tr>
+                        {% for i in range(BITS) %}
+                        <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
+                            <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
+                        </td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        {% for i in range(BITS) %}
+                        <td><input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>
+                        {% endfor %}
+                    </tr>
+                </table>
+
+                <table class="table">
+                    <tr>
+                        {% for i in range(BITS) %}
+                        <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
+                            <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
+                        </td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        {% for i in range(BITS) %}
+                        <td><input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>
+                        {% endfor %}
+                    </tr>
+                </table>
+
+                <table class="table">
+                    <tr>
+                        {% for i in range(BITS) %}
+                        <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
+                            <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
+                        </td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        {% for i in range(BITS) %}
+                        <td><input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>
+                        {% endfor %}
+                    </tr>
+                </table>
+
+                <table class="table">
+                    <tr>
+                        {% for i in range(BITS) %}
+                        <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
+                            <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
+                        </td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        {% for i in range(BITS) %}
+                        <td><input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>
+                        {% endfor %}
+                    </tr>
+                </table>
+
                 <table class="table">
                     <tr>
                         {% for i in range(BITS) %}

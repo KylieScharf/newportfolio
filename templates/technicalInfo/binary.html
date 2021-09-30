@@ -7,7 +7,7 @@
            send initial value and updated values to form via Python render_template -->
 <!-- Hack: use 8 as default -->
 <!-- got rid of the "set bits" and set them in python instead-->
-{% set MAX = ((2 ** BITS) - 1) %}
+{% set MAX = ((2 ** BITS) - 1) %} {# ** is an exponent so it is 2 to the power of bits - 1 which is the max number of bits (like 255) #}
 
 <!-- Hack: Set bulbs and pass as variables via Python render_template
            add new images (ie PNGs) to project -->
@@ -129,8 +129,11 @@
             if (n < 0) {
                 decimal = decimal >> 1;
             }
+            // convert the result back to binary
             binary = decimal_2_base(decimal, 2);
+            // update conversions
             setConversions(binary);
+            // update bits
             for (let i = 0; i < binary.length; i++) {
                 let digit = binary.substr(i, 1);
                 document.getElementById('digit' + i).value = digit;
@@ -169,12 +172,14 @@
                 <table class="table">
                     <tr id="table">
                         <th>Plus</th>
+                        <th>Shift Right (x2)</th>
                         <th>Binary</th>
                         <th>Octal</th>
                         <th>Hexadecimal</th>
                         <th>Decimal</th>
                         <!-- Hack: display ASCII label for printable character(s)  -->
                         <th>ASCII</th>
+                        <th>Shift Left (/2)</th>
                         <th>Minus</th>
                     </tr>
                     <tr>

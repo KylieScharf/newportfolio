@@ -236,6 +236,8 @@
                             {% endfor %}
                         </tr>
                     </table>
+                    <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
+                    </td>
                     <table class="table">
                         <tr>
                             {% for i in range(BITS) %}

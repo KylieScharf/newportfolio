@@ -146,17 +146,43 @@
                 }
             }
         }
+        function parseSignedByte(bitsString){
+            let signedValue = 0;
+            if (bitsString[0] === "0"){
+                signedValue = parseInt(bitsString, 2)
+            }
+            else{
+                let flipped = ""
+                for(let i = 0; i < bitsString.length; i++){
+                    if (bitsString[i] === '1'){
+                        flipped += "0"
+                    }
+                    else {
+                        flipped += "1"
+                    }
+                }
+                signedValue = parseInt(flipped, 2);
+                signedValue += 1;//finish two's compliment as bits
+                signedValue *= -1; //assign the proper sign
+            }
+            return signedValue;
+        }
         function addBits(){
             let binary1 = getBits('digit');
-            let decimal1 = parseInt(binary1,2);
+            let decimal1 = parseSignedByte(binary1);
             let binary2 = getBits('digit2');
-            let decimal2 = parseInt(binary2,2);
-            //decimal3 = decimal3 > 255 ? 0 : decimal1 + decimal2;
+            let decimal2 = parseSignedByte(binary2);
             decimal3 = decimal1 + decimal2;
-            if (decimal3 > 255){
-                alert("Number Is Too Big!! Program will overflow to 0")
-                decimal3 = 0
-            }
+            //decimal3 = decimal3 > 255 ? 0 : decimal1 + decimal2;
+            //if (binary1[0] === "0" && binary2[0] === "0"){
+                //alert("0")
+                //decimal3 = decimal1 + decimal2;
+                //}
+            //if (binary1[0] === "1" && binary2[0] === "1"){
+                //alert("1")
+                //decimal1 = decimal1 - 127
+                //decimal2 = -1
+            //}
             binary = decimal_2_base(decimal3, 2);
             for (let i = 0; i < binary.length; i++) {
                 let digit = binary.substr(i, 1);
@@ -173,7 +199,7 @@
 {% endblock %}
 
 {% block body %}
-    <h1 class="text-center">Unsigned Addition</h1>
+    <h1 class="text-center">Signed Addition</h1>
     <div class="container">
         <div class="col-12">
             <table class="table">
@@ -190,7 +216,7 @@
                 <div class ="col-3"></div>
                 <div class ="col-3"></div>
                 <div class ="col-3">
-                <button type="button" id="button" onclick="addBits()">+</button>
+                    <button type="button" id="button" onclick="addBits()">+</button>
                 </div>
             </div>
             <table class="table">

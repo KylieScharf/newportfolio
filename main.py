@@ -347,6 +347,9 @@ def unicode():
 def unsigned2():
     return render_template("unsigned2.html", path=path, BITS=8, imageOn="/static/assets/sun.jpg", imageOff="/static/assets/moon.jpg")
 
+@app.route('/signed2/', methods=['GET', 'POST'])
+def signed2():
+    return render_template("signed2.html", path=path, BITS=8, imageOn="/static/assets/sun.jpg", imageOff="/static/assets/moon.jpg")
 # runs the application on the development server
 #The rest just create routes that may be used but this actually runs the program on the server
 if __name__ == "__main__":

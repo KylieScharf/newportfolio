@@ -167,23 +167,38 @@
             }
             return signedValue;
         }
-        function addBits(){
+        function addBits() {
             let binary1 = getBits('digit');
             let decimal1 = parseSignedByte(binary1);
             let binary2 = getBits('digit2');
             let decimal2 = parseSignedByte(binary2);
+            let binary = ""
             decimal3 = decimal1 + decimal2;
             //decimal3 = decimal3 > 255 ? 0 : decimal1 + decimal2;
             //if (binary1[0] === "0" && binary2[0] === "0"){
-                //alert("0")
-                //decimal3 = decimal1 + decimal2;
-                //}
-            //if (binary1[0] === "1" && binary2[0] === "1"){
-                //alert("1")
-                //decimal1 = decimal1 - 127
-                //decimal2 = -1
+            //alert("0")
+            //decimal3 = decimal1 + decimal2;
             //}
-            binary = decimal_2_base(decimal3, 2);
+            //if (binary1[0] === "1" && binary2[0] === "1"){
+            //alert("1")
+            //decimal1 = decimal1 - 127
+            //decimal2 = -1
+            //}
+            if (decimal3 > 0) {
+                binary = decimal_2_base(decimal3, 2);
+
+            } else if (decimal3 < 0) {
+                decimal3 *= -1;//get the equivalent positive value
+                decimal3 -= 1;//since we do the addition before we flip the bits subtract instead of add
+                for (let i = 0; i < 8; i++) {
+                    if ((decimal3 & (2 ** i)) > 0 ) { //check each bit (powers of 2) and flip it
+                        binary = "0" + binary;
+                    } else {
+                        binary = "1" + binary;
+                    }
+
+                }
+            }
             for (let i = 0; i < binary.length; i++) {
                 let digit = binary.substr(i, 1);
                 document.getElementById('digit3' + i).value = digit;

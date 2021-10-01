@@ -316,9 +316,14 @@ def binary():
             return render_template("technicalInfo/binary.html", BITS=8, imageOn="/static/assets/smiley.jpg", imageOff="/static/assets/rip1.jpg")
     return render_template("technicalInfo/binary.html", BITS=8, imageOn="/static/assets/sun.jpg", imageOff="/static/assets/moon.jpg")
 
-@app.route('/Binary2/')
+@app.route('/Binary2/', methods=["GET", "POST"])
 def Binary2():
-    return render_template("technicalInfo/Binary2.html")
+    if request.form:
+        bitNumber2 = request.form.get("bits2")
+        if len(bitNumber2) != 0:  # input field has content
+            print("hello")
+            return render_template("technicalInfo/Binary2.html", BITS=int(bitNumber2))
+    return render_template("technicalInfo/Binary2.html", BITS=8)
 
 @app.route('/rgb/', methods=["GET", "POST"])
 def rgb():

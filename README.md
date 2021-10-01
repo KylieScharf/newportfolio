@@ -34,7 +34,7 @@ In this adventure page they will go through a story where they will be able to p
 
 ## Sprint 5,6 Week 6([9/28-10/1 Self Grades](https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing))
 Table of Contents
-1. [teacher review](https://github.com/KylieScharf/flask_portfolio/issues/61)
+1. [teacher review](https://github.com/KylieScharf/flask_portfolio/issues/67)
 2. [edit binary lab](https://github.com/KylieScharf/flask_portfolio/issues/66)
 3. [edit pair share journal for the week](https://github.com/KylieScharf/flask_portfolio/issues/64)
 4. [complete RGB project](https://github.com/KylieScharf/flask_portfolio/issues/49)

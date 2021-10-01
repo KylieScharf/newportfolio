@@ -10,7 +10,6 @@
            use HTML Input Form in Frontend, ie toward top of Page
            send initial value and updated values to form via Python render_template -->
 <!-- Hack: use 8 as default -->
-{% set BITS = 8 %}
 {% set MAX = ((2 ** BITS) - 1) %}
 
 
@@ -168,14 +167,11 @@
 <div class="container">
     <div class="row justify-content-md-center">
         <div class="row" style="padding-left:0%;">
-            <!--this creates the text displayed at the top that changed and sets the thing to be changed to a variable so you can set it to different values in python so it can change-->
             <div class="col-12">
-                <!--this form tag creates the search bar that is tied to a label which is displayed text and to a submit button so the user can input information-->
-                <form action="/binary/" id="binaryForm" method="POST" >
-                    <label for="binaryForm">Set Number of Bits</label>
-                    <input name="bits" id="bits">
-                    <input type="submit" name="bits1" value="Set Bits!">
-                    <input type="submit" name="bits2" value="Change Image!">
+                <form action="/Binary2/" id="binaryForm2" method="POST" >
+                    <label for="binaryForm2">Set Number of Bits</label>
+                    <input name="bits2" id="bits2">
+                    <input type="submit" name="bits2" value="Set Bits!">
                 </form>
             </div>
 

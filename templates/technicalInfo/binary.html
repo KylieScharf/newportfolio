@@ -202,16 +202,10 @@
                 <table class="table">
                         <div>
                         {% for i in range(BITS) %} {# we just want 8 bits per row #}
-                            {% if i % 8 == 0 %} {# this is a modulo operation where if the index is divisible by 8 then a table row gets created and if the index + 1 is divisible by 8 then the table row is ended #}
-                            <tr>
-                            {% endif %}
-                                <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto"> {# this sets the default image to off and creates the id for the image #}
-                                    <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
-                                    <input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>{# this sets the default message to off and calls the function "toggleBit" on the click of the button which is found in the javascript #}
-                                </td>
-                            {% if i + 1 % 8 == 0 or i == BITS %} {# this is the modulo operation for the end row #}
-                            </tr>
-                            {% endif %}
+                            <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto"> {# this sets the default image to off and creates the id for the image #}
+                                <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
+                                <input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>{# this sets the default message to off and calls the function "toggleBit" on the click of the button which is found in the javascript #}
+                            </td>
                         {% endfor %}
                         </div>
                 </table>

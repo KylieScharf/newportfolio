@@ -331,6 +331,10 @@ def rgb():
 def logicGate():
     return render_template("technicalInfo/logicGate.html", path=path, BITS=8)
 
+@app.route('/colors/')
+def colors():
+    return render_template("colors.html", path=path, BITS=8)
+
 @app.route('/unsignedaddition/')
 def unsignedaddition():
     return render_template("technicalInfo/unsignedaddition.html", path=path, BITS=8)

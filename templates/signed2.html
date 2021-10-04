@@ -23,10 +23,10 @@
     <script>
         const BITS = '{{ BITS }}'; let max = '{{ MAX }}'; let MAX = parseInt(max, 10);
         // return string with current value of each bit
-        function getBits() {
+        function getBits(digitId) {
             let bits = "";
             for(let i = 0; i < BITS; i++) {
-                bits = bits + document.getElementById('digit' + i).value;
+                bits = bits + document.getElementById(digitId + i).value;
             }
             return bits;
         }
@@ -44,7 +44,7 @@
             // the following is conditional logic that sets the ascii inner HTML to display "npc" or non printable character if the value is less than 32, space if 32, and ascii if greater than 32
             if (decimal<32) {
                 document.getElementById('ascii').innerHTML = 'NPC';
-            } else if (decimal == 32) {
+            } else if (decimal == 32){
                 document.getElementById('ascii').innerHTML = 'space';
             } else {
                 document.getElementById('ascii').innerHTML = String.fromCharCode(parseInt(decimal));
@@ -74,11 +74,11 @@
         }
 
         // toggle selected bit and recalculate
-        function toggleBit(i) {
+        function toggleBit(i, bulbId, buttId, digitId) {
             //alert("Digit action: " + i );
-            const dig = document.getElementById('digit' + i);
-            const image = document.getElementById('bulb' + i);
-            const butt = document.getElementById('butt' + i);
+            const dig = document.getElementById(digitId + i);
+            const image = document.getElementById(bulbId + i);
+            const butt = document.getElementById(buttId + i);
             // Change digit and visual
             if (image.src.match("{{ imgBulbOn }}")) {
                 dig.value = 0;
@@ -90,7 +90,7 @@
                 butt.innerHTML = "{{ msgTurnOff }}";
             }
             // Binary numbers
-            const binary = getBits();
+            const binary = getBits(digitId);
             setConversions(binary);
         }
         // add is positive integer, subtract is negative integer
@@ -146,74 +146,101 @@
                 }
             }
         }
+        function parseSignedByte(bitsString){
+            let signedValue = 0;
+            if (bitsString[0] === "0"){
+                signedValue = parseInt(bitsString, 2)
+            }
+            else{
+                let flipped = ""
+                for(let i = 0; i < bitsString.length; i++){
+                    if (bitsString[i] === '1'){
+                        flipped += "0"
+                    }
+                    else {
+                        flipped += "1"
+                    }
+                }
+                signedValue = parseInt(flipped, 2);
+                signedValue += 1;//finish two's compliment as bits
+                signedValue *= -1; //assign the proper sign
+            }
+            return signedValue;
+        }
+        function addBits(){
+            let binary1 = getBits('digit');
+            let decimal1 = parseSignedByte(binary1);
+            let binary2 = getBits('digit2');
+            let decimal2 = parseSignedByte(binary2);
+            decimal3 = decimal1 + decimal2;
+            //decimal3 = decimal3 > 255 ? 0 : decimal1 + decimal2;
+            //if (binary1[0] === "0" && binary2[0] === "0"){
+                //alert("0")
+                //decimal3 = decimal1 + decimal2;
+                //}
+            //if (binary1[0] === "1" && binary2[0] === "1"){
+                //alert("1")
+                //decimal1 = decimal1 - 127
+                //decimal2 = -1
+            //}
+            binary = decimal_2_base(decimal3, 2);
+            for (let i = 0; i < binary.length; i++) {
+                let digit = binary.substr(i, 1);
+                document.getElementById('digit3' + i).value = digit;
+                if (digit === "1") {
+                    document.getElementById('bulb3' + i).src = "{{ imgBulbOn }}";
+                } else {
+                    document.getElementById('bulb3' + i).src = "{{ imgBulbOff }}";
+                }
+            }
+        }
+
     </script>
 {% endblock %}
 
 {% block body %}
-        <h1 class="text-center">Binary Math with Conversions</h1>
-        <div class="container">
-            <div class="row justify-content-md-center">
-                    <div class="row" style="padding-left:0%;">
-                        <!--this creates the text displayed at the top that changed and sets the thing to be changed to a variable so you can set it to different values in python so it can change-->
-                        <div class="col-12">
-                            <!--this form tag creates the search bar that is tied to a label which is displayed text and to a submit button so the user can input information-->
-                            <form action="/binary/" id="binaryForm" method="POST" >
-                                <label for="binaryForm">Set Number of Bits</label>
-                                <input name="bits" id="bits">
-                                <input type="submit" name="bits1" value="Set Bits!">
-                                <input type="submit" name="bits2" value="Change Image!">
-                            </form>
-                        </div>
-                    </div>
+    <h1 class="text-center">Signed Addition</h1>
+    <div class="container">
+        <div class="col-12">
+            <table class="table">
+                <tr>
+                    {% for i in range(BITS) %} {# we just want 8 bits per row #}
+                        <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto"> {# this sets the default image to off and creates the id for the image #}
+                            <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}', 'bulb', 'butt', 'digit')">{{ msgTurnOn }}</button>
+                            <input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>{# this sets the default message to off and calls the function "toggleBit" on the click of the button which is found in the javascript #}
+                        </td>
+                    {% endfor %}
+                </tr>
+            </table>
+            <div class = "row" style="padding-top: 10px; padding-bottom: 20px;">
+                <div class ="col-3"></div>
+                <div class ="col-3"></div>
+                <div class ="col-3">
+                    <button type="button" id="button" onclick="addBits()">+</button>
+                </div>
             </div>
+            <table class="table">
+                <tr>
+                    {% for i in range(BITS) %} {# we just want 8 bits per row #}
+                        <td><img class="img-responsive py-3" id="bulb2{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto"> {# this sets the default image to off and creates the id for the image #}
+                            <button type="button" id="butt2{{i}}" onclick="toggleBit('{{i}}', 'bulb2', 'butt2', 'digit2')">{{ msgTurnOn }}</button>
+                            <input type='text' id='digit2{{i}}' Value="0" size="1" readonly></td>{# this sets the default message to off and calls the function "toggleBit" on the click of the button which is found in the javascript #}
+                        </td>
+                    {% endfor %}
+                </tr>
+            </table>
+            <table class="table">
+                <tr>
+                    <div class="dark1border" style="color: saddlebrown; text-align: center; margin: 30px 0px 40px 0px;border-top-width: 3px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;"></div>
+                </tr>
+                <tr>
+                    {% for i in range(BITS) %} {# we just want 8 bits per row #}
+                        <td><img class="img-responsive py-3" id="bulb3{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto"> {# this sets the default image to off and creates the id for the image #}
+                            <input type='text' id='digit3{{i}}' Value="0" size="1" readonly></td>{# this sets the default message to off and calls the function "toggleBit" on the click of the button which is found in the javascript #}
+                        </td>
+                    {% endfor %}
+                </tr>
+            </table>
         </div>
-
-            <div class="col-8">
-                <table class="table">
-                    <tr id="table">
-                        <th>Plus</th>
-                        <th>Shift Right (x2)</th>
-                        <th>Binary</th>
-                        <th>Octal</th>
-                        <th>Hexadecimal</th>
-                        <th>Decimal</th>
-                        <!-- Hack: display ASCII label for printable character(s)  -->
-                        <th>ASCII</th>
-                        <th>Shift Left (/2)</th>
-                        <th>Minus</th>
-                    </tr>
-                    <tr>
-                        <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
-                        <td><button type="button" id="shiftRight" onclick="shift(1)"><<</button></td>
-                        <td id="binary">00000000</td>
-                        <td id="octal">0</td>
-                        <td id="hexadecimal">0</td>
-                        <td id="decimal">0</td>
-                        <!-- Hack: display ASCII printable character(s)  -->
-                        <td id="ascii">NPC</td> <!-- this creates the inner HTML and ID of the ascii -->
-                        <td><button type="button" id="shiftLeft" onclick="shift(-1)">>></button></td>
-                        <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
-
-                    </tr>
-                </table>
-            </div>
-
-            <div class="col-12">
-                <table class="table">
-                        <div>
-                        {% for i in range(BITS) %} {# we just want 8 bits per row #}
-                            {% if i % 8 == 0 %} {# this is a modulo operation where if the index is divisible by 8 then a table row gets created and if the index + 1 is divisible by 8 then the table row is ended #}
-                            <tr>
-                            {% endif %}
-                                <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto"> {# this sets the default image to off and creates the id for the image #}
-                                    <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
-                                    <input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>{# this sets the default message to off and calls the function "toggleBit" on the click of the button which is found in the javascript #}
-                                </td>
-                            {% if i + 1 % 8 == 0 or i == BITS %} {# this is the modulo operation for the end row #}
-                            </tr>
-                            {% endif %}
-                        {% endfor %}
-                        </div>
-                </table>
-            </div>
+    </div>
 {% endblock %}

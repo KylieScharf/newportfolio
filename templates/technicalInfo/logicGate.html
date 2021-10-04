@@ -2,7 +2,7 @@
 {% extends "layouts/base.html" %}
 
 {% set imageList = ["And-gate.png", "nand.png", "or.png", "nor.png", "xor.png", "not.png"]  %}
-{% set textList = ["And Gate", "Nand Gate", "Or Gate", "Nor Gate", "Xor Gate", "Inverter (Not Gate)"] %}
+{% set textList = ["And Gate", "Nand Gate", "Or Gate", "Nor Gate", "Xor Gate", "Inverter for A (Not Gate)"] %}
 {% set result = ["0", "1", "0", "1", "0", "1"]  %}
 {% set gate = ["and1", "nand1", "or1", "nor1", "xor1", "not1"] %}
 {% set textGate = ["and", "nand", "or", "nor", "xor", "not"] %}
@@ -65,12 +65,12 @@
             <form name="form" method="POST">
                 <label>
                     <span>A</span>
-                    <input type="checkbox" name="a" class="inline checkbox" id="checkbox1" value="1">
+                    <input type="checkbox" name="a" class="inline checkbox" id="checkbox1" value="unchecked">
                 </label>
 
                 <label>
                     <span>B</span>
-                    <input type="checkbox" name="b" class="incline checkbox" id="checkbox2" value="1">
+                    <input type="checkbox" name="b" class="incline checkbox" id="checkbox2" value="unchecked">
                 </label>
 
                     <input type="button" onclick="myFunction()" value="Submit">

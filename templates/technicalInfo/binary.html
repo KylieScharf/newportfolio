@@ -44,7 +44,7 @@
             // the following is conditional logic that sets the ascii inner HTML to display "npc" or non printable character if the value is less than 32, space if 32, and ascii if greater than 32
             if (decimal<32) {
                 document.getElementById('ascii').innerHTML = 'NPC';
-            } else if (decimal == 32){
+            } else if (decimal == 32) {
                 document.getElementById('ascii').innerHTML = 'space';
             } else {
                 document.getElementById('ascii').innerHTML = String.fromCharCode(parseInt(decimal));

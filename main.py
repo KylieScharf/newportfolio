@@ -331,6 +331,11 @@ def rgb():
 def logicGate():
     return render_template("technicalInfo/logicGate.html")
 
+
+@app.route('/colors/')
+def colors():
+    return render_template("colors.html", BITS=8)
+
 # runs the application on the development server
 #The rest just create routes that may be used but this actually runs the program on the server
 if __name__ == "__main__":

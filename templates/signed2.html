@@ -188,6 +188,7 @@
                 binary = decimal_2_base(decimal3, 2);
 
             } else if (decimal3 < 0) {
+                alert(decimal3)
                 decimal3 *= -1;//get the equivalent positive value
                 decimal3 -= 1;//since we do the addition before we flip the bits subtract instead of add
                 for (let i = 0; i < 8; i++) {

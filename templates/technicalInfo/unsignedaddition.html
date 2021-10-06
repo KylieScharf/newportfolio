@@ -168,43 +168,6 @@
 <div class="container">
     <div class="row justify-content-md-center">
         <div class="row" style="padding-left:0%;">
-            <!--this creates the text displayed at the top that changed and sets the thing to be changed to a variable so you can set it to different values in python so it can change-->
-            <div class="col-12">
-                <!--this form tag creates the search bar that is tied to a label which is displayed text and to a submit button so the user can input information-->
-                <form action="/binary/" id="binaryForm" method="POST">
-                    <label for="binaryForm">Set Number of Bits</label>
-                    <input name="bits" id="bits">
-                    <input type="submit" name="bits1" value="Set Bits!">
-                    <input type="submit" name="bits2" value="Change Image!">
-                </form>
-            </div>
-
-            <div class="col-8">
-                <table class="table">
-                    <tr id="table">
-                        <th>Plus</th>
-                        <th>Binary</th>
-                        <th>Octal</th>
-                        <th>Hexadecimal</th>
-                        <th>Decimal</th>
-                        <!-- Hack: display ASCII label for printable character(s)  -->
-                        <th>ASCII</th>
-                        <th>Minus</th>
-                    </tr>
-                    <tr>
-                        <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
-                        <td id="binary">00000000</td>
-                        <td id="octal">0</td>
-                        <td id="hexadecimal">0</td>
-                        <td id="decimal">0</td>
-                        <!-- Hack: display ASCII printable character(s)  -->
-                        <td id="ascii">npc</td>
-                        <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
-
-
-                    </tr>
-                </table>
-            </div>
 
 
             <div class="col-12">

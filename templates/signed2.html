@@ -146,22 +146,28 @@
                 }
             }
         }
-        function parseSignedByte(bitsString){
+        function parseSignedByte(bitsString){//treat it like a signed integer: start with a positive or negative number
             let signedValue = 0;
-            if (bitsString[0] === "0"){
+            if (bitsString[0] === "0"){ // if the first character in the string (leftmost) is 0, we know the number is positive so just do the parseInt like usual
                 signedValue = parseInt(bitsString, 2)
             }
-            else{
+            else{// parse int does not understand the negative 8-bit binary so we need to add an else that accomidates for negative
+                // if the first character in the string is 1 we know it is negative
+                //strategy: we want to do 2's compliment to get out a positive equivalent of a negative number
+                //first we'll flip all the bits in the string
+                // then we'll read it into an integer since doing the add 1 would be difficult with a string
+                //then add the one to complete the two's compliment and get the positive version of the negative number you started with
+                //now we can multiply by -1 to get back to the negative number we started with but in decimal form rather than the binary we started with
                 let flipped = ""
-                for(let i = 0; i < bitsString.length; i++){
-                    if (bitsString[i] === '1'){
+                for(let i = 0; i < bitsString.length; i++){//we want to flip all the bits
+                    if (bitsString[i] === '1'){//toggle 1 to 0
                         flipped += "0"
                     }
                     else {
-                        flipped += "1"
+                        flipped += "1"//toggle 0 to 1
                     }
                 }
-                signedValue = parseInt(flipped, 2);
+                signedValue = parseInt(flipped, 2);//turn the string into an integer that is positive
                 signedValue += 1;//finish two's compliment as bits
                 signedValue *= -1; //assign the proper sign
             }

@@ -40,6 +40,7 @@ def image_data(path=Path("static/assets/"), img_list=None, shouldDraw=False):  #
         img_dict['hex_array'] = []
         img_dict['binary_array'] = []
         img_dict['gray_data'] = []
+        img_dict['green_data'] = []
         img_dict['flip'] = img_reference.transpose(Image.FLIP_LEFT_RIGHT)
         degree_flippedImage = img_reference.transpose(Image.FLIP_LEFT_RIGHT)
         img_dict['base64_flip'] = image_formatter(degree_flippedImage,img_dict['format'])
@@ -59,10 +60,15 @@ def image_data(path=Path("static/assets/"), img_list=None, shouldDraw=False):  #
             average = (pixel[0] + pixel[1] + pixel[2]) // 3
             if len(pixel) > 3:
                 img_dict['gray_data'].append((average, average, average, pixel[3])) # append means to add it like when you do "" + something to create a string
+                img_dict['green_data'].append((0, average, 0, pixel[3]))
             else:
                 img_dict['gray_data'].append((average, average, average))
+                img_dict['green_data'].append((0, average, 0))
         img_reference.putdata(img_dict['gray_data'])
         img_dict['base64_GRAY'] = image_formatter(img_reference, img_dict['format'])
+        img_reference.putdata(img_dict['green_data'])
+        img_dict['base64_GREEN'] = image_formatter(img_reference, img_dict['format'])
+
         #img_reference.save(img_dict['flip'])
         #img_dict['base64_flip'] = image_formatter(img_reference, img_dict['format'])
     return img_list  # list is returned with all the attributes for each image dictionary

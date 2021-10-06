@@ -139,23 +139,16 @@
 <div class="col-8">
     <table class="table">
         <tr id="table">
-            <th>Plus</th>
             <th>Binary</th>
-            <th>Octal</th>
             <th>Hexadecimal</th>
             <th>Decimal</th>
             <!-- Hack: display ASCII label for printable character(s)  -->
-            <th>ASCII</th>
-            <th>Minus</th>
         </tr>
         <tr>
             <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
             <td id="binary">00000000</td>
             <td id="octal">0</td>
             <td id="hexadecimal">0</td>
-            <td id="decimal">0</td>
-            <!-- Hack: display ASCII printable character(s)  -->
-            <td id="ascii">NPC</td> <!-- this creates the inner HTML and ID of the ascii -->
             <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
 
         </tr>
@@ -164,7 +157,9 @@
 
 <div class="col-12">
 <div class="row">
+    <td id="decimal">0</td>
     <table class="table">
+        <h2 class="text-right">Decimal</h2>
         <div>
             {% for i in range(BITS) %} {# we just want 8 bits per row #}
             {% if i % 8 == 0 %} {# this is a modulo operation where if the index is divisible by 8 then a table row gets created and if the index + 1 is divisible by 8 then the table row is ended #}

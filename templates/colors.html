@@ -24,32 +24,20 @@
 <script>
         const BITS = '{{ BITS }}'; let max = '{{ MAX }}'; let MAX = parseInt(max, 10);
         // return string with current value of each bit
-        function getBits() {
+        function getBits(digitId) {
             let bits = "";
             for(let i = 0; i < BITS; i++) {
-                bits = bits + document.getElementById('digit' + i).value;
+                bits = bits + document.getElementById(digitId + i).value;
             }
             return bits;
         }
         // setter for DOM values
-        function setConversions(binary) {
-            const decimal = parseInt(binary, 2).toString(10);
-
-            document.getElementById('binary').innerHTML = binary;
-            // DOM assignment to Octal conversion
-            document.getElementById('octal').innerHTML = parseInt(binary, 2).toString(8);
+        function setConversions(binary, decimal) {
             // DOM assignment to Hexadecimal conversion
-            document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
+            //document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16); put in later
             // DOM assignment to Decimal conversion
-            document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString(10);
-            // the following is conditional logic that sets the ascii inner HTML to display "npc" or non printable character if the value is less than 32, space if 32, and ascii if greater than 32
-            if (decimal<32) {
-                document.getElementById('ascii').innerHTML = 'NPC';
-            } else if (decimal == 32) {
-                document.getElementById('ascii').innerHTML = 'space';
-            } else {
-                document.getElementById('ascii').innerHTML = String.fromCharCode(parseInt(decimal));
-            }
+            document.getElementById(decimal).innerHTML = parseInt(binary, 2).toString(10);
+            hexidecimal();
 
             /* Hack: show ASCII printable character(s) for each 8 bits
              DOM assignment by converting decimal https://www.w3schools.com/jsref/jsref_fromcharcode.asplook
@@ -75,7 +63,7 @@
         }
 
         // toggle selected bit and recalculate
-        function toggleBit(i, bulbId, buttId, digitId) {
+        function toggleBit(i, bulbId, buttId, digitId, decimalId) {
             //alert("Digit action: " + i );
             const dig = document.getElementById(digitId + i);
             const image = document.getElementById(bulbId + i);
@@ -91,35 +79,22 @@
                 butt.innerHTML = "{{ msgTurnOff }}";
             }
             // Binary numbers
-            const binary = getBits();
-            setConversions(binary);
+            const binary = getBits(digitId);
+            setConversions(binary, decimalId);
         }
-        // add is positive integer, subtract is negative integer
-        function add(n) {
-            let binary = getBits();
-            // convert to decimal and do math
-            let decimal = parseInt(binary, 2);
-            if (n > 0) {  // PLUS
-                decimal = MAX === decimal ? 0 : decimal += n; // OVERFLOW or PLUS
-            } else  {     // MINUS
-                decimal = 0 === decimal ? MAX : decimal += n; // OVERFLOW or MINUS
-            }
-            // convert the result back to binary
-            binary = decimal_2_base(decimal, 2);
-            // update conversions
-            setConversions(binary);
-            // update bits
-            for (let i = 0; i < binary.length; i++) {
-                let digit = binary.substr(i, 1);
-                document.getElementById('digit' + i).value = digit;
-                if (digit === "1") {
-                    document.getElementById('bulb' + i).src = "{{ imgBulbOn }}";
-                    document.getElementById('butt' + i).innerHTML = "{{ msgTurnOff }}";
-                } else {
-                    document.getElementById('bulb' + i).src = "{{ imgBulbOff }}";
-                    document.getElementById('butt' + i).innerHTML = "{{ msgTurnOn }}";
-                }
-            }
+        function hexidecimal(){
+            let binary1 = getBits('digit');
+            let hexi1 = parseInt(binary1,2).toString(16);
+            //let decimal1 = parseInt(binary1,2);
+            let binary2 = getBits('digit1');
+            let hexi2 = parseInt(binary2,2).toString(16);
+            //let decimal2 = parseInt(binary2,2);
+            let binary3 = getBits('digit2');
+            let hexi3 = parseInt(binary3,2).toString(16);
+            hexi = "" + hexi1 + hexi2 + hexi3;
+            //let decimal3 = parseInt(binary3,2);
+            //decimalSum = decimal1 + decimal2 + decimal3;
+            document.getElementById("hexi").innerHTML = hexi; //parseInt(decimalSum, 10).toString(16);
         }
 </script>
 {% endblock %}
@@ -152,7 +127,7 @@
             <tr>
                 {% endif %}
                 <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto"> {# this sets the default image to off and creates the id for the image #}
-                    <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}', 'bulb', 'butt', 'digit')">{{ msgTurnOn }}</button>
+                    <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}', 'bulb', 'butt', 'digit', 'decimal1')">{{ msgTurnOn }}</button>
                     <input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>{# this sets the default message to off and calls the function "toggleBit" on the click of the button which is found in the javascript #}
                 </td>
                 {% if i + 1 % 8 == 0 or i == BITS %} {# this is the modulo operation for the end row #}
@@ -187,7 +162,7 @@
                     <tr>
                         {% endif %}
                         <td><img class="img-responsive py-3" id="bulb1{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto"> {# this sets the default image to off and creates the id for the image #}
-                            <button type="button" id="butt1{{i}}" onclick="toggleBit('{{i}}', 'bulb1', 'butt1', 'digit1')">{{ msgTurnOn }}</button>
+                            <button type="button" id="butt1{{i}}" onclick="toggleBit('{{i}}', 'bulb1', 'butt1', 'digit1', 'decimal2')">{{ msgTurnOn }}</button>
                             <input type='text' id='digit1{{i}}' Value="0" size="1" readonly></td>{# this sets the default message to off and calls the function "toggleBit" on the click of the button which is found in the javascript #}
                         </td>
                         {% if i + 1 % 8 == 0 or i == BITS %} {# this is the modulo operation for the end row #}
@@ -222,7 +197,7 @@
                     <tr>
                         {% endif %}
                         <td><img class="img-responsive py-3" id="bulb2{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto"> {# this sets the default image to off and creates the id for the image #}
-                            <button type="button" id="butt2{{i}}" onclick="toggleBit('{{i}}', 'bulb2', 'butt2', 'digit2')">{{ msgTurnOn }}</button>
+                            <button type="button" id="butt2{{i}}" onclick="toggleBit('{{i}}', 'bulb2', 'butt2', 'digit2', 'decimal3')">{{ msgTurnOn }}</button>
                             <input type='text' id='digit2{{i}}' Value="0" size="1" readonly></td>{# this sets the default message to off and calls the function "toggleBit" on the click of the button which is found in the javascript #}
                         </td>
                         {% if i + 1 % 8 == 0 or i == BITS %} {# this is the modulo operation for the end row #}
@@ -237,6 +212,14 @@
                     {% endfor %}
                 </div>
             </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2">
+            <p>Hexidecimal = </p>
+        </div>
+        <div class="col-2">
+            <P id="hexi">000000</P>
         </div>
     </div>
 </div>

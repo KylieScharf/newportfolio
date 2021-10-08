@@ -38,6 +38,7 @@ Table of Contents
 2. [edit binary lab](https://github.com/KylieScharf/flask_portfolio/issues/66)
 3. [write more stories](https://github.com/KylieScharf/flask_portfolio/issues/60)
 4. [code stub pages](https://github.com/KylieScharf/flask_portfolio/issues/52)
+5. [tpt project](https://github.com/KylieScharf/flask_portfolio/issues/71)
 
 
 ## Sprint 5,6 Week 6([9/28-10/1 Self Grades](https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing))

@@ -85,12 +85,15 @@
         function hexidecimal(){
             let binary1 = getBits('digit');
             let hexi1 = parseInt(binary1,2).toString(16);
+            let r = parseInt(binary1,2).toString(10);
             //let decimal1 = parseInt(binary1,2);
             let binary2 = getBits('digit1');
             let hexi2 = parseInt(binary2,2).toString(16);
+            let g = parseInt(binary2,2).toString(10);
             //let decimal2 = parseInt(binary2,2);
             let binary3 = getBits('digit2');
             let hexi3 = parseInt(binary3,2).toString(16);
+            let b = parseInt(binary3,2).toString(10);
             if (hexi1 == 0){
                 hexi1 = "00"
             }
@@ -113,6 +116,8 @@
             //let decimal3 = parseInt(binary3,2);
             //decimalSum = decimal1 + decimal2 + decimal3;
             document.getElementById("hexi").innerHTML = hexi; //parseInt(decimalSum, 10).toString(16);
+            color = "(" + r + "," + g + "," + b + ")";
+            document.getElementById("rgb").innerHTML = color;
         }
     </script>
 {% endblock %}
@@ -136,7 +141,7 @@
                             {% if i % 8 == 0 %} {# this is a modulo operation where if the index is divisible by 8 then a table row gets created and if the index + 1 is divisible by 8 then the table row is ended #}
                                 <div class="row">
                                     <div class="col-1.5">
-                                        <p> Decimal = </p>
+                                        <p> Red Decimal = </p>
                                     </div>
                                     <div class="col-1.5">
                                         <p id="decimal1">0</p>
@@ -171,7 +176,7 @@
                             {% if i % 8 == 0 %} {# this is a modulo operation where if the index is divisible by 8 then a table row gets created and if the index + 1 is divisible by 8 then the table row is ended #}
                                 <div class="row">
                                     <div class="col-1.5">
-                                        <p> Decimal = </p>
+                                        <p> Green Decimal = </p>
                                     </div>
                                     <div class="col-1.5">
                                         <p id="decimal2">0</p>
@@ -206,7 +211,7 @@
                             {% if i % 8 == 0 %} {# this is a modulo operation where if the index is divisible by 8 then a table row gets created and if the index + 1 is divisible by 8 then the table row is ended #}
                                 <div class="row">
                                     <div class="col-1.5">
-                                        <p> Decimal = </p>
+                                        <p> Blue Decimal = </p>
                                     </div>
                                     <div class="col-1.5">
                                         <p id="decimal3">0</p>
@@ -238,6 +243,14 @@
             </div>
             <div class="col-2">
                 <P id="hexi">#000000</P>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <p>RGB = </p>
+            </div>
+            <div class="col-2">
+                <P id="rgb">(0,0,0)</P>
             </div>
         </div>
     </div>

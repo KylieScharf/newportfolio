@@ -115,15 +115,14 @@ if __name__ == "__main__":
     print(world['total_cases'])
     print(world)
     print(countries)
-    for country in countries:
-        print(country["country_name"])
+
     #return countries
 
 
 if __name__ == "__main__":
-    url = "https://foreca-weather.p.rapidapi.com/observation/latest/102643743"
+    url = "https://foreca-weather.p.rapidapi.com/location/search/san jose"
 
-    querystring = {"lang":"en"}
+    querystring = {"lang":"en","country":"us"}
 
     headers = {
         'x-rapidapi-host': "foreca-weather.p.rapidapi.com",
@@ -133,6 +132,6 @@ if __name__ == "__main__":
     response = requests.request("GET", url, headers=headers, params=querystring)
 
     print(response.text)
-    list_of_dictionaries2 = response.json().get('observations')
-    print(list_of_dictionaries2)
+
+
 

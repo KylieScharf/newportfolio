@@ -403,21 +403,24 @@ def signed2():
 
 @app.route('/weather/', methods=['GET', 'POST'])
 def weather():
-    url = "https://foreca-weather.p.rapidapi.com/observation/latest/102643743"
+    countryCode = ['105391811', '105368361', '105359777', '105341704', '105393052', '105392171'] #this creates a list of country codes that I got from the API website by searching up different countries with their country lookup
+    dictionaryMasterList = [] #this creates an empty list that all the dictionaries go into
+    for item in countryCode: #this is a for loop for all the country codes so that each one gets a response
+        url = "https://foreca-weather.p.rapidapi.com/observation/latest/" + item
 
-    querystring = {"lang":"en"}
+        querystring = {"lang":"en"}
 
-    headers = {
-        'x-rapidapi-host': "foreca-weather.p.rapidapi.com",
-        'x-rapidapi-key': "00a6319afcmshb59ecb31e0a9dbap1c6de4jsn4b86a9198483"
-    }
+        headers = {
+            'x-rapidapi-host': "foreca-weather.p.rapidapi.com",
+            'x-rapidapi-key': "00a6319afcmshb59ecb31e0a9dbap1c6de4jsn4b86a9198483"
+        }
 
-    response = requests.request("GET", url, headers=headers, params=querystring)
+        response = requests.request("GET", url, headers=headers, params=querystring)
+        list_of_dictionaries2 = response.json().get('observations')
+        dictionaryMasterList = dictionaryMasterList + list_of_dictionaries2
     print('WEATHER INFO')
-    print(response.text) #up until here is gotten from rapidapi.com and this line creates a response object that is a json response from the server
-    list_of_dictionaries2 = response.json().get('observations') #the example response given on the api documentation is a dictionary made up of one key with a value of a list and we want to get this key so we do .get(name of key) to get the key and value pair and then we give it to the HTML
-    print(list_of_dictionaries2)
-    return render_template("weather.html", weather=list_of_dictionaries2) #we give the list of dictionaries to the HTML to use
+    print(dictionaryMasterList) #up until here is gotten from rapidapi.com and this line creates a response object that is a json response from the server
+    return render_template("weather.html", weather=dictionaryMasterList) #we give the list of dictionaries to the HTML to use
 
 
 # runs the application on the development server

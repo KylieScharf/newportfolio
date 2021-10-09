@@ -16,7 +16,7 @@
                 <tr>
                     <th style="font-size:30px">Location</th> <!--these create table headers with the name of the keys-->
                     <th style="font-size:30px">Time</th>
-                    <th style="font-size:30px">Temperature(C)</th>
+                    <th style="font-size:30px">Temperature(F)</th>
                     <th style="font-size:30px">Wind Direction</th>
                     <th style="font-size:30px">Wind Speed</th>
                     <th style="font-size:30px">Pressure</th>
@@ -29,7 +29,8 @@
                     {% set time = dictionary['time'] %}
                     <td>{{ time }}</td>
                     {% set temp = dictionary['temperature'] %}
-                    <td>{{ temp }}</td>
+                    {% set tempf = temp*2 + 30 %} {# convert celcius to farenheit #}
+                    <td>{{ tempf }}</td>
                     {% set windD = dictionary['windDirString'] %}
                     <td>{{ windD }}</td>
                     {% set windS = dictionary['windSpeed'] %}

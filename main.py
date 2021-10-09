@@ -413,7 +413,7 @@ def weather():
     }
 
     response = requests.request("GET", url, headers=headers, params=querystring)
-    print('hello')
+    print('WEATHER INFO')
     print(response.text) #up until here is gotten from rapidapi.com and this line creates a response object that is a json response from the server
     list_of_dictionaries2 = response.json().get('observations') #the example response given on the api documentation is a dictionary made up of one key with a value of a list and we want to get this key so we do .get(name of key) to get the key and value pair and then we give it to the HTML
     print(list_of_dictionaries2)

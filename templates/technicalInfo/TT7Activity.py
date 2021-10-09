@@ -1,3 +1,5 @@
+import json
+
 p1 = { "name":"John", "age":61, "city":"Eugene"}
 p2 = { "name":"Risa", "age":16, "city":"New York"}
 p3 = { "name":"Ryan", "age":16, "city":"Los Angeles"}
@@ -38,7 +40,7 @@ print("Function Items(tuple): ")
 for pair in dict_person.items():
     print(pair)
 
-JSON String**")
+('JSON String**')
 json_people = json.dumps(list_of_people)
 print("JSON People #1")
 print(type(json_people))

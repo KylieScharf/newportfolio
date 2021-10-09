@@ -379,7 +379,7 @@ def logicGate():
 
 @app.route('/colors/')
 def colors():
-    return render_template("colors.html", path=path, BITS=8)
+    return render_template("technicalInfo/colors.html", path=path, BITS=8)
 
 @app.route('/unsignedaddition/')
 def unsignedaddition():
@@ -395,11 +395,11 @@ def unicode():
 
 @app.route('/unsigned2/', methods=['GET', 'POST'])
 def unsigned2():
-    return render_template("unsigned2.html", path=path, BITS=8, imageOn="/static/assets/sun.jpg", imageOff="/static/assets/moon.jpg")
+    return render_template("technicalInfo/unsigned2.html", path=path, BITS=8, imageOn="/static/assets/sun.jpg", imageOff="/static/assets/moon.jpg")
 
 @app.route('/signed2/', methods=['GET', 'POST'])
 def signed2():
-    return render_template("signed2.html", path=path, BITS=8, imageOn="/static/assets/sun.jpg", imageOff="/static/assets/moon.jpg")
+    return render_template("technicalInfo/signed2.html", path=path, BITS=8, imageOn="/static/assets/sun.jpg", imageOff="/static/assets/moon.jpg")
 
 @app.route('/weather/', methods=['GET', 'POST'])
 def weather():

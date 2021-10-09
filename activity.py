@@ -17,36 +17,6 @@ if __name__ == "__main__":
     else:
         print("we didn't find rob")
 
-
-if __name__ == "__main__":
-    p1 = { "name":"John", "age":61, "city":"Eugene"}
-    p2 = { "name":"Risa", "age":16, "city":"New York"}
-    p3 = { "name":"Ryan", "age":16, "city":"Los Angeles"}
-    p4 = { "name":"Shekar", "age":16, "city":"San Francisco"}
-    # a list of dictionaries
-    list_of_people = [p1, p2, p3, p4]
-    for item in list_of_people:
-        print(item)#print each person on its own line
-    print(list_of_people[:])#print each person
-    dict_people = {'people': list_of_people}
-    print("List to Dictionary of people")
-    print(type(dict_people))
-    print(dict_people)
-    print(dict_people["people"])
-    print("** Dumps - Python to JSON String**")
-    json_people = json.dumps(dict_people)
-    print("JSON People #1")
-    print(type(json_people))
-    print(json_people)
-    pprint.pprint(json_people)
-    print("** Loads - JSON to Python Dict**")
-    json_dict = json.loads(json_people)
-    print(json_dict)
-    # to list
-    names = [person['name'] for person in json_dict]
-    print("Names of people to list: " + str(names))
-    print("Names of people: ")
-
 if __name__ == "__main__":
     nlist = [10, 11, 12, 13, 14, 15]
     print([item for item in reversed(nlist)])
@@ -85,27 +55,34 @@ if __name__ == "__main__":
     for item in list_of_people:
         print(item)#print each person on its own line
     print(list_of_people[:])#print each person
-    dict_people = {}
-    i = 0
-    for person in list_of_people:
-        i += 1
-        key = "P" + str(i)
-        dict_people[key] = person
+    dict_people = {'people': list_of_people}
+    #dict_people = {}
+    #i = 0
+    #for person in list_of_people:
+        #i += 1
+        #key = "P" + str(i)
+        #dict_people[key] = person
+
     print("List to Dictionary of people")
     print(type(dict_people))
     print(dict_people)
     print("** Dumps - Python to JSON String**")
-    json_people = json.dumps(dict_people)
+    json_people = json.dumps(list_of_people)
     print("JSON People #1")
     print(type(json_people))
     print(json_people)
-    pprint.pprint(json_people)
+    json_print = json.dumps(list_of_people, indent=4, separators=("*", " = "))# to get it to print nicely you can add optional parameters to the json.dumps function to add an indent and to change the seperators
+    print(json_print)
     print("** Loads - JSON to Python Dict**")
-    json_dict = json.loads(json_people)
-    print(json_dict)
+    python_list = json.loads(json_people)
+    print(python_list)
     # to list
-    print(type(json_dict))
-    names = [person['name'] for person in json_dict.values]
+    print(type(python_list))
+    names = []
+    for person in python_list:
+       names.append(person['name'])
+    #names = [person['name'] for person in python_dict] this is equivalent to above
     print("Names of people to list: " + str(names))
-    print("Names of people: ")
+    json_print2 = json.dumps(names, indent=4, separators=("$", "="))
+    print(json_print2)
 

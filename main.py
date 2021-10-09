@@ -2,7 +2,7 @@
 from flask import Flask, render_template, request
 from algorithm import  image_data
 from pathlib import Path # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
-
+import requests
 
 
 # create a Flask instance
@@ -400,6 +400,26 @@ def unsigned2():
 @app.route('/signed2/', methods=['GET', 'POST'])
 def signed2():
     return render_template("signed2.html", path=path, BITS=8, imageOn="/static/assets/sun.jpg", imageOff="/static/assets/moon.jpg")
+
+@app.route('/weather/', methods=['GET', 'POST'])
+def weather():
+    url = "https://foreca-weather.p.rapidapi.com/observation/latest/102643743"
+
+    querystring = {"lang":"en"}
+
+    headers = {
+        'x-rapidapi-host': "foreca-weather.p.rapidapi.com",
+        'x-rapidapi-key': "00a6319afcmshb59ecb31e0a9dbap1c6de4jsn4b86a9198483"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    print('hello')
+    print(response.text) #up until here is gotten from rapidapi.com and this line creates a response object that is a json response from the server
+    list_of_dictionaries2 = response.json().get('observations') #the example response given on the api documentation is a dictionary made up of one key with a value of a list and we want to get this key so we do .get(name of key) to get the key and value pair and then we give it to the HTML
+    print(list_of_dictionaries2)
+    return render_template("weather.html", weather=list_of_dictionaries2) #we give the list of dictionaries to the HTML to use
+
+
 # runs the application on the development server
 #The rest just create routes that may be used but this actually runs the program on the server
 if __name__ == "__main__":

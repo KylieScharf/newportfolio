@@ -6,6 +6,7 @@ from PIL import ImageDraw, Image
 from pathlib import Path # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
 import http.client
 import requests
+import json
 
 
 
@@ -92,5 +93,46 @@ if __name__ == "__main__":
     }
 
     response = requests.request("GET", url, headers=headers, params=querystring)
+    print(response.text)
+    list_of_dictionaries = response.json()
+    #return render_template(.html list=list)
+    print("hello")
+    print(list_of_dictionaries)
+    python = json.loads(response.text)
+
+
+    print(python)
+    url = "https://corona-virus-world-and-india-data.p.rapidapi.com/api"
+
+    headers = {
+        'x-rapidapi-key': "dec069b877msh0d9d0827664078cp1a18fajsn2afac35ae063",
+        'x-rapidapi-host': "corona-virus-world-and-india-data.p.rapidapi.com"
+    }
+
+    response = requests.request("GET", url, headers=headers)
+    world = response.json().get('world_total')
+    countries = response.json().get('countries_stat')
+    print(world['total_cases'])
+    print(world)
+    print(countries)
+    for country in countries:
+        print(country["country_name"])
+    #return countries
+
+
+if __name__ == "__main__":
+    url = "https://foreca-weather.p.rapidapi.com/observation/latest/102643743"
+
+    querystring = {"lang":"en"}
+
+    headers = {
+        'x-rapidapi-host': "foreca-weather.p.rapidapi.com",
+        'x-rapidapi-key': "00a6319afcmshb59ecb31e0a9dbap1c6de4jsn4b86a9198483"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
 
     print(response.text)
+    list_of_dictionaries2 = response.json().get('observations')
+    print(list_of_dictionaries2)
+

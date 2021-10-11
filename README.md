@@ -40,17 +40,16 @@ Table of Contents
 4. [code stub pages](https://github.com/KylieScharf/flask_portfolio/issues/52)
 5. [weather API page](https://github.com/KylieScharf/flask_portfolio/issues/73)
 6. [presentation](https://github.com/KylieScharf/flask_portfolio/issues/74)
+7. [backlog binary work](https://github.com/KylieScharf/flask_portfolio/issues/75)
 
 
 ## Sprint 7,8 Week 7([10/4-10/8 Self Grades](https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing))
 Table of Contents
 1. [edit journal](https://github.com/KylieScharf/flask_portfolio/issues/69)
 2. [edit binary lab](https://github.com/KylieScharf/flask_portfolio/issues/66)
-3. [write more stories](https://github.com/KylieScharf/flask_portfolio/issues/60)
-4. [code stub pages](https://github.com/KylieScharf/flask_portfolio/issues/52)
-5. [tpt project](https://github.com/KylieScharf/flask_portfolio/issues/71)
-6. [teacher review week 7](https://github.com/KylieScharf/flask_portfolio/issues/70)
-7. [runtime video](https://watch.screencastify.com/v/v0hGsbOEbgD7L5eB5806)
+3. [tpt project](https://github.com/KylieScharf/flask_portfolio/issues/71)
+4. [teacher review week 7](https://github.com/KylieScharf/flask_portfolio/issues/70)
+5. [runtime video](https://watch.screencastify.com/v/v0hGsbOEbgD7L5eB5806)
 
 
 ## Sprint 5,6 Week 6([9/28-10/1 Self Grades](https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing))
@@ -60,8 +59,6 @@ Table of Contents
 3. [edit pair share journal for the week](https://github.com/KylieScharf/flask_portfolio/issues/64)
 4. [complete RGB project](https://github.com/KylieScharf/flask_portfolio/issues/49)
 5. [create documentation of project layout](https://github.com/KylieScharf/flask_portfolio/issues/62)
-7. [write more stories](https://github.com/KylieScharf/flask_portfolio/issues/60)
-8. [code stub pages](https://github.com/KylieScharf/flask_portfolio/issues/52)
 
 
 ## Sprint 5,6 Week 5([9/20-9/25 Self Grades](https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing))
@@ -69,7 +66,6 @@ Table of Contents
 1. [complete pair share journal](https://github.com/KylieScharf/flask_portfolio/issues/55)
 2. [RGB project](https://github.com/KylieScharf/flask_portfolio/issues/49)
 3. [complete binary hacks on seperate binary page](https://github.com/KylieScharf/flask_portfolio/issues/59)
-4. [continue to code stub pages(PBL)](https://github.com/KylieScharf/flask_portfolio/issues/52)
 
 ## Sprint 3,4 Week 4([9/13-9/17 Self Grades](https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing))
 Table of Contents

@@ -1,7 +1,8 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
-from algorithm import image_data
+from algorithm import  image_data
 from pathlib import Path # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
+import requests
 
 
 # create a Flask instance
@@ -378,7 +379,7 @@ def logicGate():
 
 @app.route('/colors/')
 def colors():
-    return render_template("colors.html", path=path, BITS=8)
+    return render_template("technicalInfo/colors.html", path=path, BITS=8)
 
 @app.route('/unsignedaddition/')
 def unsignedaddition():
@@ -394,12 +395,39 @@ def unicode():
 
 @app.route('/unsigned2/', methods=['GET', 'POST'])
 def unsigned2():
-    return render_template("unsigned2.html", path=path, BITS=8, imageOn="/static/assets/sun.jpg", imageOff="/static/assets/moon.jpg")
+    return render_template("technicalInfo/unsigned2.html", path=path, BITS=8, imageOn="/static/assets/sun.jpg", imageOff="/static/assets/moon.jpg")
 
 @app.route('/signed2/', methods=['GET', 'POST'])
 def signed2():
-    return render_template("signed2.html", path=path, BITS=8, imageOn="/static/assets/sun.jpg", imageOff="/static/assets/moon.jpg")
+    return render_template("technicalInfo/signed2.html", path=path, BITS=8, imageOn="/static/assets/sun.jpg", imageOff="/static/assets/moon.jpg")
+
+@app.route('/weather/', methods=['GET', 'POST'])
+def weather():
+    countryCode = ['105391811', '105368361', '105359777', '105341704', '105393052', '105392171'] #this creates a list of country codes that I got from the API website by searching up different countries with their country lookup
+    dictionaryMasterList = [] #this creates an empty list that all the dictionaries go into
+    for item in countryCode: #this is a for loop for all the country codes so that each one gets a response
+        url = "https://foreca-weather.p.rapidapi.com/observation/latest/" + item
+
+        querystring = {"lang":"en"}
+
+        headers = {
+            'x-rapidapi-host': "foreca-weather.p.rapidapi.com",
+            'x-rapidapi-key': "00a6319afcmshb59ecb31e0a9dbap1c6de4jsn4b86a9198483"
+        }
+
+        response = requests.request("GET", url, headers=headers, params=querystring)
+        list_of_dictionaries2 = response.json().get('observations')
+        dictionaryMasterList = dictionaryMasterList + list_of_dictionaries2
+    print('WEATHER INFO')
+    print(dictionaryMasterList) #up until here is gotten from rapidapi.com and this line creates a response object that is a json response from the server
+    return render_template("weather.html", weather=dictionaryMasterList) #we give the list of dictionaries to the HTML to use
+
+
 # runs the application on the development server
 #The rest just create routes that may be used but this actually runs the program on the server
 if __name__ == "__main__":
     app.run(debug=True)
+
+
+
+

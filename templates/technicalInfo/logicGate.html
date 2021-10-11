@@ -10,7 +10,7 @@
 
 {% block meta %}
     <script>
-        function myFunction(){
+        function logic(){
 
             // if a and b then set inner html to be 1 if true also do value
             const x = document.getElementById("checkbox1")
@@ -64,16 +64,14 @@
         <h2 class="text-left">Inputs</h2>
             <form name="form" method="POST">
                 <label>
-                    <span>A</span>
                     <input type="checkbox" name="a" class="inline checkbox" id="checkbox1" value="unchecked">
                 </label>
 
                 <label>
-                    <span>B</span>
                     <input type="checkbox" name="b" class="incline checkbox" id="checkbox2" value="unchecked">
                 </label>
 
-                    <input type="button" onclick="myFunction()" value="Submit">
+                    <input type="button" onclick="logic()" value="Submit">
             </form>
         </div>
         <div class="col-9">

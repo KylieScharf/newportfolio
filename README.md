@@ -32,12 +32,25 @@ These wonders will include Area 51, the Bermuda Triangle, and the Great Pyramid 
 The user will be able to pick any wonder they want and will learn about that wonder with an informative page and then be directed to an adventure page.
 In this adventure page they will go through a story where they will be able to pick how they react to different situation within the story.
 
-## Sprint 7,8 Week 7([9/28-10/1 Self Grades](https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing))
+## Sprint 7,8 Week 8([10/11-10/15 Self Grades](https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing))
+Table of Contents
+1. [edit journal](https://github.com/KylieScharf/flask_portfolio/issues/72)
+2. [edit binary lab](https://github.com/KylieScharf/flask_portfolio/issues/66)
+3. [write more stories](https://github.com/KylieScharf/flask_portfolio/issues/60)
+4. [code stub pages](https://github.com/KylieScharf/flask_portfolio/issues/52)
+5. [weather API page](https://github.com/KylieScharf/flask_portfolio/issues/73)
+6. [presentation](https://github.com/KylieScharf/flask_portfolio/issues/74)
+
+
+## Sprint 7,8 Week 7([10/4-10/8 Self Grades](https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing))
 Table of Contents
 1. [edit journal](https://github.com/KylieScharf/flask_portfolio/issues/69)
 2. [edit binary lab](https://github.com/KylieScharf/flask_portfolio/issues/66)
 3. [write more stories](https://github.com/KylieScharf/flask_portfolio/issues/60)
 4. [code stub pages](https://github.com/KylieScharf/flask_portfolio/issues/52)
+5. [tpt project](https://github.com/KylieScharf/flask_portfolio/issues/71)
+6. [teacher review week 7](https://github.com/KylieScharf/flask_portfolio/issues/70)
+7. [runtime video](https://watch.screencastify.com/v/v0hGsbOEbgD7L5eB5806)
 
 
 ## Sprint 5,6 Week 6([9/28-10/1 Self Grades](https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing))

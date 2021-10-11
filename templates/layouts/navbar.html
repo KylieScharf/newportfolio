@@ -9,6 +9,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         <span class="navbar-toggler-icon"></span>
     </button>
             <a class="nav-link" style=color:white href="{{ url_for('index') }}">Home</a>
+            <a class="nav-link" style=color:white href="{{ url_for('weather') }}">Weather</a>
 <div class="collapse navbar-collapse" id="navbarNavAltMarkup"><div class="navbar-nav">
     <!--this creates a drop down within the navigation bar so if you want another one just copy and paste this text at the bottom after the last li and change the text and the links within the drop dowm-->
     <li class="nav-item dropdown">
@@ -27,13 +28,9 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
 
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" style="color:white;"  href="minilabs" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Technical Info
+            Technical Info and Greet
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/binary">Binary(TPT3)</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/Binary2">Binary(2)</a>
-            <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="{{ url_for('kylie') }}">Kylie Lab 1</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="{{ url_for('daniel') }}">Daniel Lab 1</a>
@@ -47,6 +44,17 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             <a class="dropdown-item" href="{{ url_for('designInfo') }}">Journals, Wireframe, and Brainwrite</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="{{ url_for('technicalResearch') }}">Wireframe of Button Options, Journal0, Project Plan, and Technical Research</a>
+            <div class="dropdown-divider"></div>
+        </div>
+    </li>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" style="color:white;"  href="minilabs2" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Mini Labs
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/binary">Binary(TPT3: Kylie and Khushi)</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/Binary2">Binary(2)</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="{{ url_for('rgb') }}">RGB</a>
             <div class="dropdown-divider"></div>
@@ -67,7 +75,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         </div>
     </li>
     <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" style="color:white;" href="minilab" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" style="color:white;" href="minilab" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Creators Page
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">

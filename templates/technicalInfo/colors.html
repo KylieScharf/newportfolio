@@ -118,6 +118,7 @@
             document.getElementById("hexi").innerHTML = hexi; //parseInt(decimalSum, 10).toString(16);
             color = "(" + r + "," + g + "," + b + ")";
             document.getElementById("rgb").innerHTML = color;
+            document.getElementById('color2').style.backgroundColor = hexi;
         }
     </script>
 {% endblock %}
@@ -254,4 +255,8 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block background %}
+    <body id="color2" style= "background: black;">
 {% endblock %}

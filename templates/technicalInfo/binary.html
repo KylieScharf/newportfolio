@@ -49,6 +49,12 @@
             } else {
                 document.getElementById('ascii').innerHTML = String.fromCharCode(parseInt(decimal));
             }
+            if (decimal<=255){
+                document.getElementById('asciiHead').innerHTML = "UTF-8"
+            }
+            else {
+                document.getElementById('asciiHead').innerHTML = "UTF-16"
+            }
 
             /* Hack: show ASCII printable character(s) for each 8 bits
              DOM assignment by converting decimal https://www.w3schools.com/jsref/jsref_fromcharcode.asplook
@@ -172,14 +178,14 @@
                 <table class="table">
                     <tr id="table">
                         <th>Plus</th>
-                        <th>Shift Right (x2)</th>
+                        <th>Shift Left (x2)</th>
                         <th>Binary</th>
                         <th>Octal</th>
                         <th>Hexadecimal</th>
                         <th>Decimal</th>
                         <!-- Hack: display ASCII label for printable character(s)  -->
-                        <th>ASCII</th>
-                        <th>Shift Left (/2)</th>
+                        <th id="asciiHead">UTF-8</th>
+                        <th>Shift Right (/2)</th>
                         <th>Minus</th>
                     </tr>
                     <tr>

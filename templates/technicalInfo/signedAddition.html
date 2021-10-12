@@ -40,10 +40,10 @@
         returns: <string>, the current value of each bit (ie "1010001")
      */
     // get the binary string using values of bits
-    function getBits() {
+    function getBits(digit) {
         let bits = "";
         for (let i = 0; i < BITS; i++) {
-            bits = bits + document.getElementById('digit' + i).value;
+            bits = bits + document.getElementById(digit + i).value;
         }
         return bits;
     }
@@ -124,7 +124,7 @@
             butt.innerHTML = "{{ msgTurnOff }}";
         }
         // Binary numbers
-        const binary = getBits();
+        const binary = getBits(digitId);
         setConversions(binary);
     }
 
@@ -160,6 +160,13 @@
             }
         }
     }
+    function addButton(){
+        let binaryNum = getBits('digit');
+        let decimalNum = parseInt(binaryNum, 2);
+        let binaryNum2 = getBits('digit1');
+        let decimalNum2 = parseInt(binaryNum2, 2);
+        sum = decimalNum + decimalNum2;
+    }
 </script>
 {% endblock %}
 
@@ -169,7 +176,6 @@
 <div class="container">
     <div class="row justify-content-md-center">
         <div class="row" style="padding-left:0%;">
-
 
             <div class="col-12">
                 <table class="table">
@@ -214,18 +220,17 @@
 
                 <table class="table">
                     <tr>
+                        <div class="black1border" style="color: black; text-align: center; margin: 30px 0px 40px 0px;border-top-width: 3px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;"></div>
                         {% for i in range(BITS) %}
-                        <td><img class="img-responsive py-3" id="bulb2{{i}}" src="{{ imgBulbOff }}" alt="" width="40"
-                                 height="Auto">
-                            <button type="button" id="butt2{{i}}"
-                                    onclick="toggleBit('{{i}}', 'bulb2', 'butt2', 'digit2')">{{ msgTurnOn }}
-                            </button>
-                        </td>
+                        <td><img class="img-responsive py-3" id="bulb2{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
+
+
                         {% endfor %}
                     </tr>
                     <tr>
                         {% for i in range(BITS) %}
                         <td><input type='text' id='digit2{{i}}' Value="0" size="1" readonly></td>
+
                         {% endfor %}
                     </tr>
                 </table>

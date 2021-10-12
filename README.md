@@ -50,6 +50,7 @@ Table of Contents
 3. [tpt project](https://github.com/KylieScharf/flask_portfolio/issues/71)
 4. [teacher review week 7](https://github.com/KylieScharf/flask_portfolio/issues/70)
 5. [runtime video](https://watch.screencastify.com/v/v0hGsbOEbgD7L5eB5806)
+6. [runtime video issue in github](https://github.com/KylieScharf/flask_portfolio/issues/76)
 
 
 ## Sprint 5,6 Week 6([9/28-10/1 Self Grades](https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing))

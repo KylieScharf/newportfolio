@@ -4,7 +4,7 @@ from algorithm import  image_data
 from pathlib import Path # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
 import requests
 
-
+#committ test
 # create a Flask instance
 app = Flask(__name__)
 path = Path(app.root_path) / "static" / "assets"

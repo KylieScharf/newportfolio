@@ -54,18 +54,15 @@ In this adventure page they will go through a story where they will be able to p
 [runtime video](https://watch.screencastify.com/v/v0hGsbOEbgD7L5eB5806)
 [review ticket](https://github.com/KylieScharf/flask_portfolio/issues/70)
 | Team Member Name        | Main Topics     | Issues  |
-| -------------           |:-------------:|           -----:|           -----:|                -----:|             -----:|
-| Kylie      | Logic gates, signed and unsigned addition, bit shifting | 
-1. [edit journal](https://github.com/KylieScharf/flask_portfolio/issues/69)
-2. [edit binary lab](https://github.com/KylieScharf/flask_portfolio/issues/66)
-3. [tpt project](https://github.com/KylieScharf/flask_portfolio/issues/71) | 
+| -------------           |:-------------:|           -----:|  
+| Kylie      | Logic gates, signed and unsigned addition, bit shifting | [edit journal](https://github.com/KylieScharf/flask_portfolio/issues/69) [edit binary lab](https://github.com/KylieScharf/flask_portfolio/issues/66) [tpt project](https://github.com/KylieScharf/flask_portfolio/issues/71) | 
 | Khushi      | Colors lab | [edit journal](https://github.com/KylieScharf/flask_portfolio/issues/69) [edit binary lab](https://github.com/KylieScharf/flask_portfolio/issues/66)  | 
 | Daniel     | signed addition | [edit journal](https://github.com/KylieScharf/flask_portfolio/issues/69) [edit binary lab](https://github.com/KylieScharf/flask_portfolio/issues/66) |
 | Hamza    | unsigned addition | [edit journal](https://github.com/KylieScharf/flask_portfolio/issues/69) [edit binary lab](https://github.com/KylieScharf/flask_portfolio/issues/66) | 
 | Kevin     | Ascii to unicode extension | [edit journal](https://github.com/KylieScharf/flask_portfolio/issues/69) [edit binary lab](https://github.com/KylieScharf/flask_portfolio/issues/66) |
-4. [edit journal](https://github.com/KylieScharf/flask_portfolio/issues/69)
-5. [edit binary lab](https://github.com/KylieScharf/flask_portfolio/issues/66)
-6. [tpt project](https://github.com/KylieScharf/flask_portfolio/issues/71)
+2. [edit journal](https://github.com/KylieScharf/flask_portfolio/issues/69)
+3. [edit binary lab](https://github.com/KylieScharf/flask_portfolio/issues/66)
+4. [tpt project](https://github.com/KylieScharf/flask_portfolio/issues/71)
 
 
 ## Sprint 5,6 Week 6([9/28-10/1 Self Grades](https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing))

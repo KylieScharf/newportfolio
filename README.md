@@ -33,7 +33,14 @@ The user will be able to pick any wonder they want and will learn about that won
 In this adventure page they will go through a story where they will be able to pick how they react to different situation within the story.
 
 ## Sprint 7,8 Week 8([10/11-10/15 Self Grades](https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing))
-Table of Contents
+[review video]()
+| Team Member Name        | Github ID     | Github Profile  | Filtered Issues | Filtered Scrum Board | Filtered Committs |
+| -------------           |:-------------:|           -----:|           -----:|                -----:|             -----:|
+| Kylie      | KylieScharf | [Kylie Profile](https://github.com/KylieScharf) | [Kylie Issues](https://github.com/KylieScharf/flask_portfolio/issues/assigned/KylieScharf) |  [Kylie Scrum Board](https://github.com/KylieScharf/flask_portfolio/projects/2?card_filter_query=assignee%3Akyliescharf)| [kylie Commits](https://github.com/KylieScharf/flask_portfolio/commits?author=KylieScharf) |
+| Khushi      | KhushiB24 | [Khushi Profile](https://github.com/KhushiB24) | [Khushi Issues](https://github.com/KylieScharf/flask_portfolio/issues/assigned/KhushiB24) |  [Khushi Scrum Board](https://github.com/KylieScharf/flask_portfolio/projects/2?card_filter_query=assignee%3AKhushiB24)| [Khushi Commits](https://github.com/KylieScharf/flask_portfolio/commits?author=KhushiB24) |
+| Daniel     | Danny4w | [Daniel Profile](https://github.com/Danny4w)| [Daniel Issues](https://github.com/KylieScharf/flask_portfolio/issues/assigned/Danny4w) |  [Daniel Scrum Board](https://github.com/KylieScharf/flask_portfolio/projects/2?card_filter_query=assignee%3ADanny4w)| [Daniel Commits](https://github.com/KylieScharf/flask_portfolio/commits?author=Danny4w) |
+| Hamza    | hamzahakak | [Hamza Profile](https://github.com/hamzahakak) | [Hamza Issues](https://github.com/KylieScharf/flask_portfolio/issues/assigned/hamzahakak) |  [Hamza Scrum Board](https://github.com/KylieScharf/flask_portfolio/projects/2?card_filter_query=assignee%3Ahamzahakak)| [Hamza Commits](https://github.com/KylieScharf/flask_portfolio/commits?author=hamzahakak) |
+| Kevin     | Kevinc023032 | [Kevin Profile](https://github.com/Kevinc023032) | [Kevin Issues](https://github.com/KylieScharf/flask_portfolio/issues/assigned/Kevinc023032) |  [Kevin Scrum Board](https://github.com/KylieScharf/flask_portfolio/projects/2?card_filter_query=assignee%3AKevinc023032)| [Kevin Commits](https://github.com/KylieScharf/flask_portfolio/commits?author=Kevinc023032) |
 1. [edit journal](https://github.com/KylieScharf/flask_portfolio/issues/72)
 2. [edit binary lab](https://github.com/KylieScharf/flask_portfolio/issues/66)
 3. [write more stories](https://github.com/KylieScharf/flask_portfolio/issues/60)
@@ -44,13 +51,21 @@ Table of Contents
 
 
 ## Sprint 7,8 Week 7([10/4-10/8 Self Grades](https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing))
-Table of Contents
+[runtime video](https://watch.screencastify.com/v/v0hGsbOEbgD7L5eB5806)
+[review ticket](https://github.com/KylieScharf/flask_portfolio/issues/70)
+| Team Member Name        | Main Topics     | Github Profile  | Filtered Issues | Filtered Scrum Board | Filtered Committs |
+| -------------           |:-------------:|           -----:|           -----:|                -----:|             -----:|
+| Kylie      | KylieScharf | [Kylie Profile](https://github.com/KylieScharf) | [Kylie Issues](https://github.com/KylieScharf/flask_portfolio/issues/assigned/KylieScharf) |  [Kylie Scrum Board](https://github.com/KylieScharf/flask_portfolio/projects/2?card_filter_query=assignee%3Akyliescharf)| [kylie Commits](https://github.com/KylieScharf/flask_portfolio/commits?author=KylieScharf) |
+| Khushi      | KhushiB24 | [Khushi Profile](https://github.com/KhushiB24) | [Khushi Issues](https://github.com/KylieScharf/flask_portfolio/issues/assigned/KhushiB24) |  [Khushi Scrum Board](https://github.com/KylieScharf/flask_portfolio/projects/2?card_filter_query=assignee%3AKhushiB24)| [Khushi Commits](https://github.com/KylieScharf/flask_portfolio/commits?author=KhushiB24) |
+| Daniel     | Danny4w | [Daniel Profile](https://github.com/Danny4w)| [Daniel Issues](https://github.com/KylieScharf/flask_portfolio/issues/assigned/Danny4w) |  [Daniel Scrum Board](https://github.com/KylieScharf/flask_portfolio/projects/2?card_filter_query=assignee%3ADanny4w)| [Daniel Commits](https://github.com/KylieScharf/flask_portfolio/commits?author=Danny4w) |
+| Hamza    | hamzahakak | [Hamza Profile](https://github.com/hamzahakak) | [Hamza Issues](https://github.com/KylieScharf/flask_portfolio/issues/assigned/hamzahakak) |  [Hamza Scrum Board](https://github.com/KylieScharf/flask_portfolio/projects/2?card_filter_query=assignee%3Ahamzahakak)| [Hamza Commits](https://github.com/KylieScharf/flask_portfolio/commits?author=hamzahakak) |
+| Kevin     | Kevinc023032 | [Kevin Profile](https://github.com/Kevinc023032) | [Kevin Issues](https://github.com/KylieScharf/flask_portfolio/issues/assigned/Kevinc023032) |  [Kevin Scrum Board](https://github.com/KylieScharf/flask_portfolio/projects/2?card_filter_query=assignee%3AKevinc023032)| [Kevin Commits](https://github.com/KylieScharf/flask_portfolio/commits?author=Kevinc023032) |
 1. [edit journal](https://github.com/KylieScharf/flask_portfolio/issues/69)
 2. [edit binary lab](https://github.com/KylieScharf/flask_portfolio/issues/66)
 3. [tpt project](https://github.com/KylieScharf/flask_portfolio/issues/71)
-4. [teacher review week 7](https://github.com/KylieScharf/flask_portfolio/issues/70)
-5. [runtime video](https://watch.screencastify.com/v/v0hGsbOEbgD7L5eB5806)
-6. [runtime video issue in github](https://github.com/KylieScharf/flask_portfolio/issues/76)
+4. [runtime video](https://watch.screencastify.com/v/v0hGsbOEbgD7L5eB5806)
+5. [runtime video issue in github](https://github.com/KylieScharf/flask_portfolio/issues/76)
+6. [review ticket](https://github.com/KylieScharf/flask_portfolio/issues/70)
 
 
 ## Sprint 5,6 Week 6([9/28-10/1 Self Grades](https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing))

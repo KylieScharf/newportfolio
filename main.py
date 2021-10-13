@@ -422,7 +422,27 @@ def weather():
     print(dictionaryMasterList) #up until here is gotten from rapidapi.com and this line creates a response object that is a json response from the server
     return render_template("weather.html", weather=dictionaryMasterList) #we give the list of dictionaries to the HTML to use
 
+@app.route('/translator/', methods=['GET', 'POST'])
+def translator():
+    url = "https://shakespeare.p.rapidapi.com/shakespeare.json"
+    text = "Hello everybody, Type anything in the above search bar to translate it into Shakespearean text like you see to the right of this"
+    if request.form:
+        print("hello")
+        text = request.form.get("tester")
+        print(text)
 
+    querystring = {"text": text}
+
+    headers = {
+        'x-funtranslations-api-secret': "Thou shalt try this API!",
+        'x-rapidapi-host': "shakespeare.p.rapidapi.com",
+        'x-rapidapi-key': "00a6319afcmshb59ecb31e0a9dbap1c6de4jsn4b86a9198483"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    dictionary = response.json().get('contents')
+    print(response.text)
+    return render_template("translator.html", dictionary=dictionary)
 # runs the application on the development server
 #The rest just create routes that may be used but this actually runs the program on the server
 if __name__ == "__main__":

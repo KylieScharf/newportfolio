@@ -30,7 +30,7 @@
 Our website is going to be a design your own adventure website based on different wonders of the world.
 These wonders will include Area 51, the Bermuda Triangle, and the Great Pyramid of Giza.
 The user will be able to pick any wonder they want and will learn about that wonder with an informative page and then be directed to an adventure page.
-In this adventure page they will go through a story where they will be able to pick how they react to different situation within the story.
+In this adventure page they will go through a story where they will be able to pick how they react to different situation within the story. Here is our [wireframe(https://docs.google.com/document/d/1t8cRoSjdcl2BHJ1eOqjS7T4RPHXwugz9jqXOsz4qo_w/edit?usp=sharing) and our [project plan](https://docs.google.com/document/d/1ceMRO3Jr5wGSB6g3O0-DdUKxh7ANQLHCXWUWkgdgtHA/edit?usp=sharing)
 
 ## Sprint 7,8 Week 8([10/11-10/15 Self Grades](https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing))
 | Team Member Name        | Main Topics     | Issues  |

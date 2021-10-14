@@ -1,8 +1,9 @@
 
 # Team Dream Squad (Kylie Scharf, Kevin Chen, Khushi Bagri, Daniel Bertino, Hamza Hakak)
 
-### [Our Github Repository](https://github.com/KylieScharf/flask_portfolio)
-### [Scrum Board](https://github.com/KylieScharf/flask_portfolio/projects/2)
+### [Our Github Repository](https://github.com/KylieScharf/newportfolio)
+### [Scrum Board 1](https://github.com/KylieScharf/flask_portfolio/projects/2)
+### [Scrum Board 2](https://github.com/KylieScharf/newportfolio/projects/1)
 ### [Insights](https://github.com/KylieScharf/flask_portfolio/graphs/contributors)
 
 

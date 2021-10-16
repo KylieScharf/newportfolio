@@ -1,13 +1,20 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
 from algorithm import  image_data
+from api.webapi import api_bp
 from pathlib import Path # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
 import requests
+from flask import Blueprint, jsonify
 
 #committ test
 # create a Flask instance
 app = Flask(__name__)
 path = Path(app.root_path) / "static" / "assets"
+app_starter = Blueprint('starter', __name__,
+                        url_prefix='/starter',
+                        template_folder='templates',
+                        static_folder='static',
+                        static_url_path='assets')
 
 # The following create new routes for the top navigation bar buttons and must be connected to an HTML page
 # connects default URL to render index.html
@@ -58,13 +65,6 @@ def greatPyramid():
         {'file': "GP.jpeg"}, # this is one dictionary where the source is the word and the "smiley" is the definition
     ]
     return render_template("themePages/greatPyramid.html", images=image_data(path=path, img_list=img_list))
-
-@app.route('/area51/')
-def Area51():
-    img_list = [
-        {'file': "A51.jpeg"}, # this is one dictionary where the source is the word and the "smiley" is the definition
-    ]
-    return render_template("themePages/Area51.html", images=image_data(path=path, img_list=img_list))
 
 @app.route('/bermudaTriangle/')
 def bermudaTriangle():
@@ -354,6 +354,7 @@ def binary():
                 return render_template("technicalInfo/binary.html", BITS=int(bitNumber), imageOn="/static/assets/sun.jpg", imageOff="/static/assets/moon.jpg")
         # starting and empty input default
         if request.form["bits2"]:
+            print("hello")
             return render_template("technicalInfo/binary.html", BITS=8, imageOn="/static/assets/smiley.jpg", imageOff="/static/assets/rip1.jpg")
     return render_template("technicalInfo/binary.html", BITS=8, imageOn="/static/assets/sun.jpg", imageOff="/static/assets/moon.jpg")
 
@@ -427,7 +428,6 @@ def translator():
     url = "https://shakespeare.p.rapidapi.com/shakespeare.json"
     text = "Hello everybody, Type anything in the above search bar to translate it into Shakespearean text like you see to the right of this"
     if request.form:
-        print("hello")
         text = request.form.get("tester")
         print(text)
 
@@ -445,6 +445,73 @@ def translator():
     return render_template("translator.html", dictionary=dictionary)
 # runs the application on the development server
 #The rest just create routes that may be used but this actually runs the program on the server
+
+
+@app.route('/translator2/', methods=['GET', 'POST'])
+def translator2():
+    url = "https://translated-mymemory---translation-memory.p.rapidapi.com/api/get"
+    pairs = ["en|es", "en|it", "en|zh", "en|de", "en|he"]
+    text = "Translated text will show here"
+    original = text
+    master_list = []
+    if request.form:
+        text = request.form.get("tester2")
+        original = text
+    for item in pairs:
+        querystring = {"langpair":item,"q":text,"mt":"1","onlyprivate":"0","de":"a@b.c"}
+
+        headers = {
+            'x-rapidapi-host': "translated-mymemory---translation-memory.p.rapidapi.com",
+            'x-rapidapi-key': "00a6319afcmshb59ecb31e0a9dbap1c6de4jsn4b86a9198483"
+        }
+
+        response = requests.request("GET", url, headers=headers, params=querystring)
+        print(response.text)
+        dictionary = [response.json().get('responseData')]
+        master_list = master_list + dictionary
+    return render_template("translator2.html", dictionary=master_list, original=original)
+
+@app_starter.route('/joke', methods=['GET', 'POST'])
+def joke():
+    url = "http://127.0.0.1:5000/api/joke"
+    #url = "https://csp.nighthawkcodingsociety.com/api/joke"
+    param = {"like":0}
+    response = requests.request("GET", url, params=param)
+    print(response.json())
+    a=1
+    if a == 1:
+        dictionary = response.json()
+        id = dictionary['id']
+        print(id)
+        dictionary['haha'] +=1
+        likes = dictionary['haha']
+        print("hello")
+        print(response.json())
+        print(likes)
+        param = {"id":id, "like": likes}
+        print(dictionary['haha'])
+        #response = requests.request("GET", "http://127.0.0.1:5000/api/jokes", params=param)
+    return render_template("starter/joke.html", joke=response.json())
+
+@app_starter.route('/jokes', methods=['GET', 'POST'])
+def jokes():
+    # use this url to test on and make modification on you own machine
+    url = "http://127.0.0.1:5000/api/jokes"
+    #url = "https://csp.nighthawkcodingsociety.com/api/jokes"
+
+    response = requests.request("GET", url)
+    return render_template("starter/jokes.html", jokes=response.json())
+
+@app.route('/area51/')
+def Area51():
+    img_list = [
+        {'file': "A51.jpeg"}, # this is one dictionary where the source is the word and the "smiley" is the definition
+    ]
+    return render_template("themePages/Area51.html", images=image_data(path=path, img_list=img_list))
+
+app.register_blueprint(api_bp)
+app.register_blueprint(app_starter)
+
 if __name__ == "__main__":
     app.run(debug=True)
 

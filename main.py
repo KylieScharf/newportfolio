@@ -515,7 +515,6 @@ def feedback():
         input = request.form.get("feed1")
         name = request.form.get("feed2")
         if len(input) != 0:  # input field has content
-            print("hello")
             return render_template("layouts/feedback.html", input=input, name=name)
     return render_template("layouts/feedback.html")
 

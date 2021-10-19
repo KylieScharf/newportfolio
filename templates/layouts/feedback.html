@@ -13,11 +13,6 @@ function returnFeed(){
         }
         input = text + "<br>" + stored
         localStorage.setItem("input", input);
-        if (input == "<br><br>null"){
-            input = "";
-            stored = "";
-        }
-
         // Retrieve
         document.getElementById("change").innerHTML = input
     } else {
@@ -27,15 +22,19 @@ function returnFeed(){
 function returnFeed2(){
     let input = [];
     let text = document.getElementById("change").innerHTML
-    alert(text)
     if (typeof(Storage) !== "undefined") {
         // Store
-        stored = localStorage.getItem("input")
-        alert(stored)
-        input = input.append(text) + stored
-        for (i=0; i<input.length; i++){
-            document.getElementById("change").innerHTML = input[i]
+        let stored = localStorage.getItem("input")
+        input.push("<br>")
+        input.push(stored)
+        if (stored == null){
+            alert("yes")
+            input.pop()
+            //stored = ""
+            //input = ""
         }
+        input.unshift(text)
+        document.getElementById("change").innerHTML = input
         localStorage.setItem("input", input)
     }
     else {
@@ -45,9 +44,20 @@ function returnFeed2(){
 }
 
 function remove(){
-    localStorage.clear()
+    localStorage.clear();
     let input = "";
-    document.getElementById("change").innerHTML = input
+    document.getElementById("change").innerHTML = input;
+}
+
+function pop(){
+    let text = document.getElementById("change").innerHTML
+    let input = localStorage.getItem("input");
+    alert(input);
+    let length = input.length
+    alert(length)
+    input = input[3, input.length];
+    alert(input);
+    document.getElementById("change").innerHTML = input;
 }
 </script>
 {% endblock %}
@@ -69,10 +79,13 @@ function remove(){
                         <textarea rows="6" cols="100" name="feed1" id="feed1"></textarea>
                         <input type="submit" name="feedbut" value="Post Feedback!">
                         <input type="button" value="Clear" onclick="remove()">
+                        <!--<input type="button" value="Delete" onclick="pop()">-->
                     </form>
-                    <ul>
-                        <li><p id="change">{{ name }} : {{ input }}</p></li>
-                    </ul>
+
+                    <!--<ul>-->
+                        <!--<li>--><p id="change">{% if input | length != 0 %} {{ name }} : {{ input }} {% else %} <br><mark> Previous Responses </mark><br> {% endif %}</p><!--</li>-->
+                    <!--</ul>-->
+
                 </div>
             </div>
         </div>

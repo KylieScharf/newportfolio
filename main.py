@@ -509,6 +509,16 @@ def Area51():
     ]
     return render_template("themePages/Area51.html", images=image_data(path=path, img_list=img_list))
 
+@app.route('/feedback/', methods=['GET', 'POST'])
+def feedback():
+    if request.form:
+        input = request.form.get("feed1")
+        name = request.form.get("feed2")
+        if len(input) != 0:  # input field has content
+            print("hello")
+            return render_template("layouts/feedback.html", input=input, name=name)
+    return render_template("layouts/feedback.html")
+
 app.register_blueprint(api_bp)
 app.register_blueprint(app_starter)
 

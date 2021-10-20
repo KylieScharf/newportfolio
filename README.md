@@ -1,8 +1,9 @@
 
 # Team Dream Squad (Kylie Scharf, Kevin Chen, Khushi Bagri, Daniel Bertino, Hamza Hakak)
 
-### [Our Github Repository](https://github.com/KylieScharf/flask_portfolio)
-### [Scrum Board](https://github.com/KylieScharf/flask_portfolio/projects/2)
+### [Our Github Repository](https://github.com/KylieScharf/newportfolio)
+### [Scrum Board 1](https://github.com/KylieScharf/flask_portfolio/projects/2)
+### [Scrum Board 2](https://github.com/KylieScharf/newportfolio/projects/1)
 ### [Insights](https://github.com/KylieScharf/flask_portfolio/graphs/contributors)
 
 
@@ -30,12 +31,25 @@
 Our website is going to be a design your own adventure website based on different wonders of the world.
 These wonders will include Area 51, the Bermuda Triangle, and the Great Pyramid of Giza.
 The user will be able to pick any wonder they want and will learn about that wonder with an informative page and then be directed to an adventure page.
-In this adventure page they will go through a story where they will be able to pick how they react to different situation within the story.
+In this adventure page they will go through a story where they will be able to pick how they react to different situation within the story. Here is our [wireframe](https://docs.google.com/document/d/1t8cRoSjdcl2BHJ1eOqjS7T4RPHXwugz9jqXOsz4qo_w/edit?usp=sharing) and our [project plan](https://docs.google.com/document/d/1ceMRO3Jr5wGSB6g3O0-DdUKxh7ANQLHCXWUWkgdgtHA/edit?usp=sharing)
+
+
+## Sprint 9,8 Week 10([10/18-10/22 Self Grades](https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing))
+### [review issue from group presentation on monday](https://github.com/KylieScharf/newportfolio/issues/2)
+### [Issue with Individual College Board Video, Comments, and Scores](https://github.com/KylieScharf/newportfolio/issues/3)
+| Team Member Name        | Main Topics     | Issues  |
+| -------------           | -------------           | -----------------------                         |
+| Kylie      | Presentations | [edit journal](https://github.com/KylieScharf/newportfolio/issues/4) and [Group Pres](https://github.com/KylieScharf/flask_portfolio/issues/74) and [individual pres](https://github.com/KylieScharf/newportfolio/issues/3) | 
+| Khushi      | Presentations | [edit journal](https://github.com/KylieScharf/newportfolio/issues/4) and [Group Pres](https://github.com/KylieScharf/flask_portfolio/issues/74) and [individual pres](https://github.com/KylieScharf/newportfolio/issues/3) | 
+| Daniel     | Presentations  | [edit journal](https://github.com/KylieScharf/newportfolio/issues/4) and [Group Pres](https://github.com/KylieScharf/flask_portfolio/issues/74) and [individual pres](https://github.com/KylieScharf/newportfolio/issues/3)|
+| Hamza    | Presentations  | [edit journal](https://github.com/KylieScharf/newportfolio/issues/4) and [Group Pres](https://github.com/KylieScharf/flask_portfolio/issues/74) and [individual pres](https://github.com/KylieScharf/newportfolio/issues/3) | 
+| Kevin     | Presentations |[edit journal](https://github.com/KylieScharf/newportfolio/issues/4) and [Group Pres](https://github.com/KylieScharf/flask_portfolio/issues/74) and [individual pres](https://github.com/KylieScharf/newportfolio/issues/3) |
+
 
 ## Sprint 7,8 Week 8([10/11-10/15 Self Grades](https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing))
 | Team Member Name        | Main Topics     | Issues  |
 | -------------           | -------------           | -----------------------                         |
-| Kylie      | API pages, stub pages, and presentation | [edit journal](https://github.com/KylieScharf/flask_portfolio/issues/72) and [code stub pages](https://github.com/KylieScharf/flask_portfolio/issues/52) and [weather API page](https://github.com/KylieScharf/flask_portfolio/issues/73) and [presentation](https://github.com/KylieScharf/flask_portfolio/issues/74)| 
+| Kylie      | API pages, stub pages, and presentation | [edit journal](https://github.com/KylieScharf/flask_portfolio/issues/72) and [code stub pages](https://github.com/KylieScharf/flask_portfolio/issues/52) and [weather API page](https://github.com/KylieScharf/flask_portfolio/issues/73) and [presentation](https://github.com/KylieScharf/flask_portfolio/issues/74) and [shakespearan API page](https://github.com/KylieScharf/newportfolio/issues/1) | 
 | Khushi      | Coding stub pages and presentation| [edit journal](https://github.com/KylieScharf/flask_portfolio/issues/72) and [code stub pages](https://github.com/KylieScharf/flask_portfolio/issues/52) and [presentation](https://github.com/KylieScharf/flask_portfolio/issues/74) | 
 | Daniel     | writing stories and presentation | [edit journal](https://github.com/KylieScharf/flask_portfolio/issues/72) and [write more stories](https://github.com/KylieScharf/flask_portfolio/issues/60) and [presentation](https://github.com/KylieScharf/flask_portfolio/issues/74) |
 | Hamza    | writing stories and presentation | [edit journal](https://github.com/KylieScharf/flask_portfolio/issues/72) and [backlog binary work](https://github.com/KylieScharf/flask_portfolio/issues/75) and [write more stories](https://github.com/KylieScharf/flask_portfolio/issues/60) and [presentation](https://github.com/KylieScharf/flask_portfolio/issues/74) | 

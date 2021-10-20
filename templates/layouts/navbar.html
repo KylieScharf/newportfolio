@@ -11,6 +11,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             <a class="nav-link" style=color:white href="{{ url_for('index') }}">Home</a>
             <a class="nav-link" style=color:white href="{{ url_for('weather') }}">Weather</a>
             <a class="nav-link" style=color:white href="{{ url_for('translator') }}">Shakespearean Translator</a>
+            <a class="nav-link" style=color:white href="{{ url_for('translator2') }}">Translator</a>
 <div class="collapse navbar-collapse" id="navbarNavAltMarkup"><div class="navbar-nav">
     <!--this creates a drop down within the navigation bar so if you want another one just copy and paste this text at the bottom after the last li and change the text and the links within the drop dowm-->
     <li class="nav-item dropdown">
@@ -73,7 +74,9 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="{{ url_for('colors') }}">Binary Colors Lab</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="{{ url_for('translator') }}">Translator</a>
+            <a class="dropdown-item" href="{{ url_for('starter.joke') }}">Joke</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="{{ url_for('starter.jokes') }}">Jokes</a>
             <div class="dropdown-divider"></div>
         </div>
     </li>
@@ -94,6 +97,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         </div>
     </li>
         </div>
+    <a class="nav-link" style="color:white" href="{{ url_for('feedback') }}">Feedback</a>
 </div>
 
 </nav>

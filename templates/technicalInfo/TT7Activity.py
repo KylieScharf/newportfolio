@@ -10,22 +10,23 @@ list_of_people = [p1, p2, p3, p4]
 
 
 # turn list to dictionary of people
-dict_people = {"name":"John", "age":61, "city":"Eugene"}
-dict_people = {"name":"Risa", "age":16, "city":"New York"}
-dict_people = {"name":"Ryan", "age":16, "city":"Los Angeles"}
+dict_person = { "name":"Joe", "age":61, "city":"San Diego"}
+dict_person1 = {"name":"John", "age":61, "city":"Eugene"}
+dict_person2 = {"name":"Risa", "age":16, "city":"New York"}
+dict_people3 = {"name":"Ryan", "age":16, "city":"Los Angeles"}
 dict_people = {"name":"Shekar", "age":16, "city":"San Francisco"}
 print("List to Dictionary of people")
 print(type(dict_people))
 
 print(dict_people)
-print(dict_person['name'])
-print(dict_person.get['name'])
+print(dict_person1['name'])
+print(dict_person1.get['name'])
 print("Keys: ")
-for key in dict_person:
+for key in dict_person1:
     print(key)
 
 print("Function Keys(): ")
-for key in dict_person.keys():
+for key in dict_person2.keys():
     print(key)
 
 print("Values: ")

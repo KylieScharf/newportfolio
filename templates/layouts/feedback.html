@@ -1,0 +1,94 @@
+{% extends "layouts/base.html" %}
+{% set fromPython = input %}
+{% block meta %}
+<script>
+function returnFeed(){
+    let input = "";
+    let text = document.getElementById("change").innerHTML
+    if (typeof(Storage) !== "undefined") {
+        // Store
+        let stored = localStorage.getItem("input")
+        if (stored == null){
+            stored = ""
+        }
+        input = text + "<br>" + stored
+        localStorage.setItem("input", input);
+        // Retrieve
+        document.getElementById("change").innerHTML = input
+    } else {
+        document.getElementById("change").innerHTML = "Sorry, your browser does not support Web Storage...";
+    }
+}
+function returnFeed2(){
+    let input = [];
+    let text = document.getElementById("change").innerHTML
+    if (typeof(Storage) !== "undefined") {
+        // Store
+        let stored = localStorage.getItem("input")
+        input.push("<br>")
+        input.push(stored)
+        if (stored == null){
+            alert("yes")
+            input.pop()
+            //stored = ""
+            //input = ""
+        }
+        input.unshift(text)
+        document.getElementById("change").innerHTML = input
+        localStorage.setItem("input", input)
+    }
+    else {
+        document.getElementById("change").innerHTML = "Sorry, your browser does not support Web Storage...";
+    }
+
+}
+
+function remove(){
+    localStorage.clear();
+    let input = "";
+    document.getElementById("change").innerHTML = input;
+}
+
+function pop(){
+    let text = document.getElementById("change").innerHTML
+    let input = localStorage.getItem("input");
+    alert(input);
+    let length = input.length
+    alert(length)
+    input = input[3, input.length];
+    alert(input);
+    document.getElementById("change").innerHTML = input;
+}
+</script>
+{% endblock %}
+
+{% block body %}
+    <body onload="returnFeed()">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="row" style="padding-left:0%; padding-top:5%;">
+                <!--this creates the text displayed at the top that changed and sets the thing to be changed to a variable so you can set it to different values in python so it can change-->
+                <div class="col-12">
+                    <!--this form tag creates the search bar that is tied to a label which is displayed text and to a submit button so the user can input information-->
+                    <form action="/feedback/" id="feedbackForm" method="POST" >
+                        <label>Please type your name here!</label>
+                        <input name="feed2" id="feed2">
+                        <div>
+                        <label>Please type any feedback that you have for our website in the text box shown here!</label>
+                        </div>
+                        <textarea rows="6" cols="100" name="feed1" id="feed1"></textarea>
+                        <input type="submit" name="feedbut" value="Post Feedback!">
+                        <input type="button" value="Clear" onclick="remove()">
+                        <!--<input type="button" value="Delete" onclick="pop()">-->
+                    </form>
+
+                    <!--<ul>-->
+                        <!--<li>--><p id="change">{% if input | length != 0 %} {{ name }} : {{ input }} {% else %} <br><mark> Previous Responses </mark><br> {% endif %}</p><!--</li>-->
+                    <!--</ul>-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+{% endblock %}

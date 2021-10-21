@@ -518,6 +518,15 @@ def feedback():
             return render_template("layouts/feedback.html", input=input, name=name)
     return render_template("layouts/feedback.html")
 
+@app.route('/income/', methods=['GET', 'POST'])
+def income():
+    if request.form:
+        input = request.form.get("feed1")
+        name = request.form.get("feed2")
+        if len(input) != 0:  # input field has content
+            return render_template("themePages/income.html", input=input, name=name)
+    return render_template("themePages/income.html")
+
 app.register_blueprint(api_bp)
 app.register_blueprint(app_starter)
 

@@ -520,11 +520,16 @@ def feedback():
 
 @app.route('/income/', methods=['GET', 'POST'])
 def income():
-    if request.form:
-        input = request.form.get("feed1")
-        name = request.form.get("feed2")
-        if len(input) != 0:  # input field has content
-            return render_template("themePages/income.html", input=input, name=name)
+    url = "https://idealspot-employment-salary-and-income.p.rapidapi.com/api/v1/data/insights/household-income/query"
+
+    querystring = {"version":"v2","location":"[object Object]"}
+
+    headers = {
+        'x-rapidapi-host': "idealspot-employment-salary-and-income.p.rapidapi.com",
+        'x-rapidapi-key': "f4480562c7mshcfebe0975d4fd48p16ab77jsnae6575329780"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
     return render_template("themePages/income.html")
 
 app.register_blueprint(api_bp)

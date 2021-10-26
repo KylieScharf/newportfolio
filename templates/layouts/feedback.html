@@ -104,8 +104,8 @@ function split(){
                     </form>
 
                     <!--<ul>-->     <p hidden id="top" style="text-decoration:underline dotted blue"></p> <!--this contains only the most recent text added so when text is added this is not hidden anymore and is displayed above the "previous text" box-->
-                                    <p hidden id="previous"><br><mark>Previous Responses</mark><br></p><!--this becomes unhidden when text is added-->
-                        <!--<li>--><p id="change">{% if input | length != 0 %} {{ name }} : {{ input }} {% else %}<br><mark>Previous Responses</mark><br>{% endif %}</p><!--</li>--><!--this contains only the local storage without the new text-->
+                                    <p hidden id="previous" style="color:white"><br><mark>Previous Responses</mark><br></p><!--this becomes unhidden when text is added-->
+                    <!--<li>--><p id="change" style="color:white";>{% if input | length != 0 %} <mark>{{ name }} : {{ input }}</mark> {% else %}<br><mark>Previous Responses</mark><br>{% endif %}</p><!--</li>--><!--this contains only the local storage without the new text-->
                                     <p hidden id="hidden"></p>
                                     <p hidden id="hidden2"></p>
                     <!--</ul>-->

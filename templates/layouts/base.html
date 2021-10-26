@@ -51,8 +51,10 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         }
 
         table, th, td {
-            border:1px solid black;
+            border:2px solid black;
             border-collapse: collapse;
+            background-color:white;
+            color:black;
         }
 
         h1{
@@ -100,7 +102,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             transition: all .2s;
             position: absolute;
             color: white;
-            font-size: 2.5em;
+            font-size: 4em;
         }
 
         .btn:hover {
@@ -128,9 +130,6 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         .full-height {
             height: 90vh;
         }
-        img {
-            border: 4px solid saddlebrown;
-        }
         img:hover {
             /* Start the shake animation and make the animation last for 0.5 seconds */
             animation: shake 0.5s;
@@ -155,7 +154,15 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         mark {
             background-color: greenyellow;
             color: black;
+            text-shadow: 2px 2px white;
         }
+        p {
+            font-weight: bolder;
+            text-shadow: 2px 2px black;
+        }
+    button {
+        text-shadow: 2px 2px white;
+    }
     </style>
 
     <title>{{ project }} </title>
@@ -197,8 +204,9 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
 <!--This creates the default background for the index page -->
 {% block background %}
-    <body style= "background: linear-gradient(55deg, palevioletred, mediumpurple, deepskyblue);">
+   <body style= "background-image: url('/static/assets/purpisland.jpeg'); background-repeat: no-repeat; background-size: cover;">
 {% endblock %}
+
 
 </body>
 </html>

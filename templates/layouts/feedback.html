@@ -1,20 +1,16 @@
 {% extends "layouts/base.html" %}
-{% set fromPython = input %}
 {% block meta %}
 <script>
-let session = 0
 function returnFeed(){
-    let input = localStorage.getItem("input");
     let text = document.getElementById("change").innerHTML;
     document.getElementById("top").innerHTML = text // putting the new text at the top so it is seperate
-    document.getElementById("hidden").innerHTML = text //also putting the new text in hidden so its length can be used
     if (typeof(Storage) !== "undefined") {
         let stored =  localStorage.getItem("input") //getting everything out of local storage and putting it in stored
         if (stored == null){
             stored = ""
         }
         //split stored into session and message
-        input = text + "<br>" + stored
+        let input = text + "<br>" + stored
         if (text !== "<br><mark>Previous Responses</mark><br>"){
             localStorage.setItem("input", input); //setting local storage
             document.getElementById("top").hidden = false;
@@ -30,29 +26,6 @@ function returnFeed(){
     } else {
         document.getElementById("change").innerHTML = "Sorry, your browser does not support Web Storage...";
     }
-    session = session + 1;
-}
-function returnFeed2(){
-    let input = [];
-    let text = document.getElementById("change").innerHTML
-    if (typeof(Storage) !== "undefined") {
-        // Store
-        let stored = localStorage.getItem("input")
-        input.push("<br>")
-        input.push(stored)
-        if (stored == null){
-            input.pop()
-            //stored = ""
-            //input = ""
-        }
-        input.unshift(text)
-        document.getElementById("change").innerHTML = input
-        localStorage.setItem("input", input)
-    }
-    else {
-        document.getElementById("change").innerHTML = "Sorry, your browser does not support Web Storage...";
-    }
-
 }
 
 function remove(){
@@ -65,20 +38,15 @@ function remove(){
 
 function pop(){
     let totaltext = localStorage.getItem("input")
-    let newtext = "" + document.getElementById("hidden").innerHTML // I set the current text to be in a hidden id element called hidden so I cna get the length of that element and do a substring from the end of that length to the end of the string to be rid of the most recent text displayed
+    let newtext = "" + document.getElementById("top").innerHTML // I set the current text to be in a hidden id element called hidden so I cna get the length of that element and do a substring from the end of that length to the end of the string to be rid of the most recent text displayed
     let length1 = parseInt(totaltext.length)
     let length2 = parseInt(newtext.length)
-    input = totaltext.substring(length2 + 5, length1);
+    let input = totaltext.substring(length2 + 5, length1);
     localStorage.setItem("input", input)
     document.getElementById("change").innerHTML = input;
     document.getElementById("top").hidden = true;
 }
 
-function split(){
-    let totaltext = document.getElementById("change").innerHTML
-    totaltext = totaltext.split("<br><mark>Previous Responses</mark><br>")
-    document.getElementById("change").innerHTML = totaltext;
-}
 </script>
 {% endblock %}
 
@@ -103,11 +71,9 @@ function split(){
                         <input type="button" value="Clear All" onclick="remove()">
                     </form>
 
-                    <!--<ul>-->     <p hidden id="top" style="text-decoration:underline dotted blue"></p> <!--this contains only the most recent text added so when text is added this is not hidden anymore and is displayed above the "previous text" box-->
+                    <!--<ul>-->     <p hidden id="top"></p> <!--this contains only the most recent text added so when text is added this is not hidden anymore and is displayed above the "previous text" box-->
                                     <p hidden id="previous" style="color:white"><br><mark>Previous Responses</mark><br></p><!--this becomes unhidden when text is added-->
-                    <!--<li>--><p id="change" style="color:white";>{% if input | length != 0 %} <mark>{{ name }} : {{ input }}</mark> {% else %}<br><mark>Previous Responses</mark><br>{% endif %}</p><!--</li>--><!--this contains only the local storage without the new text-->
-                                    <p hidden id="hidden"></p>
-                                    <p hidden id="hidden2"></p>
+                    <!--<li>-->     <p id="change" style="color:white";>{% if input | length != 0 %} {{ name }} : {{ input }} {% else %}<br><mark>Previous Responses</mark><br>{% endif %}</p><!--</li>--><!--this contains only the local storage without the new text-->
                     <!--</ul>-->
 
                 </div>

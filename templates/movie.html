@@ -4,20 +4,22 @@
 {% block body %}
 <div class="container-fluid">
     <div class="row">
-        <div class="col-12">
+        <div class = "row" style="padding-bottom:5%;">
+            <div class="col-12" style="text-align: center;">
             <h1><strong>Movie API</strong></h1>
         </div>
     </div>
 </div>
-<div class="row">
-    <div class="col-12">
-        <table>
+    <div class="col-12" style="text-align: center;">
+        <div class="col-12">
+            <table>
+
             <tr>
                 <th>Movie Title</th>
                 <th>Year of Movie</th>
                 <th>Type</th>
             </tr>
-            {% for dictionary in response %}
+                {% for dictionary in response %}
             <tr>
                <td>{{dictionary['title']}}</td>
                 <td>{{dictionary['year']}}</td>

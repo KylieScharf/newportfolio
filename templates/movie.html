@@ -5,10 +5,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
-            <h1><strong>Household Income API</strong></h1>
-            <form action={{url_for('income')}}>
-                <button>Reload!</button>
-            </form>
+            <h1><strong>Movie API</strong></h1>
         </div>
     </div>
 </div>
@@ -16,12 +13,15 @@
     <div class="col-12">
         <table>
             <tr>
-                <th>Income Ranges</th>
-                <th>Number of Households In that income range</th>
+                <th>Movie Title</th>
+                <th>Year of Movie</th>
+                <th>Type</th>
             </tr>
-            {% for list in response %}
+            {% for dictionary in response %}
             <tr>
-               <td>{{list}}</td>
+               <td>{{dictionary['title']}}</td>
+                <td>{{dictionary['year']}}</td>
+                <td>{{dictionary['tmdb_type']}}</td>
             </tr>
             {% endfor %}}
         </table>

@@ -1,4 +1,30 @@
 {% extends "layouts/project.html" %}
+{% set response = response %}
 
 {% block body %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h1><strong>Household Income API</strong></h1>
+            <form action={{url_for('income')}}>
+                <button>Reload!</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <table>
+            <tr>
+                <th>Income Ranges</th>
+                <th>Number of Households In that income range</th>
+            </tr>
+            {% for list in response %}
+            <tr>
+               <td>{{list}}</td>
+            </tr>
+            {% endfor %}}
+        </table>
+    </div>
+</div>
 {% endblock %}

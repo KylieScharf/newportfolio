@@ -522,7 +522,7 @@ def feedback():
 def income():
     url = "https://idealspot-employment-salary-and-income.p.rapidapi.com/api/v1/data/insights/household-income/query"
 
-    querystring = {"version":"v2","location":"[object Object]"}
+    querystring = {"version":"v2","location":"{\"type\":\"region\",\"regiontype\": \"zipcode\", \"region_id\": \"92127\"}"}
 
     headers = {
         'x-rapidapi-host': "idealspot-employment-salary-and-income.p.rapidapi.com",
@@ -530,7 +530,12 @@ def income():
     }
 
     response = requests.request("GET", url, headers=headers, params=querystring)
-    return render_template("themePages/income.html")
+    response = response.json().get('data')
+    response = [response]
+    response = response[0]
+    response = response.get('data')
+    print(response)
+    return render_template("income.html", response=response.json())
 
 app.register_blueprint(api_bp)
 app.register_blueprint(app_starter)

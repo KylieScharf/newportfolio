@@ -1,0 +1,176 @@
+{% extends "layouts/project.html" %}
+
+{% block meta %}
+    <script>
+        var aliveText = { //creates a dictionary of all story text options for the alive options
+            1:"The secrets of Area 51 intrigue you which makes you want to learn more about what is actually inside of the military base. The government claims that there are top-secret military operations going on in the area but you don’t believe what they are saying. You soon discover the rumors that there is alien activity near Area 51, which prompts you to investigate what is actually going on. You don’t know whether to believe the government or people on the internet making wild claims about Area 51. You decide to make the journey and drive to Area 51 to figure out for yourself. <br><br> As you approach the gate of Area 51, you are met by a guard who asks what you are doing in the area, while also threatening you with a gun. What do you do?",
+            11:"After you sneak into Area 51, you decide to look for evidence of alien activity or alien aircraft inside of the military After wandering around the military base for a couple of hours you discover a strange aircraft that is lying in a field. You notice that the aircraft is still smoking with something moving inside.",
+            12:"Once you speak past the gates of Area 51, you discover that there are dozens of hangars inside the military base. You decide to sneak into one of the hangars, you crawl under one of the hangar doors which had a large enough gap to crawl through. Inside the hangar you discover one of the largest and most advanced aircraft you have ever seen.",
+            112:"The creature inside of the aircraft frightens you so you back away from the aircraft that has just crashed. You walk back to the part of the military base where all the hangars are. You decide to investigate what is inside of the hangars in hopes of finding evidence of aliens or their aircraft.",
+            121:"You walk around the aircraft searching for a way to get into it. You find a ladder inside of the hangar, place it next to the aircraft and climb onto it. Despite looking for a way to get into the aircraft, you are unsuccessful. All of a sudden, the hangar door slams shut and you become trapped inside.",
+            122:"After entering the hangar you decide that it is too dangerous to stay inside. You decide that it is better to try and find a way out of the hangar. The hangar door that you first crawled through slammed shut after you entered, so you are forced to find another way out.",
+            1121:"You walk around to the side door, but you find that the door is locked. You walk around the surrounding area in the hopes of finding something that can break down the door. While searching in the grass you discover a crowbar.",
+            1122:"As you search for an entrance into the hangar, you discover that one of the side doors was left unlocked. You venture into the darkness in search for the light switch. But as you stumble into the darkness you hear something moving around on the opposite side of the hangar.",
+            1211:"You are forced to walk around in the darkness since you cannot find any sources of light. You somehow stumble across the aircraft that you saw moments ago which gives you some sort of direction. However, you still want to turn on the lights since you don’t know what lies in the darkness.",
+            1221:"There is a pile of objects in a corner of the hangar, you decide to search for something that can help you climb out of the hangar that you have become trapped inside of. You come across a ladder which you prop up against a wall. After climbing up the ladder you notice that the hangar has a hatch in the ceiling which you push open and climb through.",
+            1222:"While inside of the hangar you look for anything that can pry the door open. In the corner of the hangar you find a cinder block lying around. You lift up the door as much as possible and then place the block in between the door and the ground, you crawl out of the space under the door.",
+            11211:"",
+            11221:"",
+            12111:"",
+            12211:"",
+            12221:"",
+
+
+
+        }
+        var dieText = {//if the story number is not in the alive it is a die story and this is the text
+            111: "As you approach the aircraft, a strange alien-like creature comes out of the aircraft and attacks you. You are hit in the head by the creature and get knocked out by its mighty blow. As you regain your consciousness you attempt to fight back, however you get overpowered. <br><br> RIP",
+            1212:"You decide to yell for help since you cannot find any ways out of the dark hangar. The guard that you first encountered starts yelling back towards you from the outside. He uses his keys to open the locked side door, he gets frightened when he sees somebody in the darkness and shoots you in the head with his gun.",
+            11212:"",
+            11222:"",
+            12112:"",
+            12212:"",
+            12222:"",
+            112111:"",
+            112112:"",
+            112211:"",
+            112212:"",
+            121111:"",
+            121112:"",
+            122111:"",
+            122112:"",
+            122211:"",
+            122212:"",
+
+        }
+        var aliveImage = { //creates a dictionary of images for the alive pages
+            1:"/static/assets/A51.jpeg",
+            11:"/static/assets/ufo1.jpg",
+            12:"/static/assets/spy1.jpg",
+            112:"/static/assets/hangar.jpg",
+            121:"/static/assets/hangar2.jpg",
+            122:"/static/assets/hangar3.jpg",
+            1121:"/static/assets/crowbar.jpg",
+            1122:"/static/assets/hangar4.jpg",
+            1211:"",
+            1221:"/static/assets/ladder.png",
+            1222:"/static/assets/cinder.jpg",
+            11211:"",
+            11221:"",
+            12111:"",
+            12211:"",
+            12221:"",
+        }
+        var dieImage = {
+            111: "/static/assets/rip1.jpg",
+            1212:"",
+            11212:"",
+            11222:"",
+            12112:"",
+            12212:"",
+            12222:"",
+            112111:"",
+            112112:"",
+            112211:"",
+            112212:"",
+            121111:"",
+            121112:"",
+            122111:"",
+            122112:"",
+            122211:"",
+            122212:"",
+
+        }
+        var aliveButton = { //3 means the first button of the story page and 4 means the second button of the same story page
+            13:"Look for aliens",
+            14:"Search for Top-Secret Aircraft",
+            113:"Approach the aircraft",
+            114:"Back away from the aircraft",
+            123:"Break into the aircraft",
+            124:"Exit The Hangar",
+            1123:"Break into the hangar",
+            1124:"Search for a way in",
+            1213:"Look for a way out",
+            1214:"Yell for help",
+            1223:"Break the door open",
+            1224:"climb out of the hangar",
+            11213:"Force the door open",
+            11214:"Break the door down",
+            11223:"Walk towards the sound",
+            11224:"Turn on the lights",
+            12113:"Locate the side door",
+            12114:"Keep searching for the lights",
+            12213:"Look for a way down",
+            12214:"Yell for help",
+            12223:"Explore a different area",
+            12224:"Keep exploring the area",
+            112113:"",
+            112114:"",
+            112213:"",
+            112214:"",
+            121113:"",
+            121114:"",
+            122113:"",
+            122114:"",
+            122213:"",
+            122214:"",
+        }
+        //set all other dict keys to be same
+        //change the innerHTML of the button
+        function story(num){
+            let stored = sessionStorage.getItem("prevStory")//gets out whatever is in the session storage as stored
+            if (stored == null){
+                stored = ""
+            }
+            let currentStory = stored + "" + num;//creates a number for the current story bc button 1 passes 1 and button 2 passes 2 so add concatonate that as a string
+            if (currentStory in aliveText){
+                document.getElementById("text").innerHTML = aliveText[currentStory] //get the value of that key (ex:1121) from the alive text dictionary if it is alive
+                sessionStorage.setItem("prevStory", currentStory)//save the story number into session storage
+                document.getElementById("image").src = aliveImage[currentStory] //get the image grom the alive image dictionary
+                document.getElementById("butt1").innerHTML = aliveButton[currentStory + "3"] //get the button text for the first button
+                document.getElementById("butt2").innerHTML = aliveButton[currentStory + "4"] //get the button text for the second button
+            }
+            else { //do same as before but with die and unhide the die button that reloads the form so everything starts out
+                document.getElementById("text").innerHTML = dieText[currentStory]
+                document.getElementById("image").src = dieImage[currentStory]
+                document.getElementById("butt1").hidden = true
+                document.getElementById("butt2").hidden = true
+                document.getElementById("form").hidden = false
+            }
+        }
+        window.onbeforeunload = function(){//makes it so it resets when you reload the page
+            sessionStorage.clear()
+        }
+    </script>
+{% endblock %}
+
+
+{% block body %}
+    <body onload="story(1)">
+    <div class="container-fluid">
+        <h1><center>Area 51</center></h1>
+        <div class="row">
+            <div class="col-6">
+                <p id="text"></p> <!--text is displayed here for stories -->
+            </div>
+            <div class="col-6">
+                <img id="image" src="/static/assets/A51.jpeg" width="400" height="400"> <!--this is the image-->
+            </div>
+            <div class="col-3">
+                <button id="butt1" onclick="story(1)">button1</button> <!--this is the first button-->
+                <form hidden id="form"> <!--this is the hidden die button that gets unhidden if the key is in the die dictionary-->
+                    <input type="submit" value="return to beginning">
+                </form>
+            </div>
+            <div class="col-3"> <!--this is the second button-->
+                <button id="butt2" onclick="story(2)">button2</button>
+            </div>
+        </div>
+    </div>
+    </body>
+{% endblock %}
+
+<body>
+{% block header %}
+{% endblock %}
+</body>

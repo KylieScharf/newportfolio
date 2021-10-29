@@ -530,12 +530,18 @@ def income():
     }
 
     response = requests.request("GET", url, headers=headers, params=querystring)
-    response = response.json().get('data')
-    response = [response]
-    response = response[0]
-    response = response.get('data')
+    print(response.json())
+    ##response = response.json().get('data')
+    #response = [response]
+    #response = response[0]
+    #print(type(response))
+    #response = response.get('data')
     print(response)
     return render_template("income.html", response=response.json())
+
+@app.route('/2area51/', methods=['GET', 'POST'])
+def area51_story():
+    return render_template("A51stories/A51story.html")
 
 app.register_blueprint(api_bp)
 app.register_blueprint(app_starter)

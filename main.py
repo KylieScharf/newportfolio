@@ -129,99 +129,6 @@ def kevin():
     return render_template("greet/kevin.html", kevinDisplayName="World")
 #end greet pages
 
-#A51 stories
-@app.route('/A51story1/')
-def A51story1():
-    return render_template("A51stories/A51story1.html")
-
-@app.route('/A51story11/')
-def A51story11():
-    return render_template("A51stories/A51story11.html")
-
-@app.route('/A51story12/')
-def A51story12():
-    return render_template("A51stories/A51story12.html")
-
-@app.route('/A51story111/')
-def A51story111():
-    return render_template("A51stories/A51story111.html")
-
-@app.route('/A51story112/')
-def A51story112():
-    return render_template("A51stories/A51story112.html")
-
-@app.route('/A51story121/')
-def A51story121():
-    return render_template("A51stories/A51story121.html")
-
-@app.route('/A51story122/')
-def A51story122():
-    return render_template("A51stories/A51story122.html")
-
-@app.route('/A51story1121/')
-def A51story1121():
-    return render_template("A51stories/A51story1121.html")
-
-@app.route('/A51story1122/')
-def A51story1122():
-    return render_template("A51stories/A51story1122.html")
-
-@app.route('/A51story1211/')
-def A51story1211():
-    return render_template("A51stories/A51story1211.html")
-
-@app.route('/A51story1212/')
-def A51story1212():
-    return render_template("A51stories/A51story1212.html")
-
-@app.route('/A51story1221/')
-def A51story1221():
-    return render_template("A51stories/A51story1221.html")
-
-@app.route('/A51story1222/')
-def A51story1222():
-    return render_template("A51stories/A51story1222.html")
-
-@app.route('/A51story11211/')
-def A51story11211():
-    return render_template("A51stories/A51story11211.html")
-
-@app.route('/A51story11212/')
-def A51story11212():
-    return render_template("A51stories/A51story11212.html")
-
-@app.route('/A51story11221/')
-def A51story11221():
-    return render_template("A51stories/A51story11221.html")
-
-@app.route('/A51story11222/')
-def A51story11222():
-    return render_template("A51stories/A51story11222.html")
-
-@app.route('/A51story12111/')
-def A51story12111():
-    return render_template("A51stories/A51story12111.html")
-
-@app.route('/A51story12112/')
-def A51story12112():
-    return render_template("A51stories/A51story12112.html")
-
-@app.route('/A51story12211/')
-def A51story12211():
-    return render_template("A51stories/A51story12211.html")
-
-@app.route('/A51story12212/')
-def A51story12212():
-    return render_template("A51stories/A51story12212.html")
-
-@app.route('/A51story12221/')
-def A51story12221():
-    return render_template("A51stories/A51story12221.html")
-
-@app.route('/A51story12222/')
-def A51story12222():
-    return render_template("A51stories/A51story12222.html")
-
 #BT stories
 @app.route('/BTstory1/')
 def BTstory1():
@@ -551,11 +458,19 @@ def stonks():
     print(response.text)
     return render_template("stonks.html")
 
+@app.route('/2area51/', methods=['GET', 'POST'])
+def area51_story():
+    img_list = [
+        {'file': "A51.jpeg"}, # this is one dictionary where the source is the word and the "smiley" is the definition
+    ]
+    return render_template("A51stories/A51story.html" , images=image_data(path=path, img_list=img_list))
+
 app.register_blueprint(api_bp)
 app.register_blueprint(app_starter)
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 

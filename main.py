@@ -541,7 +541,10 @@ def income():
 
 @app.route('/2area51/', methods=['GET', 'POST'])
 def area51_story():
-    return render_template("A51stories/A51story.html")
+    img_list = [
+        {'file': "A51.jpeg"}, # this is one dictionary where the source is the word and the "smiley" is the definition
+    ]
+    return render_template("A51stories/A51story.html" , images=image_data(path=path, img_list=img_list))
 
 app.register_blueprint(api_bp)
 app.register_blueprint(app_starter)

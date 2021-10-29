@@ -518,33 +518,22 @@ def feedback():
             return render_template("layouts/feedback.html", input=input, name=name)
     return render_template("layouts/feedback.html")
 
-@app.route('/income/', methods=['GET', 'POST'])
-def income():
-    url = "https://idealspot-employment-salary-and-income.p.rapidapi.com/api/v1/data/insights/household-income/query"
+@app.route('/movie/', methods=['GET', 'POST'])
+def movie():
+    url = "https://watchmode.p.rapidapi.com/list-titles/"
 
-    querystring = {"version":"v2","location":"{\"type\":\"region\",\"regiontype\": \"zipcode\", \"region_id\": \"92127\"}"}
+    querystring = {"types":"movie,tv_series","regions":"US","source_types":"sub,free","source_ids":"23,206","page":"1","limit":"250","genres":"4,9"}
 
     headers = {
-        'x-rapidapi-host': "idealspot-employment-salary-and-income.p.rapidapi.com",
+        'x-rapidapi-host': "watchmode.p.rapidapi.com",
         'x-rapidapi-key': "f4480562c7mshcfebe0975d4fd48p16ab77jsnae6575329780"
     }
 
     response = requests.request("GET", url, headers=headers, params=querystring)
-    print(response.json())
-    ##response = response.json().get('data')
-    #response = [response]
-    #response = response[0]
-    #print(type(response))
-    #response = response.get('data')
+    response = response.json().get("titles")
     print(response)
-    return render_template("income.html", response=response.json())
 
-@app.route('/2area51/', methods=['GET', 'POST'])
-def area51_story():
-    img_list = [
-        {'file': "A51.jpeg"}, # this is one dictionary where the source is the word and the "smiley" is the definition
-    ]
-    return render_template("A51stories/A51story.html" , images=image_data(path=path, img_list=img_list))
+    return render_template("movie.html", response=response)
 
 app.register_blueprint(api_bp)
 app.register_blueprint(app_starter)

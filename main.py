@@ -532,6 +532,22 @@ def income():
     response = requests.request("GET", url, headers=headers, params=querystring)
     return render_template("themePages/income.html")
 
+@app.route('/stonks/', methods=['GET', 'POST'])
+def stonks():
+
+    url = "https://stock-data-yahoo-finance-alternative.p.rapidapi.com/v6/finance/quote"
+
+    querystring = {"symbols":"AAPL,ETH-USD"}
+
+    headers = {
+        'x-rapidapi-host': "stock-data-yahoo-finance-alternative.p.rapidapi.com",
+        'x-rapidapi-key': "6aa5930ddamsh4e21c56a3045ce9p1aaf49jsn2e14280f30bb"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    print(response.text)
+    return render_template("stonks.html")
+
 app.register_blueprint(api_bp)
 app.register_blueprint(app_starter)
 

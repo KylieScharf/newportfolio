@@ -291,6 +291,10 @@ def BTstory11221():
 def BTstory11222():
     return render_template("BTstories/BTstory11222.html")
 
+@app.route('/BTstory112211/')
+def BTstory112211():
+    return render_template("BTstories/BTstory112211.html")
+
 @app.route('/BTstory12111/')
 def BTstory12111():
     return render_template("BTstories/BTstory12111.html")
@@ -314,6 +318,8 @@ def BTstory12221():
 @app.route('/BTstory12222/')
 def BTstory12222():
     return render_template("BTstories/BTstory12222.html")
+
+
 
 #GP stories
 @app.route('/GPstory1/')

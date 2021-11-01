@@ -557,10 +557,6 @@ def stonks():
     print(response.text)
     return render_template("stonks.html")
 
-@app.route('/2area51/', methods=['GET', 'POST'])
-def area51_story():
-    return render_template("A51stories/A51story.html")
-
 app.register_blueprint(api_bp)
 app.register_blueprint(app_starter)
 

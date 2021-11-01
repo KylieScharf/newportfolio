@@ -551,6 +551,25 @@ def stonks():
     print(response.text)
     return render_template("stonks.html")
 
+@app.route('/nbastandings/', methods=['GET', 'POST'])
+def nbastandings():
+
+    url = "https://api-nba-v1.p.rapidapi.com/standings/%7Bleague%7D/2018"
+
+    querystring = {"page":"0","per_page":"25"}
+
+    headers = {
+        'x-rapidapi-host': "api-nba-v1.p.rapidapi.com",
+        'x-rapidapi-key': "7c1d894378mshb7e7e6c6ecac61bp1f2fcbjsn264b46c0ce80"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    print(response.text)
+    return render_template("nbastandings.html")
+
+response = requests.request("GET", url, headers=headers)
+
+print(response.text)
 app.register_blueprint(api_bp)
 app.register_blueprint(app_starter)
 

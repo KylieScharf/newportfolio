@@ -11,6 +11,17 @@
 1. [Kylie and Khushi](https://docs.google.com/document/d/1eyTgQhMv7jFi28SIGlwOs3k95a9KklfJFCS0O9pXCzA/edit)
 2. [Danny, Hamza, and Kevin](https://docs.google.com/document/d/1fy-J_PVrvafykD-OTxMm-Pe0L_UKrYUTC4-DP4vGXEw/edit?usp=sharing)
 
+### Overview
+Have you ever thought about where those planes really go when they disappear over the bermuda triangle? Or who really built the Great Pyramid of Giza? What about wondering what really goes on inside Area 51? If your answer is yes to any of these questions, this is the site for you!
+Here, you will learn about 3 of the greatest wonders of the world: Area 51, The Great Pyramid of Giza, and The Bermuda Triangle. And it doesn't stop there! You will also be taken on an adventure within each wonder where you will get to decide your own fate by picking between different options within the adventure. The goal: make it out alive. You decide your destiny!
+
+### Objective
+Our website is a design your own adventure website based on different wonders of the world.
+These wonders include the mysteries of Area 51, the Bermuda Triangle, and the Great Pyramid of Giza.
+The user is able to pick any wonder they want and is first directed to an informative page about said wonder to learn about it before being taken on their adventure.
+In the adventure page that follows, they will go through a story where they will be able to pick how they react to different situation within the story. They will pick by the use of buttons of which they get to choose between two per story. Here is our [wireframe](https://docs.google.com/document/d/1t8cRoSjdcl2BHJ1eOqjS7T4RPHXwugz9jqXOsz4qo_w/edit?usp=sharing) and our [project plan](https://docs.google.com/document/d/1ceMRO3Jr5wGSB6g3O0-DdUKxh7ANQLHCXWUWkgdgtHA/edit?usp=sharing)
+
+
 ## Team Members
 | Team Member Name        | Github ID     | Github Profile  | Filtered Issues | Filtered Scrum Board | Filtered Committs |
 | -------------           |:-------------:|           -----:|           -----:|                -----:|             -----:|
@@ -27,18 +38,22 @@
 3. Hamza: Designer
 4. Kevin: Navigator
 5. Khushi: Technical Lead
-### Objective
-Our website is going to be a design your own adventure website based on different wonders of the world.
-These wonders will include Area 51, the Bermuda Triangle, and the Great Pyramid of Giza.
-The user will be able to pick any wonder they want and will learn about that wonder with an informative page and then be directed to an adventure page.
-In this adventure page they will go through a story where they will be able to pick how they react to different situation within the story. Here is our [wireframe](https://docs.google.com/document/d/1t8cRoSjdcl2BHJ1eOqjS7T4RPHXwugz9jqXOsz4qo_w/edit?usp=sharing) and our [project plan](https://docs.google.com/document/d/1ceMRO3Jr5wGSB6g3O0-DdUKxh7ANQLHCXWUWkgdgtHA/edit?usp=sharing)
+
+## Sprint 11,12 Week 11([11/1-11/5 Self Grades](https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing))
+| Team Member Name        | Main Topics     | Issues  |
+| -------------           | -------------           | -----------------------                         |
+| Kylie      | Forming stories into one HTML page | [put all stories in one HTML](https://github.com/KylieScharf/newportfolio/issues/12) and [buttons](https://github.com/KylieScharf/newportfolio/issues/7) and [style](https://github.com/KylieScharf/newportfolio/issues/5)| 
+| Khushi      | Improving sytlistic element | [background](https://github.com/KylieScharf/newportfolio/issues/6) and [slideshow](https://github.com/KylieScharf/newportfolio/issues/9) and [style](https://github.com/KylieScharf/newportfolio/issues/5)| 
+| Daniel     | Finalizing stories and backgrounds  | [background](https://github.com/KylieScharf/newportfolio/issues/6) and [stories](https://github.com/KylieScharf/newportfolio/issues/10) and [style](https://github.com/KylieScharf/newportfolio/issues/5)|
+| Hamza    | Finilizing stories and backgrounds | [background](https://github.com/KylieScharf/newportfolio/issues/6) and [stories](https://github.com/KylieScharf/newportfolio/issues/10) and [style](https://github.com/KylieScharf/newportfolio/issues/5)| 
+| Kevin     | Finilizing stories and backgrounds| [background](https://github.com/KylieScharf/newportfolio/issues/6) [stories](https://github.com/KylieScharf/newportfolio/issues/10) and [style](https://github.com/KylieScharf/newportfolio/issues/5)|
 
 ## Sprint 9,10 Week 10([10/26-10/29 Self Grades](https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing))
 | Team Member Name        | Main Topics     | Issues  |
 | -------------           | -------------           | -----------------------                         |
 | Kylie      | PBL feedback and backgrounds | [edit journal](https://github.com/KylieScharf/newportfolio/issues/11) and [feedback form](https://github.com/KylieScharf/newportfolio/issues/8) and [background](https://github.com/KylieScharf/newportfolio/issues/6)| 
 | Khushi      | PBL slideshow and backroungs | [edit journal](https://github.com/KylieScharf/newportfolio/issues/11) and [slideshow](https://github.com/KylieScharf/newportfolio/issues/9) and [background](https://github.com/KylieScharf/newportfolio/issues/6)| 
-| Daniel     | PBL buttons and backgrounds  | [edit journal](https://github.com/KylieScharf/newportfolio/issues/11) and [stories](https://github.com/KylieScharf/newportfolio/issues/10) and [buttons](https://github.com/KylieScharf/newportfolio/issues/7) [background](https://github.com/KylieScharf/newportfolio/issues/6) and [backlog binary](https://github.com/KylieScharf/flask_portfolio/issues/75)|
+| Daniel     | PBL buttons and backgrounds  | [edit journal](https://github.com/KylieScharf/newportfolio/issues/11) and [stories](https://github.com/KylieScharf/newportfolio/issues/10) and [background](https://github.com/KylieScharf/newportfolio/issues/6) and [backlog binary](https://github.com/KylieScharf/flask_portfolio/issues/75)|
 | Hamza    | PBL style and backgrounds | [edit journal](https://github.com/KylieScharf/newportfolio/issues/11) and [stories](https://github.com/KylieScharf/newportfolio/issues/10) and [style](https://github.com/KylieScharf/newportfolio/issues/5) and [background](https://github.com/KylieScharf/newportfolio/issues/6)| 
 | Kevin     | PBL style and backgrounds| [edit journal](https://github.com/KylieScharf/newportfolio/issues/11) and [stories](https://github.com/KylieScharf/newportfolio/issues/10) and [background](https://github.com/KylieScharf/newportfolio/issues/6) and [style](https://github.com/KylieScharf/newportfolio/issues/5) and [backlog binary](https://github.com/KylieScharf/flask_portfolio/issues/75)|
 
@@ -50,7 +65,7 @@ In this adventure page they will go through a story where they will be able to p
 | -------------           | -------------           | -----------------------                         |
 | Kylie      | Presentations | [edit journal](https://github.com/KylieScharf/newportfolio/issues/4) and [Group Pres](https://github.com/KylieScharf/flask_portfolio/issues/74) and [individual pres](https://github.com/KylieScharf/newportfolio/issues/3) and [feedback form](https://github.com/KylieScharf/newportfolio/issues/8) and [background](https://github.com/KylieScharf/newportfolio/issues/6)| 
 | Khushi      | Presentations | [edit journal](https://github.com/KylieScharf/newportfolio/issues/4) and [Group Pres](https://github.com/KylieScharf/flask_portfolio/issues/74) and [individual pres](https://github.com/KylieScharf/newportfolio/issues/3) and [slideshow](https://github.com/KylieScharf/newportfolio/issues/9) and [background](https://github.com/KylieScharf/newportfolio/issues/6)| 
-| Daniel     | Presentations  | [edit journal](https://github.com/KylieScharf/newportfolio/issues/4) and [Group Pres](https://github.com/KylieScharf/flask_portfolio/issues/74) and [individual pres](https://github.com/KylieScharf/newportfolio/issues/3) and [stories](https://github.com/KylieScharf/newportfolio/issues/10) and [buttons](https://github.com/KylieScharf/newportfolio/issues/7) [background](https://github.com/KylieScharf/newportfolio/issues/6) |
+| Daniel     | Presentations  | [edit journal](https://github.com/KylieScharf/newportfolio/issues/4) and [Group Pres](https://github.com/KylieScharf/flask_portfolio/issues/74) and [individual pres](https://github.com/KylieScharf/newportfolio/issues/3) and [stories](https://github.com/KylieScharf/newportfolio/issues/10) and [background](https://github.com/KylieScharf/newportfolio/issues/6) |
 | Hamza    | Presentations  | [edit journal](https://github.com/KylieScharf/newportfolio/issues/4) and [Group Pres](https://github.com/KylieScharf/flask_portfolio/issues/74) and [individual pres](https://github.com/KylieScharf/newportfolio/issues/3) and [stories](https://github.com/KylieScharf/newportfolio/issues/10) and [style](https://github.com/KylieScharf/newportfolio/issues/5) and [background](https://github.com/KylieScharf/newportfolio/issues/6)| 
 | Kevin     | Presentations |[edit journal](https://github.com/KylieScharf/newportfolio/issues/4) and [Group Pres](https://github.com/KylieScharf/flask_portfolio/issues/74) and [individual pres](https://github.com/KylieScharf/newportfolio/issues/3) and [stories](https://github.com/KylieScharf/newportfolio/issues/10) [background](https://github.com/KylieScharf/newportfolio/issues/6)|
 

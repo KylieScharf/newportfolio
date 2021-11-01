@@ -39,7 +39,7 @@ In the adventure page that follows, they will go through a story where they will
 4. Kevin: Navigator
 5. Khushi: Technical Lead
 
-## Sprint 9,10 Week 10([10/26-10/29 Self Grades](https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing))
+## Sprint 11,12 Week 11([11/1-11/5 Self Grades](https://docs.google.com/document/d/10Sk438St3Zlkfl964VFOpiJHuQQQGx_JKPXUIfRFDeA/edit?usp=sharing))
 | Team Member Name        | Main Topics     | Issues  |
 | -------------           | -------------           | -----------------------                         |
 | Kylie      | Forming stories into one HTML page | [put all stories in one HTML](https://github.com/KylieScharf/newportfolio/issues/12) and [buttons](https://github.com/KylieScharf/newportfolio/issues/7) and [style](https://github.com/KylieScharf/newportfolio/issues/5)| 

@@ -1,6 +1,19 @@
 {% extends "layouts/project.html" %}
 {% set response = response %}
 
+{% block meta %}
+<script>
+    function search(){
+
+        let input = document.getElementById("tester").value;
+        let dict = document.getElementById("year").innerHTML;
+        alert(dict2)
+    }
+</script>
+
+
+{% endblock %}
+
 {% block body %}
 <div class="container-fluid">
     <div class="row">
@@ -12,6 +25,10 @@
 </div>
     <div class="col-12" style="text-align: center;">
         <div class="col-12">
+            <form method="POST" id="tester1" >
+                <input name="tester" id="tester">
+                <input type="button" id="butt" value="Search for a movie!" onclick="search()">
+            </form>
             <table>
 
             <tr>
@@ -22,11 +39,12 @@
                 {% for dictionary in response %}
             <tr>
                <td>{{dictionary.title}}</td>
-                <td>{{dictionary['year']}}</td>
+                <td id="year">{{dictionary['year']}}</td>
                 <td>{{dictionary['tmdb_type']}}</td>
             </tr>
-            {% endfor %}}
+            {% endfor %}
         </table>
     </div>
+</div>
 </div>
 {% endblock %}

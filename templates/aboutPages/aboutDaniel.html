@@ -1,15 +1,6 @@
 <!-- Extending the predefined project layout -->
 {% extends "layouts/project.html" %}
 
-{% block animation %}
-    @keyframes example {
-    0%   {background-color: red;}
-    25%  {background-color: orange;}
-    50%  {background-color: MediumSeaGreen;}
-    100% {background-color: Blue;}
-    }
-{% endblock %}
-
 <!--This sets the variables in the predefined layout within the project.html file so that every page has the same layout and is efficient-->
 {% set basename = "About Creators" %}
 {% set project = "Daniel Bertino" %}
@@ -25,6 +16,4 @@
 {% block button2 %}
 {% endblock %}
 
-{% block background %}
-{% endblock %}
 </body>

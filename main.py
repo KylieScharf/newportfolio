@@ -561,8 +561,20 @@ def stonks():
 def area51_story():
     return render_template("A51stories/A51story.html")
 
-app.register_blueprint(api_bp)
-app.register_blueprint(app_starter)
+@app.route('/nbastandings/', methods=['GET', 'POST'])
+def nbastandings():
+
+    url = "https://basketball-data.p.rapidapi.com/match/statistics"
+
+    querystring = {"matchId":"348276"}
+
+    headers = {
+        'x-rapidapi-host': "basketball-data.p.rapidapi.com",
+        'x-rapidapi-key': "7c1d894378mshb7e7e6c6ecac61bp1f2fcbjsn264b46c0ce80"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    return render_template("nbastandings.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

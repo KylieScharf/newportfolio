@@ -295,6 +295,10 @@ def BTstory11222():
 def BTstory112211():
     return render_template("BTstories/BTstory112211.html")
 
+@app.route('/BTstory112212/')
+def BTstory112212():
+    return render_template("BTstories/BTstory112212.html")
+
 @app.route('/BTstory12111/')
 def BTstory12111():
     return render_template("BTstories/BTstory12111.html")
@@ -528,7 +532,7 @@ def feedback():
 def movie():
     url = "https://watchmode.p.rapidapi.com/list-titles/"
 
-    querystring = {"types":"movie,tv_series","regions":"US","source_types":"sub,free","source_ids":"23,206","page":"1","limit":"250","genres":"4,9"}
+    querystring = {"types":"movie,tv_series","regions":"US","source_types":"sub,free","source_ids":"23,206","page":"1","limit":"250","genres":"4,9"} #assigns values to specified parameters(keys)
 
     headers = {
         'x-rapidapi-host': "watchmode.p.rapidapi.com",

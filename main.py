@@ -295,6 +295,10 @@ def BTstory11222():
 def BTstory112211():
     return render_template("BTstories/BTstory112211.html")
 
+@app.route('/BTstory112212/')
+def BTstory112212():
+    return render_template("BTstories/BTstory112212.html")
+
 @app.route('/BTstory12111/')
 def BTstory12111():
     return render_template("BTstories/BTstory12111.html")
@@ -477,36 +481,6 @@ def translator2():
         master_list = master_list + dictionary
     return render_template("translator2.html", dictionary=master_list, original=original)
 
-@app_starter.route('/joke', methods=['GET', 'POST'])
-def joke():
-    url = "http://127.0.0.1:5000/api/joke"
-    #url = "https://csp.nighthawkcodingsociety.com/api/joke"
-    param = {"like":0}
-    response = requests.request("GET", url, params=param)
-    print(response.json())
-    a=1
-    if a == 1:
-        dictionary = response.json()
-        id = dictionary['id']
-        print(id)
-        dictionary['haha'] +=1
-        likes = dictionary['haha']
-        print("hello")
-        print(response.json())
-        print(likes)
-        param = {"id":id, "like": likes}
-        print(dictionary['haha'])
-        #response = requests.request("GET", "http://127.0.0.1:5000/api/jokes", params=param)
-    return render_template("starter/joke.html", joke=response.json())
-
-@app_starter.route('/jokes', methods=['GET', 'POST'])
-def jokes():
-    # use this url to test on and make modification on you own machine
-    url = "http://127.0.0.1:5000/api/jokes"
-    #url = "https://csp.nighthawkcodingsociety.com/api/jokes"
-
-    response = requests.request("GET", url)
-    return render_template("starter/jokes.html", jokes=response.json())
 
 @app.route('/area51/')
 def Area51():
@@ -528,7 +502,7 @@ def feedback():
 def movie():
     url = "https://watchmode.p.rapidapi.com/list-titles/"
 
-    querystring = {"types":"movie,tv_series","regions":"US","source_types":"sub,free","source_ids":"23,206","page":"1","limit":"250","genres":"4,9"}
+    querystring = {"types":"movie,tv_series","regions":"US","source_types":"sub,free","source_ids":"23,206","page":"1","limit":"250","genres":"4,9"} #assigns values to specified parameters(keys)
 
     headers = {
         'x-rapidapi-host': "watchmode.p.rapidapi.com",
@@ -561,8 +535,20 @@ def stonks():
 def area51_story():
     return render_template("A51stories/A51story.html")
 
-app.register_blueprint(api_bp)
-app.register_blueprint(app_starter)
+@app.route('/nbastandings/', methods=['GET', 'POST'])
+def nbastandings():
+
+    url = "https://basketball-data.p.rapidapi.com/match/statistics"
+
+    querystring = {"matchId":"348276"}
+
+    headers = {
+        'x-rapidapi-host': "basketball-data.p.rapidapi.com",
+        'x-rapidapi-key': "7c1d894378mshb7e7e6c6ecac61bp1f2fcbjsn264b46c0ce80"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    return render_template("nbastandings.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

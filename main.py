@@ -535,6 +535,14 @@ def stonks():
 def area51_story():
     return render_template("A51stories/A51story.html")
 
+@app.route('/2bermuda/', methods=['GET', 'POST'])
+def bermuda_story():
+    return render_template("BTstories/BTstory.html")
+
+@app.route('/2pyramid/', methods=['GET', 'POST'])
+def pyramid_story():
+    return render_template("GPstories/GPstory.html")
+
 @app.route('/nbastandings/', methods=['GET', 'POST'])
 def nbastandings():
 
@@ -549,6 +557,10 @@ def nbastandings():
 
     response = requests.request("GET", url, headers=headers, params=querystring)
     return render_template("nbastandings.html")
+
+@app.route('/calculator/', methods=['GET', 'POST'])
+def calculator():
+    return render_template("technicalInfo/calc.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

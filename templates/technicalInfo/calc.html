@@ -1,0 +1,76 @@
+{% extends "layouts/base.html" %}
+{% block meta %}
+    <script>
+        function truncate (num, places) {
+            return Math.trunc(num * Math.pow(10, places)) / Math.pow(10, places);
+        }
+        function calculator(){
+            let desired = document.getElementById("desired").value
+            desired = truncate(desired,2)
+            let catWeight = document.getElementById("catweight").value
+            catWeight = truncate(catWeight,2)
+            let grade = document.getElementById("currentgrade").value
+            grade = truncate(grade,2)
+            let pointsoffinal = document.getElementById("pointsoffinal").value
+            pointsoffinal = truncate(pointsoffinal,2)
+            let currentPossiblePoints = document.getElementById("currentpossiblepoints").value
+            currentPossiblePoints = truncate(currentPossiblePoints,2)
+            let currentPoints = document.getElementById("currentpoints").value
+            currentPoints = truncate(currentPoints,2)
+            let currentCat = currentPoints/currentPossiblePoints * catWeight
+            let othercat = grade - currentCat
+            let othercat2 = (100 - catWeight) - othercat
+            let finalPossiblePoints = currentPossiblePoints + pointsoffinal
+            let catPercentNeeded = (catWeight - (100-(desired + othercat2)))/catWeight
+            let desiredPoints = (catPercentNeeded * (finalPossiblePoints))
+            let final = ((desiredPoints - currentPoints)/(pointsoffinal)) * 100
+            final = truncate(final,2)
+            document.getElementById("change").innerHTML = "You need a " + " " + final + "% on the final to get a " + desired + "% in the class!"
+            if (final > 100){
+                document.getElementById("message").innerHTML = "Better luck next time!"
+            }
+            if (final > 89){
+                document.getElementById("message").innerHTML = "You might think it's hard to get an A on your final but if you study you can do it!"
+            }
+            else if (final > 79){
+                document.getElementById("message").innerHTML = "Yeah getting a B is tough, but at least you don't need an A right?"
+            }
+            else if(final > 69){
+                document.getElementById("message").innerHTML = "All you need is a C, you got this!"
+            }
+            else if(final > 59){
+                document.getElementById("message").innerHTML = "You know what they say; D's get degrees!"
+            }
+            else {
+                document.getElementById("message").innerHTML = "You literally just need an F what are you worrying about!"
+            }
+        }
+    </script>
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="row" style="padding-top:2%; padding-bottom:2%;">
+            <div class="col-8">
+                <h1><center>Final Grade Calculator</center></h1>
+            </div>
+            <div class="col-8">
+                <form>
+                    <center><label style="font-size:32px;">Calculator for if your final counts as a test</label><br></center>
+                    <label style="font-size:27px;">What is your desired final grade?</label><input id="desired" placeholder="e.g. 80"><label>%</label><br>
+                    <label style="font-size:27px;">What is your current grade in the class?</label><input id="currentgrade" placeholder="e.g. 90"><label>%</label><br>
+                    <label style="font-size:27px;">What is the percentage weight of the test category?</label><input id="catweight" placeholder="e.g. 25"><label>%</label><br>
+                    <label style="font-size:27px;">How many points is your final worth?</label><input id="pointsoffinal" placeholder="e.g. 100"><label>points</label><br>
+                    <label style="font-size:27px;">How many total possible points are in the test category currently?</label><input id="currentpossiblepoints" placeholder="e.g. 500"><label>points</label><br>
+                    <label style="font-size:27px;">How many current points do you have in the test category?</label><input id="currentpoints" placeholder="e.g. 450"><label>points</label><br>
+                    <input type="button" value="calculate" onclick="calculator()"><br>
+                </form>
+                <br><br><p style="font-size:27px;" id="change"></p>
+                <br><p style="font-size:27px;" id="message"></p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block background %}
+    <body style="background-color:mediumslateblue"></body>
+{% endblock %}

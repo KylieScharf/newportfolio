@@ -7,13 +7,16 @@
 ### [Insights](https://github.com/KylieScharf/flask_portfolio/graphs/contributors)
 
 
-### Pair Share Journals
-1. [Kylie and Khushi](https://docs.google.com/document/d/1eyTgQhMv7jFi28SIGlwOs3k95a9KklfJFCS0O9pXCzA/edit)
-2. [Danny, Hamza, and Kevin](https://docs.google.com/document/d/1fy-J_PVrvafykD-OTxMm-Pe0L_UKrYUTC4-DP4vGXEw/edit?usp=sharing)
-
 ### Overview
 Have you ever thought about where those planes really go when they disappear over the bermuda triangle? Or who really built the Great Pyramid of Giza? What about wondering what really goes on inside Area 51? If your answer is yes to any of these questions, this is the site for you!
 Here, you will learn about 3 of the greatest wonders of the world: Area 51, The Great Pyramid of Giza, and The Bermuda Triangle. And it doesn't stop there! You will also be taken on an adventure within each wonder where you will get to decide your own fate by picking between different options within the adventure. The goal: make it out alive. You decide your destiny!
+
+### Our Website
+<img width="1425" alt="Screen Shot 2021-11-12 at 10 23 48 AM" src="https://user-images.githubusercontent.com/89220092/141516305-61034e0d-e858-4618-971c-6371f71bf8cc.png">
+
+### Pair Share Journals
+1. [Kylie and Khushi](https://docs.google.com/document/d/1eyTgQhMv7jFi28SIGlwOs3k95a9KklfJFCS0O9pXCzA/edit)
+2. [Danny, Hamza, and Kevin](https://docs.google.com/document/d/1fy-J_PVrvafykD-OTxMm-Pe0L_UKrYUTC4-DP4vGXEw/edit?usp=sharing)
 
 ### Runtime Link
 [http://dnhswonders.cf](http://dnhswonders.cf/)
